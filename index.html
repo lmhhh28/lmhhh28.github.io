@@ -37,8 +37,8 @@
         
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+Simplified+Chinese:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Noto Serif Simplified Chinese";--md-code-font:"Roboto Mono"}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Serif";--md-code-font:"Roboto Mono"}</style>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-my-note" class="md-skip">
+        <a href="#lmhhhs-personal-note" class="md-skip">
           跳转至
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Welcome to my note
+              lmhhh's Personal Note
             
           </span>
         </div>
@@ -408,17 +408,38 @@
   
 
 
-<h1 id="welcome-to-my-note">Welcome to my note</h1>
-<p>This is a testing page。</p>
-<h1 id="latex-test">LateX Test</h1>
-<div class="arithmatex">\[d \mathord{ \buildrel{ \lower3pt \hbox{$ \scriptscriptstyle \rightharpoonup$}} \over B} = \frac{{{ \mu _0}}}{{4 \pi }} \frac{{Idl \times \mathord{ \buildrel{ \lower3pt \hbox{$ \scriptscriptstyle \rightharpoonup$}} \over r} }}{{{r^3}}} =  \frac{{{ \mu _0}}}{{4 \pi }} \frac{{Idl \sin \theta }}{{{r^2}}}\]</div>
-<div class="arithmatex">\[\begin{array}{l}    \nabla \cdot \mathbf{D} =\rho _f \\    \nabla \cdot \mathbf{B} = 0 \\    \nabla \times  \mathbf{E} = -\cfrac{\partial \mathbf{B}}{\partial t }  \\    \nabla \times  \mathbf{H} = \mathbf{J}_f +  \cfrac{\partial \mathbf{D}}{\partial t }   \end{array} \]</div>
-<div class="arithmatex">\[\mathbf{V}_1 \times \mathbf{V}_2 =  
-\begin{vmatrix}  
-  \mathbf{i}&amp; \mathbf{j}&amp; \mathbf{k} \\  
-  \frac{\partial X}{\partial u}&amp; \frac{\partial Y}{\partial u}&amp; 0 \\  
-  \frac{\partial X}{\partial v}&amp; \frac{\partial Y}{\partial v}&amp; 0 \\  
-\end{vmatrix}\]</div>
+<h1 id="lmhhhs-personal-note">lmhhh's Personal Note</h1>
+<p>这里是一个笔记本。  </p>
+<script>
+function updateTime() {
+    var date = new Date();
+    var now = date.getTime();
+    var startDate = new Date("2022/01/03 09:10:00");
+    var start = startDate.getTime();
+    var diff = now - start;
+    var y, d, h, m;
+    y = Math.floor(diff / (365 * 24 * 3600 * 1000));
+    diff -= y * 365 * 24 * 3600 * 1000;
+    d = Math.floor(diff / (24 * 3600 * 1000));
+    h = Math.floor(diff / (3600 * 1000) % 24);
+    m = Math.floor(diff / (60 * 1000) % 60);
+    if (y == 0) {
+        document.getElementById("web-time").innerHTML = d + "<span class=\"heti-spacing\"> </span>天<span class=\"heti-spacing\"> </span>" + h + "<span class=\"heti-spacing\"> </span>小时<span class=\"heti-spacing\"> </span>" + m + "<span class=\"heti-spacing\"> </span>分钟";
+    } else {
+        document.getElementById("web-time").innerHTML = y + "<span class=\"heti-spacing\"> </span>年<span class=\"heti-spacing\"> </span>" + d + "<span class=\"heti-spacing\"> </span>天<span class=\"heti-spacing\"> </span>" + h + "<span class=\"heti-spacing\"> </span>小时<span class=\"heti-spacing\"> </span>" + m + "<span class=\"heti-spacing\"> </span>分钟";
+    }
+    setTimeout(updateTime, 1000 * 60);
+}
+updateTime();
+function toggle_statistics() {
+    var statistics = document.getElementById("statistics");
+    if (statistics.style.opacity == 0) {
+        statistics.style.opacity = 1;
+    } else {
+        statistics.style.opacity = 0;
+    }
+}
+</script>
 
 
 
