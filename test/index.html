@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#noip2003" class="md-skip">
+        <a href="#how-bernoulli-root" class="md-skip">
           跳转至
         </a>
       
@@ -255,8 +255,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -285,8 +283,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -295,55 +291,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#how-bernoulli-root" class="md-nav__link">
     <span class="md-ellipsis">
-      题目描述
+      How Bernoulli root?
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      输入格式
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      输出格式
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
-    <span class="md-ellipsis">
-      样例 #1
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="样例 #1">
+    <nav class="md-nav" aria-label="How Bernoulli root?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1_1" class="md-nav__link">
+  <a href="#1-principle" class="md-nav__link">
     <span class="md-ellipsis">
-      样例输入 #1
+      1 Principle
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#1_2" class="md-nav__link">
+  <a href="#2-example" class="md-nav__link">
     <span class="md-ellipsis">
-      样例输出 #1
+      2 Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3 代码实现
     </span>
   </a>
   
@@ -351,15 +329,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      提示
-    </span>
-  </a>
   
 </li>
       
@@ -389,36 +358,40 @@
   
 
 
-<h1 id="noip2003">[NOIP2003 普及组] 麦森数</h1>
-<h2 id="_1">题目描述</h2>
-<p>形如 <span class="arithmatex">\(2^{P}-1\)</span> 的素数称为麦森数，这时 <span class="arithmatex">\(P\)</span> 一定也是个素数。但反过来不一定，即如果 <span class="arithmatex">\(P\)</span> 是个素数，<span class="arithmatex">\(2^{P}-1\)</span> 不一定也是素数。到 1998 年底，人们已找到了 37 个麦森数。最大的一个是 <span class="arithmatex">\(P=3021377\)</span>，它有 909526 位。麦森数有许多重要应用，它与完全数密切相关。</p>
-<p>任务：输入 <span class="arithmatex">\(P(1000&lt;P&lt;3100000)\)</span>，计算 <span class="arithmatex">\(2^{P}-1\)</span> 的位数和最后 <span class="arithmatex">\(500\)</span> 位数字（用十进制高精度数表示）</p>
-<h2 id="_2">输入格式</h2>
-<p>文件中只包含一个整数 <span class="arithmatex">\(P(1000&lt;P&lt;3100000)\)</span></p>
-<h2 id="_3">输出格式</h2>
-<p>第一行：十进制高精度数 <span class="arithmatex">\(2^{P}-1\)</span> 的位数。</p>
-<p>第 <span class="arithmatex">\(2\sim 11\)</span> 行：十进制高精度数 <span class="arithmatex">\(2^{P}-1\)</span> 的最后 <span class="arithmatex">\(500\)</span> 位数字。（每行输出 <span class="arithmatex">\(50\)</span> 位，共输出 <span class="arithmatex">\(10\)</span> 行，不足 <span class="arithmatex">\(500\)</span> 位时高位补 <span class="arithmatex">\(0\)</span>）</p>
-<p>不必验证 <span class="arithmatex">\(2^{P}-1\)</span> 与 <span class="arithmatex">\(P\)</span> 是否为素数。</p>
-<h2 id="1">样例 #1</h2>
-<h3 id="1_1">样例输入 #1</h3>
-<pre><code>1279
-</code></pre>
-<h3 id="1_2">样例输出 #1</h3>
-<pre><code>386
-00000000000000000000000000000000000000000000000000
-00000000000000000000000000000000000000000000000000
-00000000000000104079321946643990819252403273640855
-38615262247266704805319112350403608059673360298012
-23944173232418484242161395428100779138356624832346
-49081399066056773207629241295093892203457731833496
-61583550472959420547689811211693677147548478866962
-50138443826029173234888531116082853841658502825560
-46662248318909188018470682222031405210266984354887
-32958028878050869736186900714720710555703168729087
-</code></pre>
-<h2 id="_4">提示</h2>
-<p><strong>【题目来源】</strong></p>
-<p>NOIP 2003 普及组第四题</p>
+  <h1>Test</h1>
+
+<h2 id="how-bernoulli-root"><strong>How Bernoulli root?</strong></h2>
+<h3 id="1-principle">1 Principle</h3>
+<p>对于分式线性递推：
+<span class="arithmatex">\(<span class="arithmatex">\(x_{n+1}=\frac{ax_{n}+b}{cx_{n}+d}\)</span>\)</span>
+若存在2个实不动点<span class="arithmatex">\(\lambda{\scriptsize 1},\lambda{\scriptsize 2}\)</span>，不妨令<span class="arithmatex">\(\lambda{\scriptsize 1}&lt; \lambda{\scriptsize 2}\)</span>，则有：
+<span class="arithmatex">\(<span class="arithmatex">\(\frac{x_{n+1}-\lambda _{1}}{x_{n+1}-\lambda _{2}}=\frac{a-c\lambda _{1}}{a-c\lambda _{2}}\cdot \frac{x_{n}-\lambda _{1}}{x_{n}-\lambda _{2}}\)</span>\)</span>
+设：<span class="arithmatex">\(a_{0}=\frac{x_{0}-\lambda _{1}}{x_{0}-\lambda _{2}},q=\frac{a-c\lambda _{1}}{a-c\lambda _{2}}\)</span>，则有：
+<span class="arithmatex">\(<span class="arithmatex">\(x_{n}=\frac{\lambda _{2}-\lambda _{1}}{a_{0}q^{n}-1}+\lambda _{2}\)</span>\)</span>
+当<span class="arithmatex">\(\left | q \right | &gt; 1\)</span>时，<span class="arithmatex">\(\lim_{n \to +\infty} x_{n}=\lambda _{2}\)</span>，
+当<span class="arithmatex">\(\left | q \right | &lt; 1\)</span>时，<span class="arithmatex">\(\lim_{n \to +\infty}x_{n}=\lambda_{1}\)</span>。
+设不动点<span class="arithmatex">\(<span class="arithmatex">(满足方程：
+<span class="arithmatex">(<span class="arithmatex">\(cx^{2}+(d-a)x-b=0\)</span>\)</span>
+其中：
+<span class="arithmatex">(<span class="arithmatex">\(\lambda _{1}=\frac{-(d-a)-\sqrt{\Delta } }{2c} ,\lambda _{2}=\frac{-(d-a)+\sqrt{\Delta } }{2c}\)</span>\)</span>
+当\)</span>n\)</span>一定时，<span class="arithmatex">\(q\)</span>越大，<span class="arithmatex">\(\left | x_{n}-\lambda _{i} \right |\)</span>越小。所以有：
+<span class="arithmatex">\(<span class="arithmatex">\(q=\frac{a+d+\sqrt{\Delta}}{a+d-\sqrt[]{\Delta}}\)</span>\)</span>
+我们令：<span class="arithmatex">\(a=0,b=\frac{m-\left \lfloor \sqrt{m}  \right \rfloor^{2}}{4},c=1,d=\left \lfloor \sqrt{m}  \right \rfloor\)</span>。则有：
+<span class="arithmatex">\(<span class="arithmatex">\(x_{n+1}=\frac{m-\left \lfloor m \right \rfloor^{2} }{4(x_{n}+\left \lfloor m \right \rfloor )}\)</span>\)</span>
+<span class="arithmatex">\(<span class="arithmatex">\(q=\frac{\left \lfloor \sqrt{m}  \right \rfloor+\sqrt{m}  }{\left \lfloor \sqrt{m}  \right \rfloor-\sqrt{m}  }\)</span>\)</span>
+最后得到<span class="arithmatex">\(\sqrt{m}\)</span>的近似值为：<span class="arithmatex">\(2x_{n}+\left \lfloor \sqrt{m}  \right \rfloor\)</span>。实际上<span class="arithmatex">\(2x_{n}\)</span>为<span class="arithmatex">\(\sqrt{m}\)</span>小数部分的近似值。
+不难看出：当<span class="arithmatex">\(n\)</span>趋近于无穷时，<span class="arithmatex">\(x_{n}\)</span>无限趋近于<span class="arithmatex">\(\sqrt{m}\)</span>。</p>
+<h3 id="2-example">2 Example</h3>
+<p><span class="arithmatex">\(eg.求\sqrt{114514}近似值。\)</span>
+<span class="arithmatex">\(\sqrt{114514}\)</span>的整数部分为<span class="arithmatex">\(338\)</span>，构造数列：
+<span class="arithmatex">\(<span class="arithmatex">\(x_{n+1}=\frac{270}{4(x_{n}+338)}\)</span>\)</span>
+选取初值条件：<span class="arithmatex">\(x_{0}=1\)</span>
+选取小数点后六位：
+<span class="arithmatex">\(<span class="arithmatex">\(x_{1}=0.199115,2x_{1}+338=338.398230\)</span>\)</span>
+<span class="arithmatex">\(<span class="arithmatex">\(x_{2}=0.199587,2x_{2}+338=338.399174\)</span>\)</span>
+<span class="arithmatex">\(<span class="arithmatex">\(x_{3}=0.199586,2x_{3}+338=338.399172\)</span>\)</span>
+由计算工具得：<span class="arithmatex">\(\sqrt{114514}=338.399172\)</span></p>
+<h3 id="3">3 代码实现</h3>
 
 
 
