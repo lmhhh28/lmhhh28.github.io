@@ -1,0 +1,29 @@
+site_name: My Note
+nav:
+  - Math: 
+    - Start: math/index.md 
+    - 伯努利方法: math/test.md
+    - 傅里叶-莫茨金消元法: math/fourier-motzkin-elimination.md
+  - Code-server: http://8.140.235.199:8080/
+theme:
+  name: material
+  language: zh
+  features:
+    - toc.integrate
+    - navigation.instant
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+  palette:
+    scheme: slate
+    primary: black
+    accent: indigo
+repo_url: https://github.com/lmhhh28/lmhhh28.github.io
+repo_name: 'My Note Resource'
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
