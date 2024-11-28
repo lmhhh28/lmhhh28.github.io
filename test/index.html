@@ -363,14 +363,14 @@
 
 <h1 id="noip2003">[NOIP2003 普及组] 麦森数</h1>
 <h2 id="_1">题目描述</h2>
-<p>形如 $2^{P}-1$ 的素数称为麦森数，这时 $P$ 一定也是个素数。但反过来不一定，即如果 $P$ 是个素数，$2^{P}-1$ 不一定也是素数。到 1998 年底，人们已找到了 37 个麦森数。最大的一个是 $P=3021377$，它有 909526 位。麦森数有许多重要应用，它与完全数密切相关。</p>
-<p>任务：输入 $P(1000&lt;P&lt;3100000)$，计算 $2^{P}-1$ 的位数和最后 $500$ 位数字（用十进制高精度数表示）</p>
+<p>形如 <span class="arithmatex">\(2^{P}-1\)</span> 的素数称为麦森数，这时 <span class="arithmatex">\(P\)</span> 一定也是个素数。但反过来不一定，即如果 <span class="arithmatex">\(P\)</span> 是个素数，<span class="arithmatex">\(2^{P}-1\)</span> 不一定也是素数。到 1998 年底，人们已找到了 37 个麦森数。最大的一个是 <span class="arithmatex">\(P=3021377\)</span>，它有 909526 位。麦森数有许多重要应用，它与完全数密切相关。</p>
+<p>任务：输入 <span class="arithmatex">\(P(1000&lt;P&lt;3100000)\)</span>，计算 <span class="arithmatex">\(2^{P}-1\)</span> 的位数和最后 <span class="arithmatex">\(500\)</span> 位数字（用十进制高精度数表示）</p>
 <h2 id="_2">输入格式</h2>
-<p>文件中只包含一个整数 $P(1000&lt;P&lt;3100000)$</p>
+<p>文件中只包含一个整数 <span class="arithmatex">\(P(1000&lt;P&lt;3100000)\)</span></p>
 <h2 id="_3">输出格式</h2>
-<p>第一行：十进制高精度数 $2^{P}-1$ 的位数。</p>
-<p>第 $2\sim 11$ 行：十进制高精度数 $2^{P}-1$ 的最后 $500$ 位数字。（每行输出 $50$ 位，共输出 $10$ 行，不足 $500$ 位时高位补 $0$）</p>
-<p>不必验证 $2^{P}-1$ 与 $P$ 是否为素数。</p>
+<p>第一行：十进制高精度数 <span class="arithmatex">\(2^{P}-1\)</span> 的位数。</p>
+<p>第 <span class="arithmatex">\(2\sim 11\)</span> 行：十进制高精度数 <span class="arithmatex">\(2^{P}-1\)</span> 的最后 <span class="arithmatex">\(500\)</span> 位数字。（每行输出 <span class="arithmatex">\(50\)</span> 位，共输出 <span class="arithmatex">\(10\)</span> 行，不足 <span class="arithmatex">\(500\)</span> 位时高位补 <span class="arithmatex">\(0\)</span>）</p>
+<p>不必验证 <span class="arithmatex">\(2^{P}-1\)</span> 与 <span class="arithmatex">\(P\)</span> 是否为素数。</p>
 <h2 id="1">样例 #1</h2>
 <h3 id="1_1">样例输入 #1</h3>
 <pre><code>1279
@@ -441,6 +441,10 @@
     
     
       <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
