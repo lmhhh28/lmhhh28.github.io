@@ -2,7 +2,7 @@ site_name: My Note
 nav:
   - Math: 
     - Start: math/index.md 
-    - 伯努利方法: math/test.md
+    - 伯努利方法: math/Bernoulli's_method.md
     - 傅里叶-莫茨金消元法: math/fourier-motzkin-elimination.md
   - Computer Science:
     - Start: cs/start.md
