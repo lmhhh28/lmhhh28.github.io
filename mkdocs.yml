@@ -4,6 +4,8 @@ nav:
     - Start: math/index.md 
     - 伯努利方法: math/test.md
     - 傅里叶-莫茨金消元法: math/fourier-motzkin-elimination.md
+  - Computer Science:
+    - Start: cs/start.md
   - Code-server: http://8.140.235.199:8080/
 theme:
   name: material
@@ -23,6 +25,11 @@ repo_name: 'My Note Resource'
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
 extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
