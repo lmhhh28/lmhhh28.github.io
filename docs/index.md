@@ -1,8 +1,8 @@
-# Welcome to my note
+# **Welcome to Lmhhh's Note!**
 
-This is a testing page。
+这是一个笔记本。
 
-# LateX Test
+## **LateX Test**
 
 $$d \mathord{ \buildrel{ \lower3pt \hbox{$ \scriptscriptstyle \rightharpoonup$}} \over B} = \frac{{{ \mu _0}}}{{4 \pi }} \frac{{Idl \times \mathord{ \buildrel{ \lower3pt \hbox{$ \scriptscriptstyle \rightharpoonup$}} \over r} }}{{{r^3}}} =  \frac{{{ \mu _0}}}{{4 \pi }} \frac{{Idl \sin \theta }}{{{r^2}}}$$
 

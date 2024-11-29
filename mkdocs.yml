@@ -8,6 +8,8 @@ nav:
 theme:
   name: material
   language: zh
+  font:
+    text: Noto Serif
   features:
     - toc.integrate
     - navigation.instant
