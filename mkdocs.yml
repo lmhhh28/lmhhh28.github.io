@@ -11,7 +11,7 @@ theme:
   name: material
   language: zh
   font:
-    text: Noto Serif
+    text: Noto Serif SC
   features:
     - toc.integrate
     - navigation.instant
@@ -19,9 +19,20 @@ theme:
     - navigation.sections
     - navigation.expand
   palette:
-    scheme: slate
-    primary: black
-    accent: indigo
+    - media: "(prefers-color-scheme: light)"
+      scheme: default # 日间模式
+      primary: blue grey # 上方的
+      accent: indigo # 链接等可交互元件的高亮色
+      toggle:
+        icon: material/brightness-7 # 图标
+        name: 切换至夜间模式 # 鼠标悬浮提示
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate # 夜间模式
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切换至日间模式
 repo_url: https://github.com/lmhhh28/lmhhh28.github.io
 repo_name: 'My Note Resource'
 markdown_extensions:
@@ -33,6 +44,10 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.superfences
 extra_javascript:
-  - javascripts/mathjax.js
-  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - javascripts/katex.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+
+extra_css:
+  - https://unpkg.com/katex@0/dist/katex.min.css
 
