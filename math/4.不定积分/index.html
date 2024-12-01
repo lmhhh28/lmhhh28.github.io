@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../Bernoulli%27s_method/">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="../../cs/start/">
+        <link rel="next" href="../Bernoulli%27s_method/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>傅里叶-莫茨金消元法 - My Note</title>
+        <title>4.不定积分 - My Note</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#4" class="md-skip">
           跳转至
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              傅里叶-莫茨金消元法
+              4.不定积分
             
           </span>
         </div>
@@ -382,8 +382,10 @@
                 
   
   
+    
   
   
+  
     
     
     
@@ -396,13 +398,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" checked>
         
           
           <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="">
@@ -416,7 +416,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_1_2">
             <span class="md-nav__icon md-icon"></span>
             数学笔记
@@ -427,10 +427,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../4.%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    4.不定积分
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -439,6 +457,66 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.不定积分
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.不定积分">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.运算符
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.线性性质
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.换元积分
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -477,28 +555,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    傅里叶-莫茨金消元法
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../fourier-motzkin-elimination/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -507,93 +567,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      引入
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      过程
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="过程">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    <span class="md-ellipsis">
-      例题
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    <span class="md-ellipsis">
-      时间复杂度
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    <span class="md-ellipsis">
-      应用
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    <span class="md-ellipsis">
-      实现
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    <span class="md-ellipsis">
-      参考资料与拓展阅读
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -714,65 +687,30 @@
   
 
 
-  <h1>傅里叶-莫茨金消元法</h1>
+  <h1>4.不定积分</h1>
 
-<h2 id="_1">引入</h2>
-<p><strong>傅里叶——莫茨金消元法</strong>（原名 Fourier–Motzkin Elimination，简称 <strong>FME</strong> 算法）是一种用于从线性不等式中消除变量的数学方法。</p>
-<p>它的命名源自于在 1827 年和 1936 年独立发现该算法的 Joseph Fourier 和 Theodore Motzkin 的姓氏。</p>
-<h2 id="_2">过程</h2>
-<p>从线性不等式中消除一组变量，是指通过将关系式中的若干个元素有限次地变换，消去其中的某些元素，从而解决问题的一种方法。</p>
-<p>如果线性不等式中的所有变量都被消除，那么我们会得到一个常不等式。因为当且仅当原不等式有解时，消元后的不等式才为真，消除所有变量可用于检测不等式系统是否有解。</p>
-<p>考虑一个含 <span class="arithmatex">\(n\)</span> 个不等式的系统 <span class="arithmatex">\(S\)</span>，有从 <span class="arithmatex">\(x_{1}\)</span> 到 <span class="arithmatex">\(x_{r}\)</span> 的 <span class="arithmatex">\(r\)</span> 个变量，其中 <span class="arithmatex">\(x_{r}\)</span> 为要消除的变量。根据 <span class="arithmatex">\(x_r\)</span> 系数的符号（正、负或空），<span class="arithmatex">\(S\)</span> 中的线性不等式可以分为三类：</p>
-<ol>
-<li>形式为 <span class="arithmatex">\(x_{r}\geq b_{i}-\sum _{k=1}^{r-1}a_{ik}x_{k}\)</span> 的不等式，对于范围从 <span class="arithmatex">\(1\)</span> 到 <span class="arithmatex">\(n_{A}\)</span>（<span class="arithmatex">\(n_{A}\)</span> 为这种不等式的数量）的 <span class="arithmatex">\(j\)</span>，用 <span class="arithmatex">\(x_{r}\geq A_{j}(x_{1},\dots ,x_{r-1})\)</span> 表示；</li>
-<li>形式为 <span class="arithmatex">\(x_{r}\leq b_{i}-\sum _{k=1}^{r-1}a_{ik}x_{k}\)</span> 的不等式，对于范围从 <span class="arithmatex">\(1\)</span> 到 <span class="arithmatex">\(n_{B}\)</span>（<span class="arithmatex">\(n_{B}\)</span> 为这种不等式的数量）的 <span class="arithmatex">\(j\)</span>，用 <span class="arithmatex">\(x_{r}\leq B_{j}(x_{1},\dots ,x_{r-1})\)</span> 表示；</li>
-<li>不包含 <span class="arithmatex">\(x_{r}\)</span> 的不等式，设它们构成的不等式组为 <span class="arithmatex">\(\phi\)</span>。</li>
-</ol>
-<p>因此原系统等价于</p>
+<h2 id="4">4.不定积分</h2>
+<h3 id="41">4.1.运算符</h3>
 <div class="arithmatex">\[
-\max(A_{1}(x_{1},\dots ,x_{r-1}),\dots ,A_{n_{A}}(x_{1},\dots ,x_{r-1}))\leq x_{r}\leq \min(B_{1}(x_{1},\dots ,x_{r-1}),\dots ,B_{n_{B}}(x_{1},\dots ,x_{r-1}))\wedge \phi
+\int {F}'(x)dx=F(x)+C
 \]</div>
-<p>消元包括产生一个等价于 <span class="arithmatex">\(\exists x_{r}~S\)</span> 的系统。显然，这个公式等价于</p>
 <div class="arithmatex">\[
-\max(A_{1}(x_{1},\dots ,x_{r-1}),\dots ,A_{n_{A}}(x_{1},\dots ,x_{r-1}))\leq \min(B_{1}(x_{1},\dots ,x_{r-1}),\dots ,B_{n_{B}}(x_{1},\dots ,x_{r-1}))\wedge \phi
+{F}'(x)dx=d(F(x)+C)
+\\
+{\scriptsize\int=d^{-1}\Longleftrightarrow d\cdot \int =1}
 \]</div>
-<p>不等式</p>
+<!--积分与微分互为逆运算-->
+
+<h3 id="42">4.2.线性性质</h3>
 <div class="arithmatex">\[
-\max(A_{1}(x_{1},\dots ,x_{r-1}),\dots ,A_{n_{A}}(x_{1},\dots ,x_{r-1}))\leq \min(B_{1}(x_{1},\dots ,x_{r-1}),\dots ,B_{n_{B}}(x_{1},\dots ,x_{r-1}))
+\int kf(x)dx=k\int f(x)dx
+\\
+\int [f(x)\pm g(x)]dx=\int f(x)dx\pm\int g(x)dx 
 \]</div>
-<p>等价于对于 <span class="arithmatex">\(1 \leq i \leq n_{A}\)</span> 且 <span class="arithmatex">\(1\leq j\leq n_{B}\)</span>，所有 <span class="arithmatex">\(n_{A}n_{B}\)</span> 个不等式 <span class="arithmatex">\(A_{i}(x_{1},\dots ,x_{r-1})\leq B_{j}(x_{1},\dots ,x_{r-1})\)</span> 构成的不等式组。</p>
-<p>因此，我们将原系统 <span class="arithmatex">\(S\)</span> 转换为另一个消掉 <span class="arithmatex">\(x_{r}\)</span> 的系统，这个系统有 <span class="arithmatex">\((n-n_{A}-n_{B})+n_{A}n_{B}\)</span> 个不等式。特别地，如果 <span class="arithmatex">\(n_{A}=n_{B}=n/2\)</span>，那么新系统不等式的个数为 <span class="arithmatex">\(n^{2}/4\)</span>。</p>
-<h3 id="_3">例题</h3>
-<p>考虑以下不等式系统：</p>
-<p><span class="arithmatex">\(2x-5y+4z \leq 10\)</span></p>
-<p><span class="arithmatex">\(3x-6y+3z \leq 9\)</span></p>
-<p><span class="arithmatex">\(-x+5y-2z \leq -7\)</span></p>
-<p><span class="arithmatex">\(-3x+2y+6z \leq 12\)</span></p>
-<p>为了消除 <span class="arithmatex">\(x\)</span>，我们可以根据 <span class="arithmatex">\(x\)</span> 改写不等式：</p>
-<p><span class="arithmatex">\(x \leq (10 + 5y - 4z)/2\)</span></p>
-<p><span class="arithmatex">\(x \leq (9 + 6y - 3z)/3\)</span></p>
-<p><span class="arithmatex">\(x \geq 7 + 5y - 2z\)</span></p>
-<p><span class="arithmatex">\(x \geq (-12 + 2y + 6z)/3\)</span></p>
-<p>这样我们得到两个 <span class="arithmatex">\(\leq\)</span> 不等式和两个 <span class="arithmatex">\(\geq\)</span> 不等式；如果每个 <span class="arithmatex">\(\leq\)</span> 不等式的右侧至少是每个 <span class="arithmatex">\(\geq\)</span> 不等式的右侧，则系统有一个解。我们有 <span class="arithmatex">\(2\times2\)</span> 这样的组合：</p>
-<p><span class="arithmatex">\(7 + 5y - 2z \leq  (10 + 5y - 4z)/2\)</span></p>
-<p><span class="arithmatex">\(7 + 5y - 2z \leq  (9 + 6y - 3z)/3\)</span></p>
-<p><span class="arithmatex">\((-12 + 2y + 6z)/3 \leq (10 + 5y - 4z)/2\)</span></p>
-<p><span class="arithmatex">\((-12 + 2y + 6z)/3 \leq (9 + 6y - 3z)/3\)</span></p>
-<p>现在我们有了一个新的少了一个变量不等式系统。</p>
-<h2 id="_4">时间复杂度</h2>
-<p>在 <span class="arithmatex">\(n\)</span> 个不等式上消元可以最多得到 <span class="arithmatex">\(n^{2}/4\)</span> 个不等式，因此连续运行 <span class="arithmatex">\(d\)</span> 步可以得到最多 <span class="arithmatex">\(4(n/4)^{2^{d}}\)</span> 的双指数复杂度。这是由于算法产生了许多不必要的约束（其他约束隐含的约束）。必要约束的数量以单一指数增长。</p>
-<p>可以使用线性规划 (Linear Programming, LP) 检测不必要的约束。</p>
-<h2 id="_5">应用</h2>
-<p>信息论的可实现性证明保证了存在性能良好的编码方案的条件。这些条件通常使用线性不等式系统描述。系统的变量包括传输速率和附加辅助速率。通常，人们旨在仅根据问题的参数（即传输速率）来描述通信的基本限制，因此述辅助率需要消除上。而我们正是通过傅立叶 - 莫茨金消元法来做到这一点的。</p>
-<h2 id="_6">实现</h2>
-<p>在编程语言中，<a href="https://racket-lang.org/">Racket</a>，一种基于 Lisp 的多范式编程语言在 <a href="https://docs.racket-lang.org/fme/index.html">fme - Fourier–Motzkin Elimination for Integer Systems)</a> 中对 FME 算法做了简单函数代数实现。</p>
-<h2 id="_7">参考资料与拓展阅读</h2>
-<ol>
-<li>Rui-Juan Jing, Marc Moreno-Maza, Delaram Talaashrafi, "<a href="https://arxiv.org/abs/1811.01510">Complexity Estimates for Fourier-Motzkin Elimination</a>", Journal of Functional Programming 16:2 (2006) pp 197-217.</li>
-<li><a href="https://en.wikipedia.org/wiki/Fourier%E2%80%93Motzkin_elimination">Fourier–Motzkin elimination - Wikipedia</a></li>
-<li><a href="https://www.sciencedirect.com/science/article/pii/0097316573900046">Fourier-Motzkin elimination and its dual</a></li>
-<li>GE Liepins,<a href="https://www.osti.gov/servlets/purl/5860090">Fourier-Motzkin elimination for mixed systems</a>, 1983</li>
-</ol>
+<h3 id="43">4.3.换元积分</h3>
+<div class="arithmatex">\[
+\int f(u){u}'dx=\int f(u)du=F(u)+C
+\]</div>
 
 
 
