@@ -195,9 +195,9 @@ void Martix::Pow_Martix(int **p, int n, int **result) {
 }
 ```
 
-#### 4.6.
+#### 4.6.计算整数部分
 
-二分法计算$\left \lfloor \sqrt{m} \right \rfloor$:
+利用二分法计算$\left \lfloor \sqrt{m} \right \rfloor$:
 
 ```c++
 int Int_Sqrt(int n) {
