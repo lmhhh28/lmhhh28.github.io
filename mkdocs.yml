@@ -2,7 +2,7 @@ site_name: My Note
 nav:
   - Math: 
     - 数学笔记:
-      - 0.Start: math/index.md 
+      - 0.Start: math/0.Start.md 
       - 4.不定积分: math/4.不定积分.md
     - 伯努利方法: math/Bernoulli's_method.md
     - 傅里叶-莫茨金消元法: math/fourier-motzkin-elimination.md
