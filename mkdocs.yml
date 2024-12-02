@@ -3,6 +3,7 @@ nav:
   - Math: 
     - Start: math/index.md 
     - 数学笔记:
+      - 0.Start: math/0.Start.md
       - 4.不定积分: math/4.不定积分.md
     - 伯努利方法: math/Bernoulli's_method.md
     - 傅里叶-莫茨金消元法: math/fourier-motzkin-elimination.md
@@ -52,4 +53,3 @@ extra_javascript:
 
 extra_css:
   - https://unpkg.com/katex@0/dist/katex.min.css
-
