@@ -595,6 +595,42 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#455" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.5.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#456" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.6.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#457" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.7.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#458" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.8.
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -889,6 +925,56 @@ $$
 所以：
 $$
 I_4=\int \csc xdx=\ln {|\csc x-\cot x|}+C
+$$</p>
+<h4 id="455">4.5.5.</h4>
+<div class="arithmatex">\[
+I_5=\int \frac{1}{\sqrt{a^2-x^2}}dx=\arcsin \frac{x}{a}+C
+\]</div>
+<p>证明：
+$$
+I_5=\int \frac{1}{\sqrt{1-{(\frac{x}{a})}^2}}d\frac{x}{a}=\arcsin \frac{x}{a}+C
+$$</p>
+<h4 id="456">4.5.6.</h4>
+<div class="arithmatex">\[
+I_6=\int \frac{1}{\sqrt{a^2+x^2}}dx=-\ln {|\sqrt{1+{(\frac{x}{a})}^2}-{(\frac{x}{a})}^2|}+C
+\]</div>
+<p>证明：
+$$
+I_6=\int \frac{1}{\sqrt{1+{(\frac{x}{a})}^2}}d\frac{x}{a}=-\ln {|\sqrt{1+{(\frac{x}{a})}^2}-{(\frac{x}{a})}^2|}+C
+$$
+令：<span class="arithmatex">\(\frac{1}{\sqrt{1+{(\frac{x}{a})}^2}}=\sin \theta，\frac{x}{a}=\cot \theta\)</span>。</p>
+<p>即：
+$$
+I_6=\int \sin \theta d\cot \theta=-\int \csc \theta d\theta=-\ln {|\csc \theta-\cot \theta|}+C
+$$
+又：
+$$
+\csc \theta=\sqrt{1+{(\frac{x}{a})}^2}，\cot \theta=\frac{x}{a}。
+$$
+所以：
+$$
+I_6=-\ln {|\sqrt{1+{(\frac{x}{a})}^2}-{(\frac{x}{a})}^2|}+C
+$$</p>
+<h4 id="457">4.5.7.</h4>
+<div class="arithmatex">\[
+I_7=\int \frac{1}{x^2+a^2}dx=\arctan \frac{x}{a}+C
+\]</div>
+<p>证明：
+$$
+I_7=\int \frac{1}{{(\frac{x}{a})}^2+1}d(\frac{x}{a})=\arctan \frac{x}{a}+C
+$$</p>
+<h4 id="458">4.5.8.</h4>
+<div class="arithmatex">\[
+I_8=\int \frac{1}{x^2-a^2}dx=\frac{1}{2a}\ln{|\frac{x-a}{x+a}|}+C
+\]</div>
+<p>证明：
+$$
+I_8=\frac{1}{a}\int \frac{1}{{(\frac{x}{a})}^2-1}d\frac{x}{a}
+$$
+令：<span class="arithmatex">\(\frac{1}{{(\frac{x}{a})}^2-1}=\text{tan}^2\theta，\frac{x}{a}=\csc \theta\)</span></p>
+<p>则有:
+$$
+I_8=\frac{1}{a}\int \text{tan}^2\theta\csc \theta=-\frac{1}{a}\int \sec \theta d\theta=-\frac{1}{a}\ln {|\sec \theta+\tan \theta|}+C=\frac{1}{2a}\ln{|\frac{x-a}{x+a}|}+C
 $$</p>
 <h3 id="46">4.6.换元积分例题</h3>
 <h4 id="461eg1">4.6.1.eg.1</h4>
