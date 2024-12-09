@@ -5,10 +5,10 @@ nav:
       - Start: math/index.md
       - 0.Start: math/0.Start.md 
       - 4.不定积分: math/4.不定积分.md
-    - 伯努利方法: math/Bernoulli's_method.md
-    - 傅里叶-莫茨金消元法: math/fourier-motzkin-elimination.md
   - Computer Science:
     - Start: cs/start.md
+    - 伯努利方法: cs/Bernoulli's_method.md
+    - 傅里叶-莫茨金消元法: cs/fourier-motzkin-elimination.md
   - Code-server: http://8.140.235.199:8080/
 theme:
   name: material
