@@ -9,6 +9,11 @@ nav:
     - Start: cs/start.md
     - 伯努利方法: cs/Bernoulli's_method.md
     - 傅里叶-莫茨金消元法: cs/fourier-motzkin-elimination.md
+  - Others:
+    - 中国近代史纲要:
+      - Start: history/index.md
+      - 附录.1: history/附录.1.md
+      - Chapter 1: history/Chapter 1.md              
   - Code-server: http://8.140.235.199:8080/
 theme:
   name: material

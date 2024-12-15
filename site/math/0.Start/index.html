@@ -495,7 +495,7 @@
           <li class="md-nav__item">
   <a href="#01" class="md-nav__link">
     <span class="md-ellipsis">
-      0.1.反三角函数
+      0.1.双曲函数与反三角函数
     </span>
   </a>
   
@@ -539,48 +539,6 @@
           </ul>
         </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Bernoulli%27s_method/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    伯努利方法
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../fourier-motzkin-elimination/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    傅里叶-莫茨金消元法
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -656,6 +614,48 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs/Bernoulli%27s_method/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    伯努利方法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs/fourier-motzkin-elimination/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    傅里叶-莫茨金消元法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -704,25 +704,88 @@
   <h1>0.Start</h1>
 
 <h2 id="0start">0.Start</h2>
-<h3 id="01">0.1.反三角函数</h3>
-<p><img alt="math_note" src="../../images/math_note.png" />
-$$
-\alpha =\arcsin {x}=\arccos{\sqrt{1-x^2}}=\arctan{\frac{x}{\sqrt{1-x^2}}}=arccot{\frac{\sqrt{1-x^2}}{x}}
-$$</p>
+<h3 id="01">0.1.双曲函数与反三角函数</h3>
+<p><img alt="math_note" src="../../images/math_note.png" /></p>
 <div class="arithmatex">\[
-\beta=\arcsin{\sqrt{1-x^2}}=\arccos{x}=\arctan{\frac{\sqrt{1-x^2}}{x}}=arccot\frac{x}{\sqrt{1-x^2}}
+\alpha =\arcsin {x}=\arccos{\sqrt{1-x^2}}=\arctan{\frac{x}{\sqrt{1-x^2}}}=\text {arccot}{\frac{\sqrt{1-x^2}}{x}}
 \]</div>
 <div class="arithmatex">\[
-\\\\
-\sec x=\frac{1}{\cos x}，\csc x=\frac{1}{\sin x}。
+\beta=\arcsin{\sqrt{1-x^2}}=\arccos{x}=\arctan{\frac{\sqrt{1-x^2}}{x}}=\text {arccot}\frac{x}{\sqrt{1-x^2}}
+\]</div>
+<hr />
+<div class="arithmatex">\[
+\sec x=\frac{1}{\cos x},\csc x=\frac{1}{\sin x}.
 \]</div>
 <div class="arithmatex">\[
-{(\sec x)}^{'}=\tan x\cdot\sec x，{(\csc x)}{'}=-\cot x\cdot\csc x。
+{(\sec x)}^{'}=\tan x\cdot\sec x,{(\csc x)}{'}=-\cot x\cdot\csc x.
+\]</div>
+<hr />
+<div class="arithmatex">\[
+{(\arcsin x)}'=\frac{1}{\sqrt{1-x^2}},{(\arccos x)}'=-\frac{1}{\sqrt{1-x^2}}.
 \]</div>
 <div class="arithmatex">\[
-\\\\{(\arcsin x)}^{'}=\frac{1}{\sqrt{1-x^2}},{(\arccos x)}^{'}=-\frac{1}{\sqrt{1-x^2}}.\\
-{(\arctan x)}^{'}=\frac{1}{1+x^2},{(arccot\ x)}^{'}=-\frac{1}{1+x^2}.\\
-{(arcsec\ x)}^{'}=\frac{1}{|x|\sqrt{x^2-1}},{(arccsc\ x)}^{'}=-\frac{1}{|x|\sqrt{x^2-1}}.
+{(\text{arcsh}\ x)}'=\frac{1}{\sqrt{x^2+1}},{(\text{arcch}\ x)}'=\frac{1}{\sqrt{x^2-1}}.
+\]</div>
+<div class="arithmatex">\[
+{(\arctan x)}^{'}=\frac{1}{1+x^2},{(\text {arccot}\ x)}^{'}=-\frac{1}{1+x^2}.
+\]</div>
+<div class="arithmatex">\[
+{(\text{arcth}\ x)}'=\frac{1}{1-x^2}
+\]</div>
+<div class="arithmatex">\[
+{(\text {arcsec}\ x)}^{'}=\frac{1}{|x|\sqrt{x^2-1}},{(\text {arccsc}\ x)}^{'}=-\frac{1}{|x|\sqrt{x^2-1}}.
+\]</div>
+<hr />
+<div class="arithmatex">\[
+e^{ix}=\cos x+i\sin x
+\]</div>
+<div class="arithmatex">\[
+e^x=\ch x+\sh x
+\]</div>
+<div class="arithmatex">\[
+\cos x=\frac{e^{ix}+e^{-ix}}{2},\sin x=\frac{e^{ix}-e^{-ix}}{2i},\tan x=\frac{1}{i}\cdot \frac{e^{ix}-e^{-ix}}{e^{ix}+e^{-ix}}.
+\]</div>
+<div class="arithmatex">\[
+\ch x=\frac{e^{x}+e^{-x}}{2},\sh x=\frac{e^{x}-e^{-x}}{2},\th x=\frac{e^{x}-e^{-x}}{e^{x}+e^{-x}}.
+\]</div>
+<hr />
+<div class="arithmatex">\[
+i\sh x=\sin ix\quad or\quad i\sin x=\sh ix
+\]</div>
+<div class="arithmatex">\[
+\ch x=\cos ix\quad or\quad \cos x=\ch ix
+\]</div>
+<div class="arithmatex">\[
+i\th x=\tan ix\quad or\quad i\tan x=\th ix
+\]</div>
+<hr />
+<div class="arithmatex">\[
+\text {arcch}\ x=\left
+\{
+\begin{aligned}
+&amp;\ln (x+\sqrt{x^2-1})\ ,\ \text{arcch}\ x&gt;=0\\
+&amp;\ln (x-\sqrt{x^2-1})\ ,\ \text{arcch}\ x&lt;0
+\end{aligned}
+\right.
+\]</div>
+<div class="arithmatex">\[
+\text {arcsh}\ x=\ln (x+\sqrt{x^2+1})
+\]</div>
+<div class="arithmatex">\[
+\text {arcth}\ x=\ln\sqrt{\frac{1+x}{1-x}}
+\]</div>
+<div class="arithmatex">\[
+\arccos x=\ln (ix+i\sqrt{x^2+1}),\arcsin x=\frac{1}{i}\cdot\ln (ix-i\sqrt{x^2-1}),\arctan x=\frac{1}{i}\cdot \ln\sqrt{\frac{i-x}{i+x}}
+\]</div>
+<hr />
+<div class="arithmatex">\[
+i\text{arcsh}\ x=\arcsin ix\quad or\quad i\arcsin x=\text{arcsh}\ ix
+\]</div>
+<div class="arithmatex">\[
+\text{arcch}\ x=\arccos ix\quad or\quad \arccos x=\text{arcch}\ ix
+\]</div>
+<div class="arithmatex">\[
+i\text{arcth}\ x=\arctan ix\quad or\quad i\arctan x=\text{arcth}\ ix
 \]</div>
 
 
