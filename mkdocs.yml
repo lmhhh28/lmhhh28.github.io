@@ -12,7 +12,8 @@ nav:
   - Others:
     - 中国近代史纲要:
       - Start: history/index.md
-      - 附录.1: history/附录.1.md
+      - 附录.1.条约: history/附录.1.条约.md
+      - 附录.2.Q&A: history/附录.2.Q&A.md
       - Chapter.1: history/Chapter.1.md              
   - Code-server: http://8.140.235.199:8080/
 theme:
