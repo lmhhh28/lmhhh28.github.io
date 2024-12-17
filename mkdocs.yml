@@ -15,7 +15,8 @@ nav:
       - 附录.1.条约: history/附录.1.条约.md
       - 附录.2.Q&A: history/附录.2.Q&A.md
       - Chapter.1: history/Chapter.1.md
-      - Chapter.2: history/Chapter.2.md              
+      - Chapter.2: history/Chapter.2.md
+      - Chapter.3: history/Chapter.3.md              
   - Code-server: http://8.140.235.199:8080/
 theme:
   name: material
