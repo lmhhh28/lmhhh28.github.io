@@ -1,6 +1,6 @@
 ## **How did Bernoulli root?**
 
-### 1.引入
+### **1.引入**
 
 [李克大](https://zh.z-lib.gs/author/李克大)*,* [李尹裕](https://zh.z-lib.gs/author/李尹裕)的《有趣的差分方程》一书中曾介绍利用差分方程进行开根近似计算的Bernoulli方法，原理类似于构造形如：
 
@@ -8,7 +8,7 @@ $$F_{n+1}+pF_{n}+qF_{n-1}=0$$
 
 的常系数线性齐次差分方程。笔者当时阅读时认为其线性的代数结构在进行整数开方算法上具有较大的优化空间，遂在其基础上进行改造，并加以实现。
 
-### 2.Principle
+### **2.Principle**
 
 对于分式线性递推：
 
@@ -48,7 +48,7 @@ $$q=\frac{\left \lfloor \sqrt{m}  \right \rfloor+\sqrt{m}  }{\left \lfloor \sqrt
 
 不难看出：当$n$趋近于无穷时，$2x_{n}+\left \lfloor \sqrt{m}  \right \rfloor$无限趋近于$\sqrt{m}$。
 
-### 3.Example
+### **3.Example**
 
 $eg.求\sqrt{114514}近似值。$
 
@@ -68,7 +68,7 @@ $$x_{3}=0.199586,2x_{3}+338=338.399172$$
 
 由计算工具得：$\sqrt{114514}=338.399172$
 
-### 4.代码实现
+### **4.代码实现**
 
 分式线性递推：
 
@@ -116,7 +116,7 @@ $$
 
 用C++实现一个Martix类，实现矩阵的构造，析构，乘法，幂运算。
 
-#### 4.1.类的声明
+#### **4.1.类的声明**
 
 ```c++
 #define rows 2
@@ -134,7 +134,7 @@ class Martix{
 };
 ```
 
-#### 4.2.矩阵的构造
+#### **4.2.矩阵的构造**
 
 ```c++
 void Martix::Cre_Martix(){
@@ -144,7 +144,7 @@ void Martix::Cre_Martix(){
 }
 ```
 
-#### 4.3.矩阵的析构
+#### **4.3.矩阵的析构**
 
 ```c++
 Martix::~Martix(){
@@ -154,7 +154,7 @@ Martix::~Martix(){
 }
 ```
 
-#### 4.4.矩阵的乘法
+#### **4.4.矩阵的乘法**
 
 ```c++
 void Martix::Multi_Martix(int **p,int **q,int **result) {
@@ -175,7 +175,7 @@ void Martix::Multi_Martix(int **p,int **q,int **result) {
 }
 ```
 
-#### 4.5.矩阵的幂
+#### **4.5.矩阵的幂**
 
 这里可以使用快速幂来优化算法。
 
@@ -195,7 +195,7 @@ void Martix::Pow_Martix(int **p, int n, int **result) {
 }
 ```
 
-#### 4.6.计算整数部分
+#### **4.6.计算整数部分**
 
 利用二分法计算$\left \lfloor \sqrt{m} \right \rfloor$:
 
@@ -214,7 +214,7 @@ int Int_Sqrt(int n) {
 }
 ```
 
-### 5.时间复杂度分析
+### **5.时间复杂度分析**
 
 $x_{n}$的通项公式为：
 
