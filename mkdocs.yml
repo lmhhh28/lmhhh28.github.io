@@ -20,7 +20,10 @@ nav:
     - Chapter.4: history/Chapter.4.md
     - Chapter.5: history/Chapter.5.md
     - Chapter.6: history/Chapter.6.md
-    - Chapter.7: history/Chapter.7.md              
+    - Chapter.7: history/Chapter.7.md
+  - Laws:
+    - Start: law/index.md
+    - Examples: law/Examples.md              
   - Code-server: http://8.140.235.199:8080/
 theme:
   name: material
