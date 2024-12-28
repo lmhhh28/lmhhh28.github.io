@@ -1,0 +1,1371 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.46">
+    
+    
+      
+        <title>Examples - My Note</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Serif SC";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#markdown" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../.." title="My Note" class="md-header__button md-logo" aria-label="My Note" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Note
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Examples
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="indigo"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="自动"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="自动" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/lmhhh28/lmhhh28.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    My Note Resource
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../math/" class="md-tabs__link">
+          
+  
+  Math
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../cs/start/" class="md-tabs__link">
+          
+  
+  Computer Science
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../history/" class="md-tabs__link">
+          
+  
+  中国近代史纲要
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  Laws
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="http://8.140.235.199:8080/" class="md-tabs__link">
+        
+  
+    
+  
+  Code-server
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="My Note" class="md-nav__button md-logo" aria-label="My Note" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My Note
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lmhhh28/lmhhh28.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    My Note Resource
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Math
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Math
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    数学笔记
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            数学笔记
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/0.Start/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.Start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../math/4.%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.不定积分
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Computer Science
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Computer Science
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs/start/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs/Bernoulli%27s_method/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    伯努利方法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cs/fourier-motzkin-elimination/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    傅里叶-莫茨金消元法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    中国近代史纲要
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            中国近代史纲要
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../history/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../history/%E9%99%84%E5%BD%95.1.%E6%9D%A1%E7%BA%A6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录.1.条约
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../history/%E9%99%84%E5%BD%95.2.Q%26A/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录.2.Q&A
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../history/%E9%99%84%E5%BD%95.3.%E4%BC%9A%E8%AE%AE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录.3.会议
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../history/Chapter.1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter.1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../history/Chapter.2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter.2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../history/Chapter.3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter.3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../history/Chapter.4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter.4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../history/Chapter.5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter.5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../history/Chapter.6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter.6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../history/Chapter.7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter.7
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Laws
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Laws
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Examples
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Examples
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.泸州遗赠案
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.齐玉苓受教育权案
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.杜宝良巨额交通罚款案
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.河南洛阳种子案
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.“见死不救”案
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.里格斯诉帕尔默案
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.学生田某诉北京某高校案
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.乙肝歧视案
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.深圳卖淫嫖娼示众案
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.重庆最牛钉子户（访谈）
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://8.140.235.199:8080/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Code-server
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="markdown"><strong>这是Markdown文件</strong></h1>
+<hr />
+<h2 id="1"><strong>1.泸州遗赠案</strong></h2>
+<p style="text-indent:2em">四川泸州的黄永彬与妻子蒋伦芳结婚30多年，有一养子。1994年起黄开始与张学英来往，1996年起二人公开同居，依靠黄的工资（退休金）及奖金生活，并曾经共同经营。但黄永彬与蒋伦芳并未离婚。2001年2月起，黄病重住院，蒋伦芳一直在医院照顾，法院认为其尽到了扶养义务。4月18日黄永彬立下遗嘱：“我决定，将依法所得的住房补贴金、公积金、抚恤金和卖泸州市江阳区一套住房售价的一半（即4万元），以及手机一部遗留给我的朋友张学英一人所有。我去世后骨灰盒由张学英负责安葬。”</p>
+<p style="text-indent:2em">4月20日，该遗嘱在纳溪区公证处得到公证。黄去世后，张根据遗嘱向蒋索要财产和骨灰盒，遭到蒋拒绝。张遂向纳溪区人民法院起诉，请求依据《继承法》的有关规定，判令被告蒋伦芳按遗嘱履行，同时对遗产申请诉前保全。</p>
+<p style="text-indent:2em">从5月17日起，法院经过4次开庭之后（其间曾一度中止，2001年7月13日，纳溪区司法局对该公证遗嘱的“遗赠抚恤金”部分予以撤销，依然维持了住房补贴和公积金中属于黄永彬部分的公证。此后审理恢复），于10月11日判决驳回原告张学英的诉讼请求。法院判决依据《民法通则》第七条“民事活动应当尊重社会公德，不得损害社会公共利益”的基本原则，认为黄某的遗嘱虽然是其真实意思的表示，形式上也合法，但遗嘱内容存在违法之处，且黄某与原告的非法同居关系违反了《婚姻法》的有关规定，黄某的遗赠遗嘱是一种违反公序良俗和法律的行为，因此是无效的。</p>
+<p style="text-indent:2em">本案判决获得了当地民众的热烈支持，但却被很多法律界人士评价为“道德与法”、“情与法”的冲突，甚至认为这是在舆论的压力下做出的一起错案。</p>
+
+<hr />
+<h2 id="2"><strong>2.齐玉苓受教育权案</strong></h2>
+<p style="text-indent:2em">齐玉苓与陈晓琪均系滕州八中1990届应届初中毕业生，陈晓琪在1990年中专预选考试时成绩不合格，失去了升学考试资格。齐玉苓则通过了预选考试，在统考中成绩为441分，超过了委培录取的分数线。后来济宁商校发出了录取“齐玉玲”为该校1990级财会专业委培生的通知书，陈晓琪在其父陈克政的操纵下，从滕州八中领取了该通知后即以“齐玉玲”的名义入济宁商校就读。陈晓琪从济宁商校毕业后，以“齐玉玲”的姓名在中国银行滕州支行工作。齐玉苓经过复读，后就读于邹城劳动技校，1996年8月被分配到山东鲁南铁合金总厂工作，自1998年7月，有相当一段时间下岗待业。</p>
+<p style="text-indent:2em">1999年齐玉苓在得知陈晓琪冒用其姓名上学并就业这一情况后，以陈晓琪及有关学校和单位侵害其姓名权和受教育权为由诉至法院，要求被告停止侵害，并赔偿经济损失和精神损失。枣庄市中级人民法院一审认为陈晓琪侵害了齐玉苓的姓名权，判决陈晓琪停止侵害，陈晓琪、陈克政、济宁商校、滕州八中、滕州教委向齐玉苓赔礼道歉并赔偿其精神损失费35000元。</p>
+<p style="text-indent:2em">齐玉苓不服，提出上诉，要求陈晓琪等赔偿各种损失56万元。该案二审期间，最高人民法院于8月13日专门就该案作出了《关于以侵犯姓名权的手段侵犯宪法保护的公民受教育的基本权利是否应承担民事责任的批复》（法释【2001】25号），明确指出：根据本案事实，陈晓琪等以侵犯姓名权的手段，侵犯了齐玉苓依据宪法规定所享有的受教育的基本权利，并造成了具体的损害后果，应承担相应的民事责任。</p>
+<p style="text-indent:2em">山东高院8月23日作出了终审判决，判决陈晓琪停止对齐玉苓姓名权的侵害；陈晓琪、陈克政、济宁商校、滕州八中、滕州教委向齐玉苓赔礼道歉；齐玉苓因受教育的权利被侵犯造成的直接经济损失7000元由陈晓琪和陈克政赔偿，济宁商校、滕州八中、滕州教委承担连带赔偿责任；齐玉苓因受教育的权利被侵犯造成的间接经济损失由陈晓琪、陈克政赔偿，济宁商校、滕州八中、滕州教委承担连带赔偿责任；陈晓琪、陈克政、济宁商校、滕州八中、滕州教委赔偿齐玉苓精神损害赔偿费5000元。</p>
+
+<hr />
+<h2 id="3"><strong>3.杜宝良巨额交通罚款案</strong></h2>
+<p style="text-indent:2em">2003年10月28日，《中华人民共和国道路交通安全法》由第十届全国人民代表大会常务委员会第五次会议通过，自2004年5月1日起施行。2004年10月22日，北京市第十二届人民代表大会常务委员会第十五次会议通过了《北京市实施<中华人民共和国道路交通安全法>办法》，该办法自2005年1月1日起施行。</p>
+<p style="text-indent:2em">2005年5月23日，安徽进京务工人员杜宝良在极其偶然的情况下得知，他在北京真武庙路同一地点违反禁行标志105次，均被“电子眼”拍摄记录在案，须交罚款10500元、交通违章记分210分。这意味着,起早贪黑、以贩菜谋生的他一年白干了。自打交了1万多元的交通违法罚款后，老杜两口子的生活就被打乱了，“每天在家就是复习交通法规”。</p>
+<p style="text-indent:2em">此事经媒体披露后引起广泛关注，舆论称之为“杜宝良现象”。北京市交管局法制处认为，“暗中执法符合法律规定，是交管部门针对交通违法行为采取的一种执法手段”。新交法赋予了交警查处交通违法行为的权力，交警拥有执法权，暗中执法正是交警行使执法权、查处违法行为的一种方式。为达到严格执法的效果，交管部门采取了多种手段，包括现场疏导指挥、电子眼监控、交警直接拍摄等，其中也包括暗中执法。</p>
+<p style="text-indent:2em">有出租车司机就此事发表感言：我们开车走在没有交警和电子眼值班的地方，还要不要遵守交规？我们很多驾车人都有一种心理，好像遵守交规是为对付交警而不得已的行为。现在设置交通电子眼的目的也就在于针对这种心理与现象而设的吧。如果哪天我们的驾车人独自一人行驶在没有交警和电子眼的路上，仍能自然而然地按交通规则开车，那电子眼就可以休息了。电子眼刚刚开始不久，碰到这种事恐怕也是头一次，应该有个改进的过程，所以把板子打在交管上有点感情色彩。我倒觉得驾车人应该多想想自己如何守法。“这个人不知道这里不能这样走”恐怕不能作为逃避责任的借口，否则还怎么去执法？我们这里，讲借口而推避责任的事太多了。这里更不应该以农民还是律师来划分该不该遵守交规的界线。</p>
+<p style="text-indent:2em">也有社会人士认为：作为司机，无论是什么水平的司机，不管有什么理由都必须遵守法规，不能因为不懂法就可以违法，然后人们对他们表示同情，这不符合情理。“杜宝良违章事件”其实暴露出另一个问题，这就是对交法普及教育不够。我国现行的新交法是40多年出现的第一部交通法规，到现在实行才一年多，而各地相关细则实行的时间更短，因此需要几千万有车人以各种方法进行交通法的普及宣传。制定法规的目的是让人们都遵守，如果仅仅靠罚那便偏离了制定法规的目的了。对于司机来说，有义务主动学习新交法及相关细则，不应该以不知道等理由推托自己应该承担的责任。如果说这件事有什么意义，那只能说暴露了交通管理的弊病和驾车人素质这一现实。此外，这也正是一次对新交法的普及教育。北京市公安局新闻发言人就此表示，在日常的执法中还存在一些比较突出的问题，比如在告知违章中，就没有很好考虑到，现实中一些公民还不能及时通过网络了解违章行为。在今后的整改中，要强化交通标志，使人一目了然。市局将整改规范公安执法行为，促进执法公正。</p>
+<p style="text-indent:2em">6月13日，杜宝良在律师的陪同下，就“万元罚款单”一事向北京市西城区人民法院提起行政诉讼。今年40岁的杜宝良告诉记者：“这是我平生第一次打官司。”杜宝良的律师王英指出，根据《北京市实施《中华人民共和国道路交通安全法》办法》第107条第二款的规定：“公安机关交通管理部门及其交通警察发现机动车有未处理的违法行为记录的，应当书面告知机动车所有人或者驾驶人，机动车所有人或者驾驶人应当按照告知的时间、地点接受出处理。”“西单队记录了杜宝良未处理违法行为高达105次，却从未履行过其‘书面告知’义务”。6月18日上午，北京市西城区人民法院告诉庭正式向杜宝良发出了《行政案件受理通知书》，内容为：“杜宝良：你诉西城交通支队西单队一案的起诉状，本院已于2005年6月13日收到，经审查，你的起诉基本符合法定受理条件，本院决定立案审理。”</p>
+<p style="text-indent:2em">在得知法院立案的消息后，杜宝良表示，过去他一直认为，打官司是一件不光彩的事，这次是他平生第一次走进法院大门，而且还是“民告官”，老家的人都知道了。但现在他改变了以前的想法，“那么多人帮助我，尤其是为我提供法律援助的律师。我也开始知道一些法律知识了，懂得用法律保护自己了。”</p>
+
+<hr />
+<h2 id="4"><strong>4.河南洛阳种子案</strong></h2>
+<p style="text-indent:2em">2001年5月22日，汝阳公司与伊川公司签订了一份合同，约定由伊川公司为其繁殖玉米种子。2003年初，汝阳公司以伊川公司没有履约为由将其起诉到洛阳市中级人民法院，请求赔偿。双方对案件事实不存在争议。双方的分歧主要在赔偿损失的计算方法上。原告主张适用《种子法》，以“市场价”计算赔偿数额；被告则要求适用《河南省农作物种子管理条例》，以“政府指导价”计算。</p>
+<p style="text-indent:2em">2003年5月27日，承办该案的李慧娟在院审委会的同意下，下发“2003洛民初字”第26号判决书，支持了原告的主张，判令伊川公司按市场价格进行赔偿。判决书中写道：“《种子法》实施后，玉米种子的价格已由市场调节，《河南省农作物种子管理条例》作为法律位阶较低的地方性法规，其与《种子法》相抵触的条款自然无效。”判决后，双方都提出了上诉。</p>
+<p style="text-indent:2em">同年10月18日，河南省人大常委会办公厅下发了《关于洛阳市中级人民法院在民事审判中违法宣告省人大常委会通过的地方性法规有关内容无效问题的通报》，要求河南省高院对洛阳市中院的“严重违法行为作出认真、严肃的处理，对直接责任人和主管领导依法作出处理”。省人大认为李慧娟无权以法官身份宣布地方性法规无效，洛阳市中院的判决违反了《宪法》；人大是立法机关，法院是执法机关，主要任务是适用法律，法律的修改和废止是人大职权范围的事情，所以不管是否冲突法院都无权去宣布法规有效还是无效。</p>
+<p style="text-indent:2em">随后，洛阳市中院党组根据要求作出决定撤销判决书签发人——民事庭副庭长的职务和李慧娟的审判长职务，免去李慧娟的助理审判员。10月21日，河南省高级法院在一份对全省下发的通报中称，“个别干警人民代表大会制度意识淡薄，政治业务素质不高......无论案件具体情况如何，均不得在判决书中认定地方法规的内容无效。”</p>
+<p style="text-indent:2em">2004年3月30日，最高人民法院发出《关于河南省汝阳县种子公司与河南省伊川县种子公司玉米种子代繁合同纠纷一案请示的答复》认为：根据《立法法》第七十九条规定：“法律的效力高于行政法规、地方性法规、规章，行政性法规的效力高于地方性法规、规章”；《中华人民共和国合同法》解释（一）第四条规定：“合同法实施以后，人民法院确认合同无效应当以全国人大及其常委会制定的法律和国务院制定的行政性法规为依据，不得以地方性法规和行政规章为依据”，人民法院在审理案件过程中，认为地方性法规与法律行政法规的规定不一致，应当适用法律行政法规的相关规定。</p>
+<p style="text-indent:2em">4月1日，河南省人大常委会通过《河南省实施《中华人民共和国种子法》实施办法》，办法自7月1日起施行。《河南省农作物种子管理条例》同时废止。</p>
+
+<hr />
+<h2 id="5"><strong>5.“见死不救”案</strong></h2>
+<p style="text-indent:2em">2004年11月12日晚11时30分，海南东线高速路122公里处发生一起车祸：海南某公司的韩某被大货车挤压到护栏上两个多小时，万宁市人民医院的120急救医生到达现场后仅仅是摸黑简单地查看了一下情况，并没有采取任何救援措施就返回急救车上。韩某因失血过多，两小时后死亡。</p>
+<p style="text-indent:2em">如何解决这种耻辱性的“见死不救”为标志的时代道德困境，诉诸法律，还是重建道德？人们面对道德的失范，往往会想起法律的武器。</p>
+<p style="text-indent:2em">“见死不救”事件屡屡发生一再表明，这一社会问题，仅仅靠道德的约束和有限的法律责任是远远不够的，惟有施以全面的法律手段，方能惩治这种具有极大社会危害性质的冷漠和怠责行为。也就是说，国家公务员在树立和倡导社会公德和善良风俗上应当起到模范带头作用，这种“应当”可以提升到法律义务的层面；每个公民应当对自己义务范围内的危险情势负有义不容辞的救助义务，这种责任也可以强制提到法律的层面上。</p>
+<p style="text-indent:2em">早在2001年的全国人代会上，即有32名代表就增加刑法罪名提出议案。建议刑法增加新名：“见危不救和见死不救罪”。“见危不救”和“见死不救”等现象引起了社会各界的广泛关注。“见危不救”和“见死不救”造成的社会影响相当恶劣，在有些国家早已有此类立法。在这次人代会上，刘如军等32位代表也就此提出议案，他们建议在刑法中增加“见危不救和见死不救罪”，立法内容应包括犯罪行为的法律界定和惩治条款等。</p>
+<p style="text-indent:2em">有法律学者建议规定：公民对于国家公共利益与他人的合法权益遭受危害时，负有救助义务；对于“见死不救”的行为，可以按其社会危害性及责任人当时的主客观条件，追究其刑事责任。上海市政协委员、上海大学法学院教授倪正茂和一些政协委员也曾提出建议——设立“见死不救罪”，并同时制定“见义勇为奖励法”。他们认为，“见死不救罪”的量罪依据,可以参考造成事情后果的轻重、事情发生时当事人的处置态度等等。见义勇为者奖励可根据当事人当时的献身程度、事情发生时的危急情况，以及所取得的有效后果等来决定。</p>
+
+<hr />
+<h2 id="6"><strong>6.里格斯诉帕尔默案</strong></h2>
+<p style="text-indent:2em">1882年帕尔默在纽约用毒药杀死了自己的祖父，他的祖父在现有的遗嘱中给他留下了一大笔遗产。帕尔默因杀人的罪行被法庭判处监禁几年，但帕尔默是否能享有继承其祖父遗产的权利成了一个让法官头疼的疑难案件。帕尔默的姑姑们主张，既然帕尔默杀死了被继承人，那么法律就不应当继续赋予帕尔默以继承遗产的任何权利。但纽约州的法律并未明确规定如果继承人杀死被继承人将当然丧失继承权，相反帕尔默祖父生前所立遗嘱完全符合法律规定的有效条件。因此，帕尔默的律师争辩说，既然这份遗嘱在法律上是有效的，既然帕尔默被一份有效遗嘱指定为继承人那么他就应当享有继承遗产的合法权利。如果法院剥夺帕尔默的继承权，那么法院就是在更改法律，就是用自己的道德信仰来取代法律。</p>
+<p style="text-indent:2em">审判这一案件的格雷法官亦支持律师的说法，格雷法官认为：如果帕尔默的祖父早知道帕尔默要杀害他，他或许愿意将遗产给别的什么人，但法院也不能排除相反的可能，即祖父认为即使帕尔默杀了人（甚至就是祖父自己）他也仍然是最好的遗产继承人选。法律的含义是由法律文本自身所使用的文字来界定的，而纽约州遗嘱法清楚确定，因而没有理由弃之不用。此外如果帕尔默因杀死被继承人而丧失继承权，那就是对帕尔默在判处监禁之外又加上一种额外的惩罚。这是有违“罪行法定”原则的，对某一罪行的惩罚，必须由立法机构事先作处规定，法官不能在判决之后对该罪行另加处罚。</p>
+<p style="text-indent:2em">但是，审理该案的另一位法官厄尔却认为法规的真实含义不仅取决于法规文本。而且取决于文本之外的立法者意图，立法者的真实意图显然不会让杀人犯去继承遗产。厄尔法官的另外一条理由是，理解法律的真实含义不能仅以处于历史孤立状态中的法律文本为依据，法官应当创造性的构思出一种与普遍渗透于法律之中的正义原则最为接近的法律，从而维护整个法律体系的统一性。厄尔法官最后援引了一条古老的法律原则——任何人不能从其自身的过错中受益——来说明遗嘱法应被理解为否认以杀死继承人的方式来获取继承权。</p>
+<p style="text-indent:2em">最后，厄尔法官的意见占了优势，有四位法官支持他；而格雷法官只有一位支持者。纽约州最高法院判决剥夺帕尔默的继承权。</p>
+
+<hr />
+<h2 id="7"><strong>7.学生田某诉北京某高校案</strong></h2>
+<p style="text-indent:2em">1994年9月，田某考入北京某高校，并取得本科生学籍。1996年2月29日，田某在参加电磁学课程补考过程中，随身携带写有电磁学公式的纸条，被监考教师发现。监考教师按照考场纪律，当即停止了田某的考试。该校于同年3月5日按照本校有关规定认定田某的行为是考试作弊，田某按退学处理，4月10日填发了学籍变动通知。</p>
+<p style="text-indent:2em">但是，该校没有直接向田某宣布处分决定和送达变更学籍通知，没有给予田某提出申辩意见的机会，还未给田某办理退学手续。田某继续在该校以在校大学生的身份参加正常学习及学校组织的活动。在此期间，该高校为田某补办过曾丢失的学生证，每学年均收取田某交纳的教育费，并为田某进行注册、发放大学生补助津贴。</p>
+<p style="text-indent:2em">还安排田某参加了大学生毕业实习设计，并由论文指导教师领取了学校发放的毕业设计结业费。田某还以该校大学生的名义参加考试，先后取得了大学英语四级、计算机应用水平测试BAS1C语言成绩合格证书。田某在该校学习的4年中，成绩全部合格，通过了毕业实习、设计及论文答辩，获得优秀毕业论文及毕业总成绩全班第九名。</p>
+<p style="text-indent:2em">1998年6月，田某所在高校的有关部门以田某不具有学籍为由，拒绝为其颁发毕业证，进而也未向教育行政部门呈报毕业派遣资格表。田某遂向北京海淀区人民法院提起行政诉讼，认为被告的这种作法违背了法律规定。请求判令被告：一、为我颁发毕业证、学位证；二、及时有效地为我办理毕业派遣手续；三、赔偿我经济损失3000元；四、在校报上公开向我赔礼道歉，为我恢复名誉；五、承担本案诉讼费。</p>
+<p style="text-indent:2em">北京市海淀区人民法院于1999年2月14日判决：一、被告北京某高校在本判决生效之日起30日内向原告田某颁发大学本科毕业证书；二、被告北京某高校在本判决生效之日起60日内召集本校的学位评定委员会对原告田某的学士学位资格进行审核；三、被告北京某高校于本判决生效之日起30日内履行向当地教育行政部门上报原告田某毕业派遣的有关手续的职责；四、驳回原告田某的其它诉讼请求。</p>
+<p style="text-indent:2em">第一审宣判后，北京某高校提出上诉。请求二审撤销原判，驳回田某的诉讼请求。北京市第一中级人民法院经审理认为，原判认定事实清楚、证据充分，适用法律正确，审判程序合法，应当维持。上诉人北京某高校认为被上诉人田某已不具有该校学籍，与事实不符，不予采纳。学校依照国家的授权，有权制定校规、校纪，并有权对在校学生进行教学管理和违纪处理。</p>
+<p style="text-indent:2em">但是法院认为制定的校规、校纪和据此进行的教学管理和违纪处理，必须符合法律法规和规章的规定，必须保护当事人的合法权益。北京某高校对田某按退学处理有违法律、法规和规章的规定，是无效的。据此，北京市第一中级人民法院依照行政诉讼法第六十一条第（一）项的规定于1999年4月26日判决：驳回上诉，维持原判。</p>
+
+<hr />
+<h2 id="8"><strong>8.乙肝歧视案</strong></h2>
+<p style="text-indent:2em">2004年12月4日，中央电视台《今日说法》栏目举办的“2004年度法治人物”评选活动揭晓，张先著名列全国“十大法治人物”之首。</p>
+<p style="text-indent:2em">张先著，芜湖人，安徽某高校毕业生。2003年6月，25岁的张先著报考了芜湖市公务员招聘考试，并在30名考生中名列第一。但是，张先著却因为携带乙肝病毒而被取消录取资格。 我国目前大约有1.2亿人和张先著一样是乙肝病毒携带者。这个群体在入学、求职甚至恋爱婚姻方面受到种种排斥。面对这种情况，张先著一纸诉状把芜湖市人事局告上法庭。他希望以自己的诉讼唤起社会公众对1.2亿人的关注，消除对病毒携带者的歧视。这场官司因此被媒体称作“乙肝歧视第一案”。</p>
+<p style="text-indent:2em">2004年4月2日，“乙肝歧视第一案”以张先著胜诉而告终。之后，浙江、四川、福建、广东等省修改了当地公务员禁止录用乙肝病毒携带者的有关规定。2005年1月17日，国家人事部和卫生部正式出台了《公务员录用体检通用标准（试行）》（国人部发〔2005〕1号）首次对公务员体检健康标准予以明确限定。这次颁布的新标准明确，肝炎的乙肝病毒携带者可以担任公务员。</p>
+
+<hr />
+<h2 id="9"><strong>9.深圳卖淫嫖娼示众案</strong></h2>
+<p style="text-indent:2em">自2006年11月24日开始，一场“扫黄”风暴席卷深圳福田。据悉，这场打击整治涉黄犯罪的专项行动将持续两个月。11月29日下午，福田警方召开的这两次公处大会对近期在开展专项行动中抓获的100名涉嫌操纵、容留、强迫妇女卖淫，路边招嫖卖淫嫖娟，派发色情卡片等违法犯罪人员进行了公开处理。</p>
+<p style="text-indent:2em">11月29日下午，记者在沙嘴社区公处现场看到，50名涉嫌卖淫嫖娼等违法犯罪活动的人员被全副武装的民警押解到现场。公处大会吸引了千余名当地群众前来观看，福田公安分局副局长井亦军宣布处罚决定时，现场不时响起掌声。</p>
+<p style="text-indent:2em">据介绍，福田警方的打击涉黄犯罪专项行动以沙头、福田、南园、梅林、景田片区城中村为重点，全面查封违法违规场所，严厉打击皮条客、灯头（容留吸毒人员的组织者）、鸡头、妈咪、保护伞及其他黑恶势力，打击路边、公园等场所招嫖女、卖淫嫖娟、派发色情卡片活动，清理出租屋内从事色情服务、卖淫嫖娼的违法犯罪人员，挤压利用出租屋违法犯罪的空间。</p>
+<p style="text-indent:2em">福田警方统计，11月25日、26日、27日。警方共出动了3000人次警力，连续开展三次集中统一行动。截至11月27日下午5时共破获涉黄案件109起，抓获违法犯罪人员167人，其中卖淫嫖娼行为人67人，站街招嫖女71人；其中刑事拘留17人，行政拘留142人，同时查封取缔场所79家，查封出租屋78间。</p>
+
+<hr />
+<h2 id="10"><strong>10.重庆最牛钉子户（访谈）</strong></h2>
+<p>最牛“钉子户”事件如何收场，众专家激辩重庆“钉子户”事件。</p>
+<p>采访专家：</p>
+<p>梁慧星（中国社科院法学所研究员、物权法专家)</p>
+<p>孙宪忠（中国社科院法学所研究员、物权法专家)</p>
+<p>尹田（北京大学法学院教授、物权法专家）</p>
+<p>李晓斌（北京市律师协会土地法专业委员会主任)</p>
+<p>温来成（中央财经大学公共管理学院教授）</p>
+<p>周孝正（中国人民大学社会学系教授）</p>
+<p>杨建顺（中国人民大学法学院教授、行政法专家)</p>
+<p>李延荣（中国人民大学法学院教授、土地法专家)</p>
+<p>毛寿龙（中国人民大学公共管理学院教授）</p>
+<ol>
+<li>应不应拆？敢不敢拆？</li>
+</ol>
+<p style="text-indent:2em">政府大力宣传物权法将使得人们“安居乐业”，房产这一多数中国人一辈子积攒的最大财富得以传给后代。但房与地产权分离的政策可能给“恒产”增加变数。</p>
+<p style="text-indent:2em">物权法五审时，全国人大常委会委员王英凡就曾提出：“你可以买房子，但是房子下面的土地不属于你。”从理论上说，中国的农村土地属于集体所有，城镇土地归国家所有。物权法里也如此规定，对于城市房屋所有者而言，他们拥有的只是土地使用权。</p>
+<p style="text-indent:2em">不过，“最牛钉子户”事件的浮现，还是让它的支持者们把目光和希望集中在这部新颁布尚未施行的法律上，在实践中它能起到多大作用？它能不能经得起司法和民意的考验？</p>
+<p style="text-indent:2em">梁慧星：如果以损害他人利益为目的，或者是你自己得利很少，但大家的损失很大，尤其是开发商合法取得了土地的使用权，它的权利也受损，就应该拆迁。因为这就涉及权利滥用了。</p>
+<p style="text-indent:2em">尹田：已经生效的判决应得到尊重。公民可以申诉，法庭可以特别安排暂停拆迁。法院在执行时也不能过于简单，应听取当事人的声音，消除对立情绪。</p>
+<p style="text-indent:2em">孙宪忠：许多专家说要拆，我觉得恐怕太草率了，不能这么简单化。如果老百姓真要在此寻死觅活，能强制去拆迁吗？而且这个案子是物权法颁布之后遇到的第一个征地案件，法官也不敢因为轻率决定强拆而导致严重社会问题，这不会是一个光彩的历史记录。</p>
+<p style="text-indent:2em">李晓斌：物权法在个案中，会有一定的作用，如果没有物权法，重庆钉子户的关注度可能不会这么大，没准法院就真正强制执行了。但在大范围的案件中，不会有立竿见影的作用。执法者以后会更强调私权利的保护，贯彻尊重私权利；在实践中进行思考，促使一些司法解释进一步制定。</p>
+<p style="text-indent:2em">周孝正：物权法还没有生效，但意思已经到了，要依法妥善协调，不要你死我活，两败俱伤。现在法院推迟强行拆迁是一件好事。开发商还是有一定的法律意识，让这个小楼存在。我赞成一个说法，就是这个房子留着，建设一个公园，这是一个里程碑，它是一种精神财富，可以提高我国的国格。</p>
+<p style="text-indent:2em">温来成：法院执行一直很受关注，如果不能执行那么老百姓就不会相信法院。就这件事情来说，法院已经劝说过，无效的话，根据正常的程序，强行拆迁也是一种手段。但各方应该相互协商，找到好的办法。如果补偿合情合理，绝大多数还是能够接受的。强制拆迁是最后的手段。</p>
+
+<ol>
+<li>“钉子户”是否有不搬的权利？</li>
+</ol>
+<p style="text-indent:2em">我国目前的拆迁和土地征收征用制度，是以《城市房屋拆迁管理条例》（以下简称《条例》)和《中华人民共和国土地管理法》为基础，包括一些地方法规与行政规章。“征收征用带有行政强制色彩，不是平等主体关系，而是一种命令和服从。”尹田说。《条例》曾一度规定，“对于拆迁决定，被征用拆迁房屋的所有人或使用人只能服从，不得拖延。”这规定是以后强制拆迁规定的源头。</p>
+
+<ol>
+<li>房管所的裁决和法院的判决均支持强拆。钉子户能否牛到就不搬走？</li>
+</ol>
+<p style="text-indent:2em">李延荣：拆迁房子不是目的，目的是征用土地。拆迁其实是公益和私利的协调，国家总有一些公益性用地需求，土地的占有是排他的，被一个具体的使用权人占有，完全通过市场不可能协商下来，为协调这种矛盾，就必须实行征用制度。国外也有征用土地的制度对于政府而言，它拥有处置的权力，肯定是强制性的，无需征求意见。</p>
+<p style="text-indent:2em">杨建顺：如果基于程序规范考虑，钉子户是对秩序的挑战。政府是收回土地，为了公共利益的实现，民众有协作的义务。</p>
+<p style="text-indent:2em">李晓斌：强拆从成文法来说合法，从法理上值得探讨，不能说完全违背法律精神。发达国家你不搬，铁路就要拐弯。中国正处在大规模建设阶段，我倾向于支持这样的制度———都必须签协议再拆迁，但现在可能不太现实，也许要再过十年二十年。在物权法中，“公共利益”的需要是征收征用的条件，这在宪法和土地管理法中均有规定。</p>
+<p style="text-indent:2em">尹田说，从立法技术上，拆迁补偿是行政权力运用的问题，不是调整平等主体之间的关系。其他国家的民法也只能原则性规定。但因为矛盾突出，立法机关重点研究。梁慧星曾尝试从“包括”和“不包括”两个相反角度，在《物权法》草案中对“公共利益”进行界定，以限制政府滥用权力。但物权法最终没有界定公益拆迁的概念。</p>
+
+<ol>
+<li>政府拆迁一方面是为了旧城改造，另一方面又是开发商场，到底符合公共利益，还是商业利益？</li>
+</ol>
+<p style="text-indent:2em">杨建顺：商业拆迁和公益拆迁是相对应的，都是为了实现公共利益。通过商品房开发，旧城改造，危改，实现公共利益；被拆迁户实现改善生活条件；开发商实现商业价值。在三方利益均衡的条件下，拆迁征地才有可能实现。</p>
+<p style="text-indent:2em">孙宪忠：最近有两个案例学者在引用：美国著名的辉瑞公司要在一个偏远小镇上建制药厂，遭到当地居民反对，但是法院认为药厂可以为当地提供就业机会，符合社会公共利益。我觉得这对严格的公共利益就有了松动。还有一个是美国修建帝国大厦时，也是认为大厦是美国的标志性建筑也被理解为公共利益。从这两个案子看，都不是为了纯粹的商业价值的增加，增加的价值不仅仅是为了政府利益。</p>
+
+<ol>
+<li>从重庆这个案例看，这个地方已经是成熟的商业区，无非是把小商业者赶走，叫大商业者来做，当地政府还要收钱（土地出让金)。纽约这个例子，政府根本是不收钱的。这有什么可比性呢？</li>
+</ol>
+<p style="text-indent:2em">李晓斌：现在“公共利益”宽一点可以。通俗说，是允许公共利益掺点水，大概有个平衡，不能掺得太多。在大区域，不能以房地产开发为主，以城市改造为辅；也不能单纯开发房地产项目。公共利益是个时代概念，不是中外概念，对它的限制也会逐步从严。逐步保护私权是一个趋势，物权法毕竟才出台，也是时代的产物，而且物权法也承受不了公共利益之重。拆不拆从成文法上没有商量余地，补偿是维权的核心，也是出现钉子户的主要原因。</p>
+<p style="text-indent:2em">李晓斌：从开发商的利润和政府的利益中挤出一部分作为补偿，我觉得这个目前能做到。严格界定公共利益，现在没有办法。拆迁法的补偿标准表面是按市场价格评估，其实是按房屋的补偿标准，没有说土地的补偿标准。实际上大家认可的城市房子的价格，一定跟它坐落的位置有关。所以拆迁部门往往考虑区位因素，以为就考虑了地的价格。但真正的市场价格，是在同样的地段能买到同样的房子。实际的补偿款，经常只能到偏远地方买到同样的房子。比如北京，拆迁范围东到东六环，西到石景山，南到南苑，北到回龙观，政府把你安置在哪都可以，但有的地方都不叫北京了。以前老百姓取得土地使用权，当然没交钱，但不能只承认他的占用，不承认他的地权和上面的价值。</p>
+<p style="text-indent:2em">孙宪忠：这几年房地产涨价那么厉害，政府要是按照以前的标准拿地就说不过去了。就是为了公共利益，也不能牺牲老百姓利益。</p>
+<p style="text-indent:2em">李延荣：按照国家标准已经得到补偿的，仍然不满足拒绝搬走，就叫钉子户。我看那个钉子户，其实给他的钱已经不低了，在北京都能买一套复式房子了。</p>
+<p style="text-indent:2em">杨建顺说，补偿金由开发商与被拆迁户协商，百姓容易被各个击破，反过来，他们对不同价的补偿会产生不满。而本来，拆迁征地是政府与百姓之间的事情。在计划经济时代，国家和国有企业建房，人们把拆迁当成一种福利。</p>
+<p style="text-indent:2em">2006年，孙宪忠在土地管理法颁布二十周年座谈会上发言，建议国土部门在城市居民的房屋使用权等方面，“能进一步贯彻中央民权保护精神”，按照科学法理建立民众的知情权和参与权，甚至在有些情况下给老百姓一定的决策权。</p>
+<p style="text-indent:2em">李延荣说，目前城市拆迁矛盾多发的原因是，各地上的项目太多，拆迁面太广，速度太快，而政府行使征地权，没有明确的界限。征地是为了公共利益需要，但很多时候不是。如果征地拆迁不符合公共利益，如何阻止政府非法行为？李延荣说，政府可以强拆，“问题是拆迁法中没有相对抗衡的办法。”</p>
+<p style="text-indent:2em">孙宪忠：政府从被拆迁户手中征收土地，和政府把土地出让给开发商，这是两个法律关系。目前普遍的做法是让开发商直接和拆迁户发生关系，这个也是当地政府在转嫁自己的责任和风险。</p>
+<p style="text-indent:2em">李晓斌：政府没有财力的储备。按理说，应提倡政府在没项目情况下的拆迁和征地行为，先解决与百姓间的房地产权问题，这是化解矛盾的很好方法。而现在有的政府，一是没有很好的长远规划，加上财力有限，不管是城市基础设施建设还是商业项目，只要下家拿钱来了就批。这样的话，政府就充当了拆迁的工具，这种行为还是不是国家行为就不好说，是行使所有权还是以公权力强制你拆呢？这两个环节应该尽量分离，以体现公平，避免出现舞弊，官商勾结。</p>
+<p style="text-indent:2em">李晓斌：对于政府和开发商，做到程序上的合法性很容易，裁决，或者申请法院的强制执行。但老百姓不想启动拆迁程序，就很难，没有相应的程序。在程序上存在一定的不公平。最后会感觉裁决判决，都是向着开发商和政府既定的开发意图去的。可以通过听证程序，还可以向同级和上级政府反映，以及人大的监督。在拆迁工作展开之后，我倾向于个体包括钉子户没有权利拒绝。中国还没有保护个人利益到这样的程度。但是如果这一片的被拆迁户不认可你所说的公共利益，我觉得他们可以提出这样的主张。</p>
+<p style="text-indent:2em">毛寿龙：老百姓认为“法院没有尊严了”，这种想法还是有可能的。但这关系到司法改革的民主化进程。首先立法要好，不能让利益集团伤害到群众的利益，在拆迁这方面，立法要完善。第二，是司法本身，要有更多的解决冲突的方法，要完善司法程序。要注意民意，考虑陪审团的意见。第三，法院的力量要有良好的民意基础，才能有更好的公信力。</p>
+
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["toc.integrate", "navigation.instant", "navigation.tabs", "navigation.sections", "navigation.expand"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>
