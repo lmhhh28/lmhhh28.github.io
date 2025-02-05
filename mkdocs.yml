@@ -7,6 +7,9 @@ nav:
       - 4.不定积分: math/4.不定积分.md
   - Computer Science:
     - Start: cs/start.md
+    - C++:
+      - Range Loop: cs/C++_loop.md
+      - Class and Object(1): cs/C++_C&O(1).md
     - 伯努利方法: cs/Bernoulli's_method.md
     - 傅里叶-莫茨金消元法: cs/fourier-motzkin-elimination.md
   - 中国近代史纲要:
