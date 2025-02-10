@@ -198,7 +198,7 @@ class Test {
 
 ---
 
-## **4.static const & static constexpr**
+## **4.constexpr**
 
 - `constexpr`修饰符
 
