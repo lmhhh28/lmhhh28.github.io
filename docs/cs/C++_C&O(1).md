@@ -36,7 +36,7 @@ class Shape{
     public:
     	const string& getName(){return shapeName;}	// "const": we can't modify the private variable "shapeName" through it's reference
     	setName(const string& name){shapeName = name;}
-}
+};
 ```
 
 ---
@@ -117,11 +117,11 @@ class Shape{
 	public:
 		Shape(int val){ptr = new int(val);}
 		Shape(const Shape& other){ptr = other.ptr}
-}
+};
 
 auto main(){
 	Shape obj_1(1);
-	Shape obj_2(obj_2)
+	Shape obj_2(obj_1)
 }
 ```
 
@@ -129,4 +129,5 @@ In the code above, `obj_1.ptr` and `onj_2.ptr` point to the same area in the mem
 
 `Shape(const Shape& other){ptr = new int(*other.ptr);}` 
 
+---
 

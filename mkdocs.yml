@@ -10,6 +10,8 @@ nav:
     - C++:
       - Range Loop: cs/C++_loop.md
       - Class and Object(1): cs/C++_C&O(1).md
+      - Class and Object(2): cs/C++_C&O(2).md
+      - Class and Object(3): cs/C++_C&O(3).md
     - 伯努利方法: cs/Bernoulli's_method.md
     - 傅里叶-莫茨金消元法: cs/fourier-motzkin-elimination.md
   - 中国近代史纲要:

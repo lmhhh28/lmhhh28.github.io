@@ -12,7 +12,7 @@
         <link rel="prev" href="../C%2B%2B_loop/">
       
       
-        <link rel="next" href="../Bernoulli%27s_method/">
+        <link rel="next" href="../C%2B%2B_C%26O%282%29/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -764,6 +764,48 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C%2B%2B_C%26O%282%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class and Object(2)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../C%2B%2B_C%26O%283%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Class and Object(3)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1257,7 +1299,7 @@
 <a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="k">public</span><span class="o">:</span>
 <a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">getName</span><span class="p">(){</span><span class="k">return</span><span class="w"> </span><span class="n">shapeName</span><span class="p">;}</span><span class="w">  </span><span class="c1">// &quot;const&quot;: we can&#39;t modify the private variable &quot;shapeName&quot; through it&#39;s reference</span>
 <a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span><span class="n">setName</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">string</span><span class="o">&amp;</span><span class="w"> </span><span class="n">name</span><span class="p">){</span><span class="n">shapeName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;}</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">}</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">};</span>
 </code></pre></div>
 <hr />
 <h2 id="2constructor-and-destructor"><strong>2.Constructor and Destructor</strong></h2>
@@ -1328,15 +1370,16 @@
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="k">public</span><span class="o">:</span>
 <a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">        </span><span class="n">Shape</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">val</span><span class="p">){</span><span class="n">ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="p">(</span><span class="n">val</span><span class="p">);}</span>
 <a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">        </span><span class="n">Shape</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Shape</span><span class="o">&amp;</span><span class="w"> </span><span class="n">other</span><span class="p">){</span><span class="n">ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">other</span><span class="p">.</span><span class="n">ptr</span><span class="p">}</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="p">}</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="p">};</span>
 <a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
 <a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="k">auto</span><span class="w"> </span><span class="n">main</span><span class="p">(){</span>
 <a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="n">Shape</span><span class="w"> </span><span class="nf">obj_1</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">    </span><span class="n">Shape</span><span class="w"> </span><span class="n">obj_2</span><span class="p">(</span><span class="n">obj_2</span><span class="p">)</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">    </span><span class="n">Shape</span><span class="w"> </span><span class="n">obj_2</span><span class="p">(</span><span class="n">obj_1</span><span class="p">)</span>
 <a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="p">}</span>
 </code></pre></div>
 <p>In the code above, <code>obj_1.ptr</code> and <code>onj_2.ptr</code> point to the same area in the memory. To copy the area in the memory, we have to allocate a new area for the target object. We called it <strong>Deep Copy</strong>(深拷贝). </p>
 <p><code>Shape(const Shape&amp; other){ptr = new int(*other.ptr);}</code> </p>
+<hr />
 
 
 
