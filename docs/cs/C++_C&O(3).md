@@ -277,7 +277,7 @@ auto main(){
 |       Index        |       在编译期求值       | 分配内存 | 在类内完成初始化 | 作用域 |
 | :----------------: | :----------------------: | :------: | :--------------: | :----: |
 |      `static`      |            ❌             |    ✅     |        ❌         | Class  |
-|      `const`       | ✅局部整型(非强制),❌Other |    ✅     |        ❌         |  Obje  |
+|      `const`       | ✅局部整型(非强制),❌Other |    ✅     |        ❌         | Object |
 |    `constexpr`     |            ✅             |    ❌     |        ✅         | Object |
 |   `static const`   |   ✅整型(非强制),❌Other   |    ✅     |   ✅整型,❌Other   | Class  |
 | `static constexpr` |            ✅             |    ❌     |        ✅         | Class  |
