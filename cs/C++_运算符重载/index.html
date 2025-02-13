@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="../C%2B%2B_C%26O%283%29/">
+      
+      
+        <link rel="next" href="../Bernoulli%27s_method/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -16,7 +20,7 @@
     
     
       
-        <title>C++ 1.loop - My Note</title>
+        <title>运算符重载 - My Note</title>
       
     
     
@@ -70,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#coperator-overloading" class="md-skip">
           跳转至
         </a>
       
@@ -104,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              C++ 1.loop
+              运算符重载
             
           </span>
         </div>
@@ -246,10 +250,12 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../start/" class="md-tabs__link">
           
   
@@ -527,27 +533,30 @@
       
   
   
+    
   
   
+  
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -558,7 +567,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Computer Science
@@ -590,27 +599,30 @@
                 
   
   
+    
   
   
+  
     
     
     
       
       
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
         
           
+          
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -621,7 +633,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             C++
@@ -707,6 +719,94 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    运算符重载
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    运算符重载
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      友元函数
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.链式调用
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      运算符重载
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1178,7 +1278,101 @@
   
 
 
-<h1 id="_1"></h1>
+<h1 id="coperator-overloading"><strong>C++.Operator Overloading</strong></h1>
+<hr />
+<h2 id="_1"><strong>友元函数</strong></h2>
+<ul>
+<li><code>friend</code>修饰符</li>
+</ul>
+<p><code>friend</code>修饰符下的全局函数访问类的私有成员变量的权限。旨在增强与相关类的协作，减少代码的重写。</p>
+<p>例如声明一个整型的复数类：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Complex</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="k">private</span><span class="o">:</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">real</span><span class="p">,</span><span class="w"> </span><span class="n">imag</span><span class="p">;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="n">Complex</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">reals</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">imags</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">real</span><span class="p">(</span><span class="n">reals</span><span class="p">),</span><span class="w"> </span><span class="n">imag</span><span class="p">(</span><span class="n">imags</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="o">~</span><span class="n">Complex</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="k">friend</span><span class="w"> </span><span class="n">Complex</span><span class="w"> </span><span class="n">addOther</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Complex</span><span class="o">&amp;</span><span class="w"> </span><span class="n">obj_1</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Complex</span><span class="o">&amp;</span><span class="w"> </span><span class="n">obj_2</span><span class="p">);</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">};</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">Complex</span><span class="w"> </span><span class="nf">addOther</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Complex</span><span class="o">&amp;</span><span class="w"> </span><span class="n">obj_1</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Complex</span><span class="o">&amp;</span><span class="w"> </span><span class="n">obj_2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">Complex</span><span class="p">(</span><span class="n">obj_1</span><span class="p">.</span><span class="n">real</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">obj_2</span><span class="p">.</span><span class="n">real</span><span class="p">,</span><span class="w"> </span><span class="n">obj_1</span><span class="p">.</span><span class="n">imag</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">obj_2</span><span class="p">.</span><span class="n">imag</span><span class="p">);</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="2"><strong>2.链式调用</strong></h2>
+<p>在类的成员函数中利用<code>this</code>指针返回对自身的引用以完成链式调用。</p>
+<p>For example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Complex</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="k">private</span><span class="o">:</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">real</span><span class="p">,</span><span class="w"> </span><span class="n">imag</span><span class="p">;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">        </span><span class="n">Complex</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">reals</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">imags</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">real</span><span class="p">(</span><span class="n">reals</span><span class="p">),</span><span class="w"> </span><span class="n">imag</span><span class="p">(</span><span class="n">imags</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">        </span><span class="o">~</span><span class="n">Complex</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">        </span><span class="n">Complex</span><span class="o">&amp;</span><span class="w"> </span><span class="n">addSelf</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Complex</span><span class="o">&amp;</span><span class="w"> </span><span class="n">obj</span><span class="p">);</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="nf">showCase</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">            </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">real</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;+&#39;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">imag</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;i&#39;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="p">};</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="n">Complex</span><span class="o">&amp;</span><span class="w"> </span><span class="nf">Complex::addSelf</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Complex</span><span class="o">&amp;</span><span class="w"> </span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="n">real</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">obj</span><span class="p">.</span><span class="n">real</span><span class="p">;</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="n">imag</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">obj</span><span class="p">.</span><span class="n">real</span><span class="p">;</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="k">this</span><span class="p">;</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="p">}</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="k">auto</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">    </span><span class="n">Complex</span><span class="w"> </span><span class="nf">c_1</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">c_2</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">),</span><span class="w"> </span><span class="n">c_3</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">    </span><span class="n">c_1</span><span class="p">.</span><span class="n">addSelf</span><span class="p">(</span><span class="n">c_2</span><span class="p">).</span><span class="n">addSelf</span><span class="p">(</span><span class="n">c_3</span><span class="p">).</span><span class="n">showCase</span><span class="p">();</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="_2"><strong>运算符重载</strong></h2>
+<p>C++的运算符重载允许自定义类对象的运算，但是运算符的优先级和结合性不能更改，只能定义它们如何作用于类的对象。且以下运算符不能重载：</p>
+<ul>
+<li><code>::</code> (作用域解析运算符)</li>
+<li><code>.</code> (成员访问运算符)</li>
+<li><code>*</code> (成员指针访问运算符)</li>
+<li><code>?</code> (条件运算符)</li>
+<li><code>sizeof</code> (大小运算符)</li>
+<li><code>typeid</code> (类型信息运算符)</li>
+</ul>
+<p>考虑设计一个复数类<code>Complex</code>，使用运算符重载实现复数类对象的加法运算：</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Complex</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">private</span><span class="o">:</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">real</span><span class="p">,</span><span class="w"> </span><span class="n">imag</span><span class="p">;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">        </span><span class="n">Complex</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">reals</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">imags</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">real</span><span class="p">(</span><span class="n">reals</span><span class="p">),</span><span class="w"> </span><span class="n">imag</span><span class="p">(</span><span class="n">imags</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">        </span><span class="o">~</span><span class="n">Complex</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">        </span><span class="k">friend</span><span class="w"> </span><span class="n">Complex</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Complex</span><span class="o">&amp;</span><span class="w"> </span><span class="n">obj_1</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Complex</span><span class="o">&amp;</span><span class="w"> </span><span class="n">obj_2</span><span class="p">);</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="nf">showCase</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">            </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">real</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;+&#39;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">imag</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="sc">&#39;i&#39;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">        </span><span class="n">Complex</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Complex</span><span class="o">&amp;</span><span class="w"> </span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">obj</span><span class="p">){</span><span class="w">   </span><span class="c1">// 防止自复制</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">                </span><span class="n">real</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">obj</span><span class="p">.</span><span class="n">real</span><span class="p">;</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">                </span><span class="n">imag</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">obj</span><span class="p">.</span><span class="n">imag</span><span class="p">;</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="k">this</span><span class="p">;</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">        </span><span class="n">Complex</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Complex</span><span class="o">&amp;</span><span class="w"> </span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">            </span><span class="n">real</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">obj</span><span class="p">.</span><span class="n">real</span><span class="p">;</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">            </span><span class="n">imag</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">obj</span><span class="p">.</span><span class="n">imag</span><span class="p">;</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="o">*</span><span class="k">this</span><span class="p">;</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="p">};</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="n">Complex</span><span class="w"> </span><span class="k">operator</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Complex</span><span class="o">&amp;</span><span class="w"> </span><span class="n">obj_1</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">Complex</span><span class="o">&amp;</span><span class="w"> </span><span class="n">obj_2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">Complex</span><span class="p">(</span><span class="n">obj_1</span><span class="p">.</span><span class="n">real</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">obj_2</span><span class="p">.</span><span class="n">real</span><span class="p">,</span><span class="w"> </span><span class="n">obj_1</span><span class="p">.</span><span class="n">imag</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">obj_2</span><span class="p">.</span><span class="n">imag</span><span class="p">);</span>
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="p">}</span>
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="k">auto</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="w">    </span><span class="n">Complex</span><span class="w"> </span><span class="nf">c_1</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">),</span><span class="w"> </span><span class="n">c_2</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">),</span><span class="w"> </span><span class="n">c_3</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a><span class="w">    </span><span class="p">(</span><span class="n">c_1</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">c_2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c_3</span><span class="p">).</span><span class="n">showCase</span><span class="p">();</span>
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="p">}</span>
+</code></pre></div>
+<hr />
 
 
 
