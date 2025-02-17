@@ -189,7 +189,7 @@ void playSound(Animal* ptr){
 
 ```c++
 class Animal{
-  	private:
+  	protected:
     	virtual void makeSound() = 0;
     	virtual ~Shape(){}	// 通过虚函数调用继承类的析构函数完成对继承类对象的虚构。
     	// ......
