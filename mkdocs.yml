@@ -13,6 +13,7 @@ nav:
       - Class and Object(2): cs/C++_C&O(2).md
       - Class and Object(3): cs/C++_C&O(3).md
       - 运算符重载: cs/C++_运算符重载.md
+      - 模板: cs/C++_模板.md
     - 伯努利方法: cs/Bernoulli's_method.md
     - 傅里叶-莫茨金消元法: cs/fourier-motzkin-elimination.md
   - 中国近代史纲要:
@@ -27,9 +28,10 @@ nav:
     - Chapter.5: history/Chapter.5.md
     - Chapter.6: history/Chapter.6.md
     - Chapter.7: history/Chapter.7.md
-  - Laws:
+  - Others:
     - Start: law/index.md
-    - Examples: law/Examples.md              
+    - Law: law/Examples.md
+    - Presentation: law/English.md              
   - Code-server: http://8.140.235.199:8080/
 theme:
   name: material

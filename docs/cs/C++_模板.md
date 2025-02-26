@@ -302,6 +302,44 @@ This is subClass_3 i :42
 
 ---
 
+- 类模板的递归
 
+类模板不仅可以将类型作为参数传入，还可以将**数**作为参数传入。
 
+```c++
+template <int N>
+class Test {
+	public:
+		static constexpr int val = N;
+};
+```
 
+因为类模板的实例化发生在编译期，考虑在编译期利用类模板完成一定的计算：
+
+```c++
+#include <iostream>
+
+template <int N>
+class Fac {
+	public:
+		static constexpr long long val = N * Fac<N - 1>::val;
+};
+
+// 利用特化完成类模板递归的终点
+
+template <>
+class Fac<0> {
+	public:
+		static constexpr long long val = 1;
+};
+
+auto main() {
+	std::cout << Fac<10>::val << std::endl;
+}
+```
+
+The result of running:
+
+`3628800`
+
+---
