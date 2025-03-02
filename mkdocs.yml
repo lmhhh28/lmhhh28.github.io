@@ -14,6 +14,8 @@ nav:
       - Class and Object(3): cs/C++_C&O(3).md
       - 运算符重载: cs/C++_运算符重载.md
       - 模板: cs/C++_模板.md
+      - Namespace: cs/C++_Namespace.md
+      - 异常: cs/C++_Exception.md
     - 伯努利方法: cs/Bernoulli's_method.md
     - 傅里叶-莫茨金消元法: cs/fourier-motzkin-elimination.md
   - 中国近代史纲要:
