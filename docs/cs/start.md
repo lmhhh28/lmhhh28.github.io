@@ -17,3 +17,4 @@ $$
 \end{array}
 $$
 
+This is vim on termux test!!!
