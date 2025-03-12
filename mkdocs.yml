@@ -5,6 +5,8 @@ nav:
       - Start: math/index.md
       - 0.Start: math/0.Start.md 
       - 4.不定积分: math/4.不定积分.md
+      - 8.多元函数微分:
+        - 8.1.微分与导数: math/7.Vector.md
   - Computer Science:
     - Start: cs/start.md
     - C++:
