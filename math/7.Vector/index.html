@@ -12,7 +12,7 @@
         <link rel="prev" href="../4.%E4%B8%8D%E5%AE%9A%E7%A7%AF%E5%88%86/">
       
       
-        <link rel="next" href="../../cs/start/">
+        <link rel="next" href="../8.Function_2/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -673,6 +673,28 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../8.Function_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.2.Jacobi矩阵与隐映射
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1501,29 +1523,29 @@
 <li>高阶偏导数</li>
 </ul>
 <p>按照求导变量顺序的不同，存在如下偏导数：</p>
-<div class="arithmatex">\[
+<p>$$
 \frac {\partial ^{2} f}{\partial x^{2}}, \frac {\partial ^{2} f}{\partial y^{2}}, \frac {\partial ^{2} f}{\partial x \partial y}, \frac {\partial ^{2} f}{\partial y \partial x}
-\]</div>
-<p>有如下定理：</p>
+$$
+有如下定理：</p>
 <div class="arithmatex">\[
 若函数z=f(x,y)在区域D上连续且\frac {\partial ^{2} f}{\partial x \partial y}与\frac {\partial ^{2} f}{\partial y \partial x}在区域D上存在且连续，则\frac {\partial ^{2} f}{\partial x \partial y}=\frac {\partial ^{2} f}{\partial y \partial x}。
 \]</div>
 <hr />
 <h2 id="12"><strong>1.2.全微分</strong></h2>
-<p>考虑曲面<span class="arithmatex">\(z=f(x,y)\)</span>在<span class="arithmatex">\((x_{0}, y_{0}, z_{0})\)</span>存在切平面<span class="arithmatex">\(\pi :Ax+By+Cz+D=0\)</span>，其法方向为：<span class="arithmatex">\(\vec {r}\)</span>。则存在<span class="arithmatex">\(\vec {\alpha}=(1,0,\frac {\partial f}{\partial x}|_{x=x_{0}}), \vec {\beta}=(0,1,\frac {\partial f}{\partial y}|_{y=y_{0}})\)</span>，使得<span class="arithmatex">\(\vec {\alpha} \parallel \pi, \vec {\beta} \parallel \pi\)</span>，则有：</p>
-<div class="arithmatex">\[
-\vec {r} = \vec {\alpha} \times \vec {\beta}=(\frac {\partial f}{\partial x}|_{x=x_{0}}, \frac {\partial f}{\partial y}|_{y=y_{0}}, -1)
-\]</div>
+<p>考虑曲面<span class="arithmatex">\(z=f(x,y)\)</span>在<span class="arithmatex">\((x_{0}, y_{0}, z_{0})\)</span>存在切平面<span class="arithmatex">\(\pi :Ax+By+Cz+D=0\)</span>，其法方向为：<span class="arithmatex">\(\vec {r}\)</span>。则存在<span class="arithmatex">\(\vec {\alpha}=(1,0,\frac {\partial f}{\partial x}|_{x=x_{0}}), \vec {\beta}=(0,1,\frac {\partial f}{\partial y}|_{y=y_{0}})\)</span>，使得<span class="arithmatex">\(\vec {\alpha} \parallel \pi, \vec {\beta} \parallel \pi\)</span>，则有：
+$$
+\vec {r} = \vec {\alpha} \times \vec {\beta}=(\frac {\partial f}{\partial x}|<em>{x=x</em>{0}}, \frac {\partial f}{\partial y}|<em>{y=y</em>{0}}, -1)
+$$</p>
 <p>在<span class="arithmatex">\((x_{0}, y_{0}, z_{0})\)</span>处的切平面<span class="arithmatex">\(\pi\)</span>的点法式方程为：</p>
-<div class="arithmatex">\[
+<p>$$
 \vec {r} \cdot
 \begin{pmatrix}
-x-x_{0} \\
-y-y_{0} \\
+x-x_{0} \
+y-y_{0} \
 z-z_{0}
-\end{pmatrix}=0 \Longrightarrow z-z_{0}=\frac {\partial f}{\partial x}|_{x=x_{0}} (x-x_0)+\frac {\partial f}{\partial y}|_{y=y_{0}}(y-y_{0})
-\]</div>
-<p>当<span class="arithmatex">\(x \to x_{0}, y \to y_{0}\)</span>时：</p>
+\end{pmatrix}=0 \Longrightarrow z-z_{0}=\frac {\partial f}{\partial x}|<em>{x=x</em>{0}} (x-x_0)+\frac {\partial f}{\partial y}|<em>{y=y</em>{0}}(y-y_{0})
+$$
+当<span class="arithmatex">\(x \to x_{0}, y \to y_{0}\)</span>时：</p>
 <div class="arithmatex">\[
 dz|_{z=z_{0}}=\frac {\partial f}{\partial x}|_{x=x_{0}}dx+\frac {\partial f}{\partial y}|_{y=y_{0}}dy
 \]</div>
@@ -1545,18 +1567,18 @@ dz=\frac {\partial f}{\partial \phi}d\phi+\frac {\partial f}{\partial \psi}d\psi
 <div class="arithmatex">\[
 d\phi=\frac {\partial \phi}{\partial x}dx+\frac {\partial \phi}{\partial y}dy
 \]</div>
-<div class="arithmatex">\[
+<p>$$
 d\psi=\frac {\partial \psi}{\partial x}dx+\frac {\partial \psi}{\partial y}dy
-\]</div>
-<p>所以：</p>
+$$
+所以：</p>
 <div class="arithmatex">\[
 dz=(\frac {\partial f}{\partial \phi}\frac{\partial \phi}{\partial x}+\frac {\partial f}{\partial \psi}\frac{\partial \psi}{\partial x})dx+(\frac {\partial f}{\partial \phi}\frac{\partial \phi}{\partial y}+\frac {\partial f}{\partial \psi}\frac{\partial \psi}{\partial y})dy
 \]</div>
 <p>又：</p>
-<div class="arithmatex">\[
+<p>$$
 dz=\frac {\partial g}{\partial x}dx+\frac {\partial g}{\partial y}dy
-\]</div>
-<p>则<span class="arithmatex">\(z=g(x, y)\)</span>偏微分：</p>
+$$
+则<span class="arithmatex">\(z=g(x, y)\)</span>偏微分：</p>
 <div class="arithmatex">\[
 \frac {\partial g}{\partial x}=\frac {\partial f}{\partial \phi}\frac{\partial \phi}{\partial x}+\frac {\partial f}{\partial \psi}\frac{\partial \psi}{\partial x}
 \]</div>
@@ -1586,7 +1608,7 @@ dF=\frac{\partial F}{\partial x}dx+\frac{\partial F}{\partial y}dy+\frac{\partia
 dF=(\frac{\partial F}{\partial x}+\frac{\partial F}{\partial z}\frac{\partial z}{\partial x})dx+(\frac{\partial F}{\partial y}+\frac{\partial F}{\partial z}\frac{\partial z}{\partial y})dy
 \]</div>
 <div class="arithmatex">\[
-\frac{dF}{dx}=\frac{\partial F}{\partial x}+\frac{\partial F}{\partial z}\frac{\partial z}{\partial x}=0
+           \frac{dF}{dx}=\frac{\partial F}{\partial x}+\frac{\partial F}{\partial z}\frac{\partial z}{\partial x}=0
 \]</div>
 <p>因此有：<span class="arithmatex">\({F_{x}}^{'}+{F_{z}}^{'}\frac{\partial z}{\partial x}=0，即：\frac{\partial z}{\partial x}=-\frac{{F_{z}}^{'}}{{F_{x}}^{'}}\)</span>。同理有：<span class="arithmatex">\(\frac{\partial z}{\partial y}=-\frac{{F_{z}}^{'}}{{F_{x}}^{'}}\)</span>。</p>
 <hr />
@@ -1596,19 +1618,19 @@ dF=(\frac{\partial F}{\partial x}+\frac{\partial F}{\partial z}\frac{\partial z}
 </ul>
 <p>讨论二元函数<span class="arithmatex">\(z=f(x,y)\)</span>在<span class="arithmatex">\((x_0,y_0,z_0)\)</span>处的切平面<span class="arithmatex">\(\pi\)</span>(若此处偏导数存在)由向量<span class="arithmatex">\(\vec{\alpha}=(1,0,\frac{\partial f}{\partial x})，\vec{\beta}=(0,1,\frac{\partial f}{\partial y})\)</span>确定。则平行于切平面<span class="arithmatex">\(\pi\)</span>的任意方向向量<span class="arithmatex">\(\vec{l}\)</span>都可由基向量<span class="arithmatex">\(\vec{\alpha}，\vec{\beta}\)</span>的线性组合表示：</p>
 <div class="arithmatex">\[
-\vec{l}=\lambda \vec{\alpha}+\mu \vec{\beta}=(\lambda,\mu,\lambda\frac{\partial f}{\partial x}+\mu \frac{\partial f}{\partial y})
+\mathbf{l}=\lambda \mathbf{\alpha}+\mu \mathbf{\beta}=(\lambda,\mu,\lambda\frac{\partial f}{\partial x}+\mu \frac{\partial f}{\partial y})
 \]</div>
-<p>定义<span class="arithmatex">\(z=f(x,y)\)</span>在<span class="arithmatex">\(\vec{l}\)</span>方向的方向导数：</p>
+<p>定义<span class="arithmatex">\(z=f(x,y)\)</span>在<span class="arithmatex">\(\mathbf{l}\)</span>方向的方向导数：</p>
 <div class="arithmatex">\[
 \frac{\partial f}{\partial l}=\frac{\lambda}{\sqrt{\lambda^2+\mu^2}}\frac{\partial f}{\partial x}+\frac{\mu}{\sqrt{\lambda^2+\mu^2}}\frac{\partial f}{\partial y}
 \]</div>
-<p>由定义可知，<span class="arithmatex">\(z=f(x,y)\)</span>在<span class="arithmatex">\(x\)</span>轴方向的方向导数为<span class="arithmatex">\(\frac{\partial f}{\partial x}\)</span>，在<span class="arithmatex">\(y\)</span>轴方向的方向导数为<span class="arithmatex">\(\frac{\partial f}{\partial y}\)</span>。描述了<span class="arithmatex">\(z=f(x,y)的(x_0,y_0,z_0)处\vec{l}\)</span>方向上的变化量</p>
+<p>由定义可知，<span class="arithmatex">\(z=f(x,y)\)</span>在<span class="arithmatex">\(x\)</span>轴方向的方向导数为<span class="arithmatex">\(\frac{\partial f}{\partial x}\)</span>，在<span class="arithmatex">\(y\)</span>轴方向的方向导数为<span class="arithmatex">\(\frac{\partial f}{\partial y}\)</span>。描述了<span class="arithmatex">\(z=f(x,y)的(x_0,y_0,z_0)处\mathbf{l}\)</span>方向上的变化量</p>
 <ul>
 <li>梯度</li>
 </ul>
-<p>不妨将函数<span class="arithmatex">\(z=f(x,y)\)</span>的<span class="arithmatex">\((x_0,y_0,z_0)\)</span>点在<span class="arithmatex">\(\vec{l}\)</span>方向上的方向导数视作以下内积形式：</p>
+<p>不妨将函数<span class="arithmatex">\(z=f(x,y)\)</span>的<span class="arithmatex">\((x_0,y_0,z_0)\)</span>点在<span class="arithmatex">\(\mathbf{l}\)</span>方向上的方向导数视作以下内积形式：</p>
 <div class="arithmatex">\[
-\frac{\partial f}{\partial l}=(\frac{\lambda}{\sqrt{\lambda^2+\mu^2}},\frac{\mu}{\sqrt{\lambda^2+\mu^2}})\cdot (\frac{\partial f}{\partial x},\frac{\partial f}{\partial y})^T=\vec{e_l}\cdot (\frac{\partial f}{\partial x},\frac{\partial f}{\partial y})^T
+\frac{\partial f}{\partial l}=(\frac{\lambda}{\sqrt{\lambda^2+\mu^2}},\frac{\mu}{\sqrt{\lambda^2+\mu^2}})\cdot (\frac{\partial f}{\partial x},\frac{\partial f}{\partial y})^T=\mathbf{e_l}\cdot (\frac{\partial f}{\partial x},\frac{\partial f}{\partial y})^T
 \]</div>
 <p>其中<span class="arithmatex">\(\vec{e_l}\)</span>是<span class="arithmatex">\((x_0,y_0,z_0)\)</span>处<span class="arithmatex">\(\vec{l}\)</span>方向上的单位向量。定义函数<span class="arithmatex">\(z=f(x,y)\)</span>的点<span class="arithmatex">\((x_0,y_0,z_0)\)</span>处的梯度为：</p>
 <div class="arithmatex">\[
@@ -1616,10 +1638,10 @@ dF=(\frac{\partial F}{\partial x}+\frac{\partial F}{\partial z}\frac{\partial z}
 \]</div>
 <p>重新审视方向导数的内积形式：</p>
 <div class="arithmatex">\[
-\frac{\partial f}{\partial l}=|\vec{e_l}|\cdot|\nabla f(x,y)|\cos{\theta}
+\frac{\partial f}{\partial l}=|\mathbf{e_l}|\cdot|\nabla f(x,y)|\cos{\theta}
 \]</div>
-<p>其中<span class="arithmatex">\(\theta\)</span>是单位方向向量<span class="arithmatex">\(\vec{e_l}\)</span>与梯度<span class="arithmatex">\(\nabla f(x,y)\)</span>的夹角。</p>
-<p>要使在<span class="arithmatex">\(\vec{l}\)</span>方向上的变化率最大，<span class="arithmatex">\(\cos{\theta}=1\)</span>，即方向单位向量<span class="arithmatex">\(\vec{e_l}\)</span>与梯度<span class="arithmatex">\(\nabla f(x,y)\)</span>平行。</p>
+<p>其中<span class="arithmatex">\(\theta\)</span>是单位方向向量<span class="arithmatex">\(\mathbf{e_l}\)</span>与梯度<span class="arithmatex">\(\nabla f(x,y)\)</span>的夹角。</p>
+<p>要使在<span class="arithmatex">\(\mathbf{l}\)</span>方向上的变化率最大，<span class="arithmatex">\(\cos{\theta}=1\)</span>，即方向单位向量<span class="arithmatex">\(\mathbf{e_l}\)</span>与梯度<span class="arithmatex">\(\nabla f(x,y)\)</span>平行。</p>
 <hr />
 
 
