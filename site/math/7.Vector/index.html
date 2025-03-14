@@ -1630,15 +1630,15 @@ dF=(\frac{\partial F}{\partial x}+\frac{\partial F}{\partial z}\frac{\partial z}
 </ul>
 <p>不妨将函数<span class="arithmatex">\(z=f(x,y)\)</span>的<span class="arithmatex">\((x_0,y_0,z_0)\)</span>点在<span class="arithmatex">\(\mathbf{l}\)</span>方向上的方向导数视作以下内积形式：</p>
 <div class="arithmatex">\[
-\frac{\partial f}{\partial l}=(\frac{\lambda}{\sqrt{\lambda^2+\mu^2}},\frac{\mu}{\sqrt{\lambda^2+\mu^2}})\cdot (\frac{\partial f}{\partial x},\frac{\partial f}{\partial y})^T=\mathbf{e_l}\cdot (\frac{\partial f}{\partial x},\frac{\partial f}{\partial y})^T
+\frac{\partial f}{\partial l}=(\frac{\partial f}{\partial x},\frac{\partial f}{\partial y})\cdot(\frac{\lambda}{\sqrt{\lambda^2+\mu^2}},\frac{\mu}{\sqrt{\lambda^2+\mu^2}})^T=(\frac{\partial f}{\partial x},\frac{\partial f}{\partial y})\cdot \mathbf{e_l}
 \]</div>
 <p>其中<span class="arithmatex">\(\vec{e_l}\)</span>是<span class="arithmatex">\((x_0,y_0,z_0)\)</span>处<span class="arithmatex">\(\vec{l}\)</span>方向上的单位向量。定义函数<span class="arithmatex">\(z=f(x,y)\)</span>的点<span class="arithmatex">\((x_0,y_0,z_0)\)</span>处的梯度为：</p>
 <div class="arithmatex">\[
-\nabla f(x,y)=(\frac{\partial f}{\partial x},\frac{\partial f}{\partial y})^T
+\nabla f(x,y)=(\frac{\partial f}{\partial x},\frac{\partial f}{\partial y})
 \]</div>
 <p>重新审视方向导数的内积形式：</p>
 <div class="arithmatex">\[
-\frac{\partial f}{\partial l}=|\mathbf{e_l}|\cdot|\nabla f(x,y)|\cos{\theta}
+\frac{\partial f}{\partial l}=|\nabla f(x,y)|\cdot |\mathbf{e_l}|\cos{\theta}
 \]</div>
 <p>其中<span class="arithmatex">\(\theta\)</span>是单位方向向量<span class="arithmatex">\(\mathbf{e_l}\)</span>与梯度<span class="arithmatex">\(\nabla f(x,y)\)</span>的夹角。</p>
 <p>要使在<span class="arithmatex">\(\mathbf{l}\)</span>方向上的变化率最大，<span class="arithmatex">\(\cos{\theta}=1\)</span>，即方向单位向量<span class="arithmatex">\(\mathbf{e_l}\)</span>与梯度<span class="arithmatex">\(\nabla f(x,y)\)</span>平行。</p>

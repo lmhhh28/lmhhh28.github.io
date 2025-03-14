@@ -649,7 +649,25 @@
         <li class="md-nav__item">
   <a href="#21jacobi" class="md-nav__link">
     <span class="md-ellipsis">
-      2.1.向量集映射与Jacobi矩阵
+      **2.1.向量集映射与Jacobi矩阵
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22jacobi" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.链式法则的Jacobi矩阵形式
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.隐函数与隐映射
     </span>
   </a>
   
@@ -1480,14 +1498,14 @@
 
 <h1 id="2jacobi"><strong>2.Jacobi矩阵与隐映射复合</strong></h1>
 <hr />
-<h2 id="21jacobi"><strong>2.1.向量集映射与Jacobi矩阵</strong></h2>
+<h2 id="21jacobi">**2.1.向量集映射与Jacobi矩阵</h2>
 <p>考虑向量集函数<span class="arithmatex">\(\mathbf{z}=f(\mathbf{v})，\mathbf{v}=(x,y)^{\mathbf{T}}\)</span>在<span class="arithmatex">\((x_0,y_0)\)</span>处微分：</p>
 <div class="arithmatex">\[
-f(\mathbf v+\mathbf h)-f(\mathbf v)=J\mathbf h+o(||\mathbf h||)，\mathbf h \to \mathbf 0
+f(\mathbf v+\mathbf h)-f(\mathbf v)=J\cdot\mathbf h+o(||\mathbf h||)，\mathbf h \to \mathbf 0
 \]</div>
 <p>其中<span class="arithmatex">\(o(||\mathbf h||)\)</span>为<span class="arithmatex">\(||\mathbf h||\)</span>的高阶无穷小，因此<span class="arithmatex">\(f(\mathbf v)\)</span>在<span class="arithmatex">\((x_0,y_0)\)</span>处任意方向<span class="arithmatex">\(\mathbf h\)</span>的增量可近似于增量<span class="arithmatex">\(\mathbf h\)</span>的线性函数：</p>
 <div class="arithmatex">\[
-df(\mathbf v)=J\mathbf h
+df(\mathbf v)=J\cdot\mathbf h
 \]</div>
 <p>对于更为具体的向量集函数<span class="arithmatex">\(F(x,y)=(P(x,y),Q(x,y))^{\mathbf T}\)</span>，其微分可表示为：</p>
 <div class="arithmatex">\[
@@ -1499,18 +1517,169 @@ dF(x,y)=
 =\begin{pmatrix}
  \nabla P\\
  \nabla Q
-\end{pmatrix}\mathbf h=
+\end{pmatrix}\cdot\mathbf h=
 \begin{pmatrix}
  \frac{\partial P}{\partial x} &amp; \frac{\partial P}{\partial y}\\
  \frac{\partial Q}{\partial x} &amp; \frac{\partial Q}{\partial x}
-\end{pmatrix}\mathbf{h}
+\end{pmatrix}\cdot\mathbf{h}
 \]</div>
-<p>因此我们确定二维向量集函数的Jacobi矩阵：</p>
+<p>因此我们确定二维向量集函数<span class="arithmatex">\(\mathbf{z}=f(\mathbf{v})\)</span>的Jacobi矩阵：</p>
 <div class="arithmatex">\[
 J=\begin{pmatrix}
  \frac{\partial P}{\partial x} &amp; \frac{\partial P}{\partial y}\\
  \frac{\partial Q}{\partial x} &amp; \frac{\partial Q}{\partial x}
 \end{pmatrix}
+\]</div>
+<p>对于二维值函数<span class="arithmatex">\(z=f(x,y)\)</span>，有<span class="arithmatex">\(dz=\nabla f\cdot\mathbf{h}\)</span>，<span class="arithmatex">\(\nabla f\)</span>为值函数<span class="arithmatex">\(z=f(x,y)\)</span>的Jacobi矩阵，被视为一个二维向量向量到值的映射。</p>
+<hr />
+<h2 id="22jacobi"><strong>2.2.链式法则的Jacobi矩阵形式</strong></h2>
+<p>对于二维的复合值函数<span class="arithmatex">\(z=F(\lambda(x,y),\mu(x,y))\)</span>，其微分为：</p>
+<div class="arithmatex">\[
+dz=\nabla F\cdot 
+\begin{pmatrix}
+d\lambda \\
+d\mu
+\end{pmatrix}=
+\nabla F \cdot
+\begin{pmatrix}
+\nabla \lambda \\
+\nabla \mu
+\end{pmatrix}\cdot
+\begin{pmatrix}
+dx \\
+dy
+\end{pmatrix}=
+\nabla F\cdot
+\begin{pmatrix}
+\frac{\partial \lambda}{\partial x}  &amp; \frac{\partial \lambda}{\partial y}\\
+\frac{\partial \mu}{\partial x}  &amp; \frac{\partial \mu}{\partial y}
+\end{pmatrix}\cdot
+\begin{pmatrix}
+dx \\
+dy
+\end{pmatrix}
+\]</div>
+<p>对于更为普遍的复合函数，链式法则展示了一种<span class="arithmatex">\(n\)</span>维向量通过对应Jacobi矩阵的一种链式映射关系。</p>
+<p>如上述的复合函数<span class="arithmatex">\(z=F(\lambda(x,y),\mu(x,y))\)</span>，可视为下述的链式映射：</p>
+<div class="arithmatex">\[
+\begin{pmatrix}
+dx\\
+dy
+\end{pmatrix}
+\stackrel{J_{(\lambda,\mu)}}{\longrightarrow}
+\begin{pmatrix}
+d\lambda\\
+d\mu
+\end{pmatrix}
+\stackrel{J_F}{\longrightarrow}
+dz
+\]</div>
+<hr />
+<h2 id="23"><strong>2.3.隐函数与隐映射</strong></h2>
+<ul>
+<li>隐函数：</li>
+</ul>
+<p>对于隐函数<span class="arithmatex">\(f(x_1,x_2,x_3)=0\)</span>，可以确定唯一的映射：<span class="arithmatex">\(x_i=x_i(x_j,x_k)\)</span>。对函数<span class="arithmatex">\(f\)</span>微分：</p>
+<div class="arithmatex">\[
+df=\nabla f\cdot
+\begin{pmatrix}
+\nabla x_1 \\
+\nabla x_2 \\
+\nabla x_3
+\end{pmatrix}\cdot
+\begin{pmatrix}
+dx_1 \\
+dx_2 
+\end{pmatrix}=
+\nabla f\cdot
+\begin{pmatrix}
+ I\\
+ \nabla x_3
+\end{pmatrix}\cdot
+\begin{pmatrix}
+dx_1 \\
+dx_2 
+\end{pmatrix}
+\]</div>
+<p>解出<span class="arithmatex">\(\nabla x_3\)</span>：</p>
+<div class="arithmatex">\[
+\nabla f_{(x_1,x_2)}+\frac{\partial f}{\partial x_3}\nabla x_3=0
+\]</div>
+<p>即：<span class="arithmatex">\(\nabla x_3=-{(\frac{\partial f}{\partial x_3})}^{-1}\nabla f_{(x_1,x_2)}\)</span>。</p>
+<ul>
+<li>隐映射：</li>
+</ul>
+<p>对于隐函数方程组：</p>
+<div class="arithmatex">\[
+\left\{
+\begin{matrix} 
+  F_1(x,y,\lambda,\mu)=0 \\  
+  F_2(x,y,\lambda,\mu)=0 
+\end{matrix}
+\right. 
+\]</div>
+<p>可以确定唯一隐映射：</p>
+<div class="arithmatex">\[
+\left\{
+\begin{matrix} 
+  \lambda = \lambda(x,y) \\  
+  \mu = \mu(x,y) 
+\end{matrix}
+\right. 
+\]</div>
+<p>对<span class="arithmatex">\(F_1，F_2\)</span>微分：</p>
+<div class="arithmatex">\[
+\left\{
+\begin{matrix} 
+  dF_1=\nabla F_1\cdot J_{(\lambda,\mu)}\cdot\mathbf{h} \\  
+  dF_2=\nabla F_2\cdot J_{(\lambda,\mu)}\cdot\mathbf{h} 
+\end{matrix}
+\right. 
+\]</div>
+<p>不妨写作以下形式：</p>
+<div class="arithmatex">\[
+d\mathbf{F}=
+\begin{pmatrix}
+dF_1 \\
+dF_2
+\end{pmatrix}=
+\begin{pmatrix}
+\nabla F_1 \\
+\nabla F_2
+\end{pmatrix}\cdot
+J_{(\lambda,\mu)}\cdot\mathbf{h}=
+J_F\cdot J_{(\lambda,\mu)} \cdot \mathbf{h}
+\]</div>
+<p>由于微分的形式不变性，对<span class="arithmatex">\(\mathbf F\)</span>的微分依然可以视作对应Jacobi矩阵的链式映射法则：</p>
+<div class="arithmatex">\[
+\begin{pmatrix}
+dx\\
+dy
+\end{pmatrix}
+\stackrel{J_{(\lambda,\mu)}}{\longrightarrow}
+\begin{pmatrix}
+d\lambda\\
+d\mu
+\end{pmatrix}
+\stackrel{J_F}{\longrightarrow}
+d\mathbf F
+\]</div>
+<p>不妨将<span class="arithmatex">\(J_F\)</span>分块为：<span class="arithmatex">\((J_{F_{(x,y)}}\ \ \ J_{F_{(\lambda,\mu)}})，|J_F|\ne 0\)</span>，有：</p>
+<div class="arithmatex">\[
+d\mathbf{F}=
+\begin{pmatrix}
+ J_{F_{(x,y)}} &amp; J_{F_{(\lambda,\mu)}}
+\end{pmatrix}\cdot
+\begin{pmatrix}
+I \\
+J_{(\lambda,\mu)}
+\end{pmatrix}\cdot
+\mathbf{h}=
+(J_{F_{(x,y)}}+J_{F_{(\lambda,\mu)}}J_{(\lambda,\mu)})\cdot\mathbf{h}
+\]</div>
+<p>解出<span class="arithmatex">\(J_{(\lambda,\mu)}\)</span>：</p>
+<div class="arithmatex">\[
+J_{(\lambda,\mu)}=-{(J_{F_{(\lambda,\mu)}})}^{-1}J_{F_{(x,y)}}
 \]</div>
 <hr />
 
