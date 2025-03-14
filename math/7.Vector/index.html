@@ -1523,29 +1523,29 @@
 <li>高阶偏导数</li>
 </ul>
 <p>按照求导变量顺序的不同，存在如下偏导数：</p>
-<p>$$
+<div class="arithmatex">\[
 \frac {\partial ^{2} f}{\partial x^{2}}, \frac {\partial ^{2} f}{\partial y^{2}}, \frac {\partial ^{2} f}{\partial x \partial y}, \frac {\partial ^{2} f}{\partial y \partial x}
-$$
-有如下定理：</p>
+\]</div>
+<p>有如下定理：</p>
 <div class="arithmatex">\[
 若函数z=f(x,y)在区域D上连续且\frac {\partial ^{2} f}{\partial x \partial y}与\frac {\partial ^{2} f}{\partial y \partial x}在区域D上存在且连续，则\frac {\partial ^{2} f}{\partial x \partial y}=\frac {\partial ^{2} f}{\partial y \partial x}。
 \]</div>
 <hr />
 <h2 id="12"><strong>1.2.全微分</strong></h2>
-<p>考虑曲面<span class="arithmatex">\(z=f(x,y)\)</span>在<span class="arithmatex">\((x_{0}, y_{0}, z_{0})\)</span>存在切平面<span class="arithmatex">\(\pi :Ax+By+Cz+D=0\)</span>，其法方向为：<span class="arithmatex">\(\vec {r}\)</span>。则存在<span class="arithmatex">\(\vec {\alpha}=(1,0,\frac {\partial f}{\partial x}|_{x=x_{0}}), \vec {\beta}=(0,1,\frac {\partial f}{\partial y}|_{y=y_{0}})\)</span>，使得<span class="arithmatex">\(\vec {\alpha} \parallel \pi, \vec {\beta} \parallel \pi\)</span>，则有：
-$$
-\vec {r} = \vec {\alpha} \times \vec {\beta}=(\frac {\partial f}{\partial x}|<em>{x=x</em>{0}}, \frac {\partial f}{\partial y}|<em>{y=y</em>{0}}, -1)
-$$</p>
+<p>考虑曲面<span class="arithmatex">\(z=f(x,y)\)</span>在<span class="arithmatex">\((x_{0}, y_{0}, z_{0})\)</span>存在切平面<span class="arithmatex">\(\pi :Ax+By+Cz+D=0\)</span>，其法方向为：<span class="arithmatex">\(\vec {r}\)</span>。则存在<span class="arithmatex">\(\vec {\alpha}=(1,0,\frac {\partial f}{\partial x}|_{x=x_{0}}), \vec {\beta}=(0,1,\frac {\partial f}{\partial y}|_{y=y_{0}})\)</span>，使得<span class="arithmatex">\(\vec {\alpha} \parallel \pi, \vec {\beta} \parallel \pi\)</span>，则有：</p>
+<div class="arithmatex">\[
+\vec {r} = \vec {\alpha} \times \vec {\beta}=(\frac {\partial f}{\partial x}|_{x=x_{0}}, \frac {\partial f}{\partial y}|_{y=y_{0}}, -1)
+\]</div>
 <p>在<span class="arithmatex">\((x_{0}, y_{0}, z_{0})\)</span>处的切平面<span class="arithmatex">\(\pi\)</span>的点法式方程为：</p>
-<p>$$
+<div class="arithmatex">\[
 \vec {r} \cdot
 \begin{pmatrix}
-x-x_{0} \
-y-y_{0} \
+x-x_{0} \\
+y-y_{0} \\
 z-z_{0}
-\end{pmatrix}=0 \Longrightarrow z-z_{0}=\frac {\partial f}{\partial x}|<em>{x=x</em>{0}} (x-x_0)+\frac {\partial f}{\partial y}|<em>{y=y</em>{0}}(y-y_{0})
-$$
-当<span class="arithmatex">\(x \to x_{0}, y \to y_{0}\)</span>时：</p>
+\end{pmatrix}=0 \Longrightarrow z-z_{0}=\frac {\partial f}{\partial x}|_{x=x_{0}} (x-x_0)+\frac {\partial f}{\partial y}|_{y=y_{0}}(y-y_{0})
+\]</div>
+<p>当<span class="arithmatex">\(x \to x_{0}, y \to y_{0}\)</span>时：</p>
 <div class="arithmatex">\[
 dz|_{z=z_{0}}=\frac {\partial f}{\partial x}|_{x=x_{0}}dx+\frac {\partial f}{\partial y}|_{y=y_{0}}dy
 \]</div>
