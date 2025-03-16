@@ -8,6 +8,7 @@ nav:
       - 8.多元函数微分:
         - 8.1.微分与导数: math/7.Vector.md
         - 8.2.Jacobi矩阵与隐映射: math/8.Function_2.md
+        - 8.3.Hessian矩阵与Lagrange乘数: math/8.Function_3.md
   - Computer Science:
     - Start: cs/start.md
     - C++:
