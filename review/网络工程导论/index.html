@@ -2123,11 +2123,15 @@
 <h3 id="521http"><strong>5.2.1.http协议</strong></h3>
 <ol>
 <li>http(Browser/Server架构)(应用层协议)客户端(浏览器)与web服务器的http端口(80)建立tcp连接</li>
-<li>发送请求报文</li>
+<li>发送请求报文<ul>
 <li><u><strong>数据组成</strong></u>：请求行，请求头部，空行，请求数据</li>
 <li>数据内容：请求方法，URL，协议版本，请求头部，请求数据</li>
-<li>服务器接受请求并返回http响应</li>
+</ul>
+</li>
+<li>服务器接受请求并返回http响应<ul>
 <li>响应：状态行，响应头部，空行，响应数据</li>
+</ul>
+</li>
 <li>释放tcp连接</li>
 <li>
 <p>客户端浏览器解析html内容</p>
@@ -2140,12 +2144,14 @@
 </li>
 <li>
 <p>http状态码(响应——状态行)</p>
-</li>
+<ol>
 <li>1xx：接收的请求正在处理</li>
 <li>2xx：请求正常处理完成</li>
 <li>3xx：重定向</li>
 <li><u><strong>4xx</strong></u>：<u><strong>请求错误</strong></u></li>
 <li>5xx：服务器错误</li>
+</ol>
+</li>
 </ol>
 <hr />
 <h2 id="6htmlcssjs"><strong>6.HTML、CSS、JS</strong></h2>
@@ -2204,24 +2210,28 @@
 <h3 id="62css"><strong>6.2.CSS</strong></h3>
 <p>CSS：层叠样式表，定义如何显示HTML元素，解决了内容与表现分离的问题。多个样式定义可层叠为一个。</p>
 <ul>
-<li>组成：</li>
-<li><u><strong>选择器</strong></u>：需要改变样式的HTML元素</li>
 <li>
-<p><u><strong>多条声明</strong></u>：属性，值</p>
+<p>组成：</p>
+<ul>
+<li><u><strong>选择器</strong></u>：需要改变样式的HTML元素</li>
+<li><u><strong>多条声明</strong></u>：属性，值</li>
+</ul>
 </li>
 <li>
 <p><u><strong>选择器</strong></u>——<strong>2种</strong></p>
-</li>
+<ul>
 <li><strong><em>id选择器</em></strong>：可以为标有特定id的HTML元素指定特定的样式</li>
-<li>
-<p><strong>class选择器</strong>：可以在多个元素中使用</p>
+<li><strong>class选择器</strong>：可以在多个元素中使用</li>
+</ul>
 </li>
 <li>
 <p><u><strong>插入方式</strong></u>——<strong>3种</strong></p>
-</li>
+<ol>
 <li>外部样式</li>
 <li>内部样式</li>
 <li>内联样式</li>
+</ol>
+</li>
 </ul>
 <h3 id="63javascript"><strong>6.3.JavaScript</strong></h3>
 <ul>
@@ -2245,10 +2255,12 @@
 <h2 id="7"><strong>7.语义网基础</strong></h2>
 <h3 id="71"><strong>7.1.智能的定义</strong></h3>
 <ul>
-<li>AI的两条途径</li>
-<li><u><strong>基于符号表示的途径</strong></u></li>
 <li>
-<p><u><strong>基于统计表示的途径</strong></u></p>
+<p>AI的两条途径</p>
+<ol>
+<li><u><strong>基于符号表示的途径</strong></u></li>
+<li><u><strong>基于统计表示的途径</strong></u></li>
+</ol>
 </li>
 <li>
 <p><u><strong>符号主义</strong></u>：智能即符号计算(慢速思考)</p>
@@ -2267,22 +2279,26 @@
 <p><strong>Web 1.0</strong>(HTTP, HTML, URL)——(<u><strong>静态页面</strong></u>)<span class="arithmatex">\(\to\)</span><strong>Web 2.0</strong>(CGI, ASP, JSP, PHP)——(<u><strong>用户生成式内容</strong></u>)<span class="arithmatex">\(\to\)</span><strong>Web 3.0</strong>(语义网，发明者：<u><strong>Tim Berners-Lee</strong></u>)(RDF, RDFS, OWL)</p>
 <h3 id="72"><strong>7.2.知识描述语言</strong></h3>
 <ul>
-<li>RDF(<u><strong>不具备推理能力</strong></u>)：使用<u><strong>三元组</strong></u>描述语义空间</li>
+<li>
+<p>RDF(<u><strong>不具备推理能力</strong></u>)：使用<u><strong>三元组</strong></u>描述语义空间</p>
+<ul>
 <li>命名资源(I)，未命名资源(B)，自解释资源(数据)(L)</li>
 <li>主语(I, B)+谓语(I)<span class="arithmatex">\(\to\)</span>(I, B, L)</li>
-<li>
-<p>W3C标准：RDF是一个(拥有XML语法，能表达语义的)图形化的表示，使用RDF statement把资源描述成(属性，值)集合，以三元组形式表示，包含主谓宾(S, P, O)</p>
+<li>W3C标准：RDF是一个(拥有XML语法，能表达语义的)图形化的表示，使用RDF statement把资源描述成(属性，值)集合，以三元组形式表示，包含主谓宾(S, P, O)</li>
+</ul>
 </li>
 <li>
 <p>RDFS(<u><strong>具有类型推理能力</strong></u>)：扩展了RDF，来表示资源的类型，以及类型的属性，为模型添加了约束，拥有额外的推导规则</p>
-</li>
-<li>
-<p>表达能力依然有限：没有定义域和值域的条件化限制，没有存在/基数限制，没有完整的逻辑运算符，没有传递性，自反或者对称性属性描述。</p>
+<ul>
+<li>表达能力依然有限：没有定义域和值域的条件化限制，没有存在/基数限制，没有完整的逻辑运算符，没有传递性，自反或者对称性属性描述。</li>
+</ul>
 </li>
 <li>
 <p>OWL(<u><strong>具有属性推理能力</strong></u>)：用于高级概念表达的语言组件，有基于数量的表示(全称/存在两次)，有表达限制和约束的公理。</p>
-</li>
+<ul>
 <li>查询语言与协议：<u><strong>SPARQL</strong></u></li>
+</ul>
+</li>
 </ul>
 <hr />
 <h2 id="9"><strong>9.无线网络概述</strong></h2>
@@ -2330,21 +2346,23 @@
 <h3 id="93"><strong>9.3.无线传输介质和方式</strong></h3>
 <ul>
 <li>无线传输空间：地球大气层和外层空间</li>
-<li>无线传输介质</li>
-<li>导向传输介质：有线通信</li>
 <li>
-<p>非导向传输介质：无线电波，微波，红外线</p>
+<p>无线传输介质</p>
+<ul>
+<li>导向传输介质：有线通信</li>
+<li>非导向传输介质：无线电波，微波，红外线</li>
+</ul>
 </li>
 <li>
 <p>微波通信</p>
-</li>
+<ul>
 <li>频率高，波长短，视距通信，频率范围2～40GHz</li>
 <li><u><strong>衰减慢</strong></u>：微波损耗随距离平方而变化。而双绞线和同轴电缆损耗随距离呈指数变化。微波系统中继器或放大器可彼此相距很远</li>
 <li>容量大，质量好，<u><strong>可沿直线传至很远距离</strong></u>，<u><strong>易受电磁干扰</strong></u></li>
 <li><u><strong>主要损耗来源于衰减</strong></u></li>
 <li>地面微波天线：更长距离需要使用多个中继站，微波链路两两串联</li>
-<li>
-<p>卫星微波通信：范围大，距离远，不受地面灾害影响，易广播，多址通信，信号传输时延</p>
+<li>卫星微波通信：范围大，距离远，不受地面灾害影响，易广播，多址通信，信号传输时延</li>
+</ul>
 </li>
 <li>
 <p><u><strong>红外线通信</strong></u>：收发器距离均不能超过视线范围，不易发现和截获，保密性强，几乎不受电磁和人为干扰，抗干扰性强，不易发现和截获，保密性强，<u><strong>传播易受天气影响</strong></u></p>
@@ -2357,27 +2375,27 @@
 </li>
 <li>
 <p>信号的调制：将输入信息变换为适于信道传输形式</p>
-</li>
+<ul>
 <li>信号源信息：基带信号→已调信号</li>
-<li>
-<p>常用调制方式：模拟，数字，脉冲</p>
+<li>常用调制方式：模拟，数字，脉冲</li>
+</ul>
 </li>
 <li>
 <p>信号的扩频</p>
-</li>
+<ul>
 <li>利用传输信息无关的码对被传输信号扩展频谱，使之占有远远超过被传送信息所必须的最小带宽</li>
 <li>对各种类型噪声和多径失真具有免疫性</li>
-<li>
-<p>隐藏和加密信号。接收方必须知道扩展代码，才可恢复原始信息</p>
+<li>隐藏和加密信号。接收方必须知道扩展代码，才可恢复原始信息</li>
+</ul>
 </li>
 <li>
 <p>复用和多址(<u><strong>复用是实现多址的前提</strong></u>)</p>
-</li>
+<ul>
 <li>信道复用：两点间信道中同时传输互不干扰的多个信号</li>
 <li>多址接入：多点间实现互不干扰多边通信</li>
 <li>复用方式：频分复用，时分复用，码分复用，空分复用，极化复用，波分复用</li>
-<li>
-<p>多址复用：频分多址，时分多址，码分多址，空分多址</p>
+<li>多址复用：频分多址，时分多址，码分多址，空分多址</li>
+</ul>
 </li>
 <li>
 <p>时分复用多址：给定频带最高数据传输速率，传递时间划分为若干个时隙，各用户使用某一时隙，突发脉冲序列方式接受和发送信号</p>
@@ -2405,10 +2423,12 @@
 <li>WLAN: Wireless Local Area Network 无线局域网</li>
 <li>ISO: International Standard Organization 国际标准化组织</li>
 </ul>
-<p><u><strong>网站的设计流程</strong></u>：
-  - 确定内容
-  - 确定表现形式
-  - 确定设计方案</p>
+<p><u><strong>网站的设计流程</strong></u>：</p>
+<ul>
+<li>确定内容</li>
+<li>确定表现形式</li>
+<li>确定设计方案</li>
+</ul>
 <hr />
 
 
