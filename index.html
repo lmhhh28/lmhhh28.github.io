@@ -1665,7 +1665,7 @@
     font-weight: bold;
     width: 2px;
     animation: cursor-blink 1s step-end infinite;
-    margin-left: -1px;  /* 微调光标与文字的距离 */
+    margin-left: -1px;
   }
   @keyframes cursor-blink {
     from, to { opacity: 1 }
@@ -1697,7 +1697,6 @@ function type() {
     charIndex++;
     timeout = setTimeout(type, typingSpeed);
   } else {
-    // 完成打字，准备删除
     timeout = setTimeout(deleteText, pauseBeforeDelete);
   }
 }
@@ -1708,21 +1707,17 @@ function deleteText() {
     charIndex--;
     timeout = setTimeout(deleteText, deletingSpeed);
   } else {
-    // 完成删除，准备打下一段
     currentTextIndex = (currentTextIndex + 1) % texts.length;
     timeout = setTimeout(type, pauseBeforeType);
   }
 }
 
-// 开始动画
 type();
 
-// 清理：页面不可见时暂停动画
 document.addEventListener('visibilitychange', function() {
   if (document.hidden) {
     clearTimeout(timeout);
   } else {
-    // 恢复动画
     if (textElement.textContent === texts[currentTextIndex]) {
       timeout = setTimeout(deleteText, pauseBeforeDelete);
     } else {
