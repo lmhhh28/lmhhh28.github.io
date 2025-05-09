@@ -1768,13 +1768,13 @@
 \]</div>
 <hr />
 <h2 id="12"><strong>1.2.全微分</strong></h2>
-<p>考虑曲面<span class="arithmatex">\(z=f(x,y)\)</span>在<span class="arithmatex">\((x_{0}, y_{0}, z_{0})\)</span>存在切平面<span class="arithmatex">\(\pi :Ax+By+Cz+D=0\)</span>，其法方向为：<span class="arithmatex">\(\vec {r}\)</span>。则存在<span class="arithmatex">\(\vec {\alpha}=(1,0,\frac {\partial f}{\partial x}|_{x=x_{0}}), \vec {\beta}=(0,1,\frac {\partial f}{\partial y}|_{y=y_{0}})\)</span>，使得<span class="arithmatex">\(\vec {\alpha} \parallel \pi, \vec {\beta} \parallel \pi\)</span>，则有：</p>
+<p>考虑曲面<span class="arithmatex">\(z=f(x,y)\)</span>在<span class="arithmatex">\((x_{0}, y_{0}, z_{0})\)</span>存在切平面<span class="arithmatex">\(\pi :Ax+By+Cz+D=0\)</span>，其法方向为：<span class="arithmatex">\(\mathbf {r}\)</span>。则存在<span class="arithmatex">\(\mathbf {\alpha}=(1,0,\frac {\partial f}{\partial x}|_{x=x_{0}}), \mathbf {\beta}=(0,1,\frac {\partial f}{\partial y}|_{y=y_{0}})\)</span>，使得<span class="arithmatex">\(\mathbf {\alpha} \parallel \pi, \mathbf {\beta} \parallel \pi\)</span>，则有：</p>
 <div class="arithmatex">\[
-\vec {r} = \vec {\alpha} \times \vec {\beta}=(\frac {\partial f}{\partial x}|_{x=x_{0}}, \frac {\partial f}{\partial y}|_{y=y_{0}}, -1)
+\mathbf {r} = \mathbf {\alpha} \times \mathbf {\beta}=(\frac {\partial f}{\partial x}|_{x=x_{0}}, \frac {\partial f}{\partial y}|_{y=y_{0}}, -1)
 \]</div>
 <p>在<span class="arithmatex">\((x_{0}, y_{0}, z_{0})\)</span>处的切平面<span class="arithmatex">\(\pi\)</span>的点法式方程为：</p>
 <div class="arithmatex">\[
-\vec {r} \cdot
+\mathbf {r} \cdot
 \begin{pmatrix}
 x-x_{0} \\
 y-y_{0} \\
@@ -1783,36 +1783,36 @@ z-z_{0}
 \]</div>
 <p>当<span class="arithmatex">\(x \to x_{0}, y \to y_{0}\)</span>时：</p>
 <div class="arithmatex">\[
-dz|_{z=z_{0}}=\frac {\partial f}{\partial x}|_{x=x_{0}}dx+\frac {\partial f}{\partial y}|_{y=y_{0}}dy
+\text{d}z|_{z=z_{0}}=\frac {\partial f}{\partial x}|_{x=x_{0}}\text{d}x+\frac {\partial f}{\partial y}|_{y=y_{0}}\text{d}y
 \]</div>
 <p>因此有全微分公式：</p>
 <div class="arithmatex">\[
-dz=\frac {\partial f}{\partial x}dx+\frac {\partial f}{\partial y}dy
+\text{d}z=\frac {\partial f}{\partial x}\text{d}x+\frac {\partial f}{\partial y}\text{d}y
 \]</div>
 <hr />
 <h2 id="13"><strong>1.3.复合多元函数的导数与微分</strong></h2>
 <p>如果多元函数函数<span class="arithmatex">\(z=f(\lambda , \mu)\)</span>，其中<span class="arithmatex">\(\lambda=\phi(t), \mu=\psi(t)\)</span>，则<span class="arithmatex">\(z\)</span>关于<span class="arithmatex">\(t\)</span>的导数：</p>
 <div class="arithmatex">\[
-\frac {dz}{dt}=\frac {\partial f}{\partial \phi}\frac {d\phi}{dt}+\frac {\partial f}{\partial \psi}\frac {d\psi}{dt}
+\frac {\text{d}z}{\text{d}t}=\frac {\partial f}{\partial \phi}\frac {\text{d}\phi}{\text{d}t}+\frac {\partial f}{\partial \psi}\frac {\text{d}\psi}{\text{d}t}
 \]</div>
 <p>若<span class="arithmatex">\(\lambda=\phi(x, y), \mu=\psi(x, y)\)</span>，不妨令<span class="arithmatex">\(z=g(x, y)\)</span>，则有：</p>
 <div class="arithmatex">\[
-dz=\frac {\partial f}{\partial \phi}d\phi+\frac {\partial f}{\partial \psi}d\psi
+\text{d}z=\frac {\partial f}{\partial \phi}\text{d}\phi+\frac {\partial f}{\partial \psi}\text{d}\psi
 \]</div>
 <p>又：</p>
 <div class="arithmatex">\[
-d\phi=\frac {\partial \phi}{\partial x}dx+\frac {\partial \phi}{\partial y}dy
+\text{d}\phi=\frac {\partial \phi}{\partial x}\text{d}\text{d}x+\frac {\partial \phi}{\partial y}\text{d}y
 \]</div>
 <p>$$
-d\psi=\frac {\partial \psi}{\partial x}dx+\frac {\partial \psi}{\partial y}dy
+\text{d}\psi=\frac {\partial \psi}{\partial x}\text{d}x+\frac {\partial \psi}{\partial y}\text{d}y
 $$
 所以：</p>
 <div class="arithmatex">\[
-dz=(\frac {\partial f}{\partial \phi}\frac{\partial \phi}{\partial x}+\frac {\partial f}{\partial \psi}\frac{\partial \psi}{\partial x})dx+(\frac {\partial f}{\partial \phi}\frac{\partial \phi}{\partial y}+\frac {\partial f}{\partial \psi}\frac{\partial \psi}{\partial y})dy
+\text{d}z=(\frac {\partial f}{\partial \phi}\frac{\partial \phi}{\partial x}+\frac {\partial f}{\partial \psi}\frac{\partial \psi}{\partial x})\text{d}x+(\frac {\partial f}{\partial \phi}\frac{\partial \phi}{\partial y}+\frac {\partial f}{\partial \psi}\frac{\partial \psi}{\partial y})\text{d}y
 \]</div>
 <p>又：</p>
 <p>$$
-dz=\frac {\partial g}{\partial x}dx+\frac {\partial g}{\partial y}dy
+\text{d}z=\frac {\partial g}{\partial x}\text{d}x+\frac {\partial g}{\partial y}\text{d}y
 $$
 则<span class="arithmatex">\(z=g(x, y)\)</span>偏微分：</p>
 <div class="arithmatex">\[
@@ -1825,26 +1825,26 @@ $$
 <h2 id="14"><strong>1.4.隐函数求导</strong></h2>
 <p>二元隐函数通常由方程<span class="arithmatex">\(F(x, y)=0\)</span>确定。若在<span class="arithmatex">\((x_{0}, y_{0})\)</span>邻域内具有连续偏导数，则有链式法则：</p>
 <div class="arithmatex">\[
-dF(x, y(x)) = \frac {\partial F}{\partial x}dx+\frac{\partial F}{\partial y}dy
+\text{d}F(x, y(x)) = \frac {\partial F}{\partial x}\text{d}x+\frac{\partial F}{\partial y}\text{d}y
 \]</div>
 <p>又：</p>
 <div class="arithmatex">\[
-\frac{dF(x, y)}{dx}=\frac{\partial F}{\partial x}+\frac{\partial F}{\partial y}\frac{dy}{dx}=0
+\frac{\text{d}F(x, y)}{\text{d}x}=\frac{\partial F}{\partial x}+\frac{\partial F}{\partial y}\frac{\text{d}y}{\text{d}x}=0
 \]</div>
 <p>故隐函数方程<span class="arithmatex">\(F(x, y)=0, y关于x的导数\)</span>为：</p>
 <div class="arithmatex">\[
-\frac{dy}{dx}=-\frac{{F_{x}}^{'}}{{F_{y}}^{'}}
+\frac{\text{d}y}{\text{d}x}=-\frac{{F_{x}}^{'}}{{F_{y}}^{'}}
 \]</div>
 <p>推广至多元函数，例如三元隐函数方程<span class="arithmatex">\(F(x, y, z(x, y))=0\)</span>，有链式法则：</p>
 <div class="arithmatex">\[
-dF=\frac{\partial F}{\partial x}dx+\frac{\partial F}{\partial y}dy+\frac{\partial F}{\partial z}dz
+\text{d}F=\frac{\partial F}{\partial x}\text{d}x+\frac{\partial F}{\partial y}\text{d}y+\frac{\partial F}{\partial z}\text{d}z
 \]</div>
-<p>又有：<span class="arithmatex">\(z=z(x,y)，dz=\frac{\partial z}{\partial x}dx+\frac{\partial z}{\partial y}dy\)</span>，因此：</p>
+<p>又有：<span class="arithmatex">\(z=z(x,y)，\text{d}z=\frac{\partial z}{\partial x}\text{d}x+\frac{\partial z}{\partial y}\text{d}y\)</span>，因此：</p>
 <div class="arithmatex">\[
-dF=(\frac{\partial F}{\partial x}+\frac{\partial F}{\partial z}\frac{\partial z}{\partial x})dx+(\frac{\partial F}{\partial y}+\frac{\partial F}{\partial z}\frac{\partial z}{\partial y})dy
+\text{d}F=(\frac{\partial F}{\partial x}+\frac{\partial F}{\partial z}\frac{\partial z}{\partial x})\text{d}x+(\frac{\partial F}{\partial y}+\frac{\partial F}{\partial z}\frac{\partial z}{\partial y})\text{d}y
 \]</div>
 <div class="arithmatex">\[
-           \frac{dF}{dx}=\frac{\partial F}{\partial x}+\frac{\partial F}{\partial z}\frac{\partial z}{\partial x}=0
+\frac{\text{d}F}{\text{d}x}=\frac{\partial F}{\partial x}+\frac{\partial F}{\partial z}\frac{\partial z}{\partial x}=0
 \]</div>
 <p>因此有：<span class="arithmatex">\({F_{x}}^{'}+{F_{z}}^{'}\frac{\partial z}{\partial x}=0，即：\frac{\partial z}{\partial x}=-\frac{{F_{z}}^{'}}{{F_{x}}^{'}}\)</span>。同理有：<span class="arithmatex">\(\frac{\partial z}{\partial y}=-\frac{{F_{z}}^{'}}{{F_{x}}^{'}}\)</span>。</p>
 <hr />
@@ -1852,7 +1852,7 @@ dF=(\frac{\partial F}{\partial x}+\frac{\partial F}{\partial z}\frac{\partial z}
 <ul>
 <li>方向导数</li>
 </ul>
-<p>讨论二元函数<span class="arithmatex">\(z=f(x,y)\)</span>在<span class="arithmatex">\((x_0,y_0,z_0)\)</span>处的切平面<span class="arithmatex">\(\pi\)</span>(若此处偏导数存在)由向量<span class="arithmatex">\(\vec{\alpha}=(1,0,\frac{\partial f}{\partial x})，\vec{\beta}=(0,1,\frac{\partial f}{\partial y})\)</span>确定。则平行于切平面<span class="arithmatex">\(\pi\)</span>的任意方向向量<span class="arithmatex">\(\vec{l}\)</span>都可由基向量<span class="arithmatex">\(\vec{\alpha}，\vec{\beta}\)</span>的线性组合表示：</p>
+<p>讨论二元函数<span class="arithmatex">\(z=f(x,y)\)</span>在<span class="arithmatex">\((x_0,y_0,z_0)\)</span>处的切平面<span class="arithmatex">\(\pi\)</span>(若此处偏导数存在)由向量<span class="arithmatex">\(\mathbf{\alpha}=(1,0,\frac{\partial f}{\partial x})，\mathbf{\beta}=(0,1,\frac{\partial f}{\partial y})\)</span>确定。则平行于切平面<span class="arithmatex">\(\pi\)</span>的任意方向向量<span class="arithmatex">\(\mathbf {l}\)</span>都可由基向量<span class="arithmatex">\(\mathbf {\alpha}，\mathbf {\beta}\)</span>的线性组合表示：</p>
 <div class="arithmatex">\[
 \mathbf{l}=\lambda \mathbf{\alpha}+\mu \mathbf{\beta}=(\lambda,\mu,\lambda\frac{\partial f}{\partial x}+\mu \frac{\partial f}{\partial y})
 \]</div>
@@ -1868,7 +1868,7 @@ dF=(\frac{\partial F}{\partial x}+\frac{\partial F}{\partial z}\frac{\partial z}
 <div class="arithmatex">\[
 \frac{\partial f}{\partial l}=(\frac{\partial f}{\partial x},\frac{\partial f}{\partial y})\cdot(\frac{\lambda}{\sqrt{\lambda^2+\mu^2}},\frac{\mu}{\sqrt{\lambda^2+\mu^2}})^T=(\frac{\partial f}{\partial x},\frac{\partial f}{\partial y})\cdot \mathbf{e_l}
 \]</div>
-<p>其中<span class="arithmatex">\(\vec{e_l}\)</span>是<span class="arithmatex">\((x_0,y_0,z_0)\)</span>处<span class="arithmatex">\(\vec{l}\)</span>方向上的单位向量。定义函数<span class="arithmatex">\(z=f(x,y)\)</span>的点<span class="arithmatex">\((x_0,y_0,z_0)\)</span>处的梯度为：</p>
+<p>其中<span class="arithmatex">\(\mathbf{e_l}\)</span>是<span class="arithmatex">\((x_0,y_0,z_0)\)</span>处<span class="arithmatex">\(\mathbf{l}\)</span>方向上的单位向量。定义函数<span class="arithmatex">\(z=f(x,y)\)</span>的点<span class="arithmatex">\((x_0,y_0,z_0)\)</span>处的梯度为：</p>
 <div class="arithmatex">\[
 \nabla f(x,y)=(\frac{\partial f}{\partial x},\frac{\partial f}{\partial y})
 \]</div>
