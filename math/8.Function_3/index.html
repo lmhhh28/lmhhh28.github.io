@@ -1726,16 +1726,16 @@
 <h1 id="3hessianlagrange"><strong>3.Hessian矩阵与Lagrange乘数法</strong></h1>
 <hr />
 <h2 id="31hessian"><strong>3.1.二阶偏导与Hessian矩阵</strong></h2>
-<p>对于点集多元函数<span class="arithmatex">\(z=f(x,y)\)</span>，其微分为<span class="arithmatex">\(dz=\nabla f\cdot(dx,dy)^T\)</span>，将Jacobi矩阵即梯度<span class="arithmatex">\(\nabla f\)</span>视为<span class="arithmatex">\(z\)</span>的导函数。对<span class="arithmatex">\(dz\)</span>微分：</p>
+<p>对于点集多元函数<span class="arithmatex">\(z=f(x,y)\)</span>，其微分为<span class="arithmatex">\(\text{d}z=\nabla f\cdot(\text{d}x,\text{d}y)^T\)</span>，将Jacobi矩阵即梯度<span class="arithmatex">\(\nabla f\)</span>视为<span class="arithmatex">\(z\)</span>的导函数。对<span class="arithmatex">\(\text{d}z\)</span>微分：</p>
 <div class="arithmatex">\[
-d^2z=
+\text{d}^2z=
 \begin{pmatrix}
-\frac{\partial^2 f}{\partial x^2}dx+\frac{\partial^2f}{\partial x\partial y}dy \\
-\frac{\partial^2f}{\partial x\partial y}dx+\frac{\partial^2f}{\partial y^2}dy
+\frac{\partial^2 f}{\partial x^2}\text{d}x+\frac{\partial^2f}{\partial x\partial y}\text{d}y \\
+\frac{\partial^2f}{\partial x\partial y}\text{d}x+\frac{\partial^2f}{\partial y^2}\text{d}y
 \end{pmatrix}^T\cdot
 \begin{pmatrix}
-dx \\
-dy
+\text{d}x \\
+\text{d}y
 \end{pmatrix}=
 \mathbf h^TH\mathbf{h}\ ,\\ H=
 \begin{pmatrix}
@@ -1747,9 +1747,9 @@ dy
 <p>若<span class="arithmatex">\(f_{xy}，f_{yx}\)</span>在<span class="arithmatex">\((x_0,y_0,z_0)\)</span>处存在且连续，则<span class="arithmatex">\(f_{xy}=f_{yx}\)</span>。由此<span class="arithmatex">\(H=H^T\)</span>，Hessian矩阵为实对称矩阵。</p>
 <p>对于函数<span class="arithmatex">\(z=f(x,y)\)</span>，有Taylor公式的二阶近似：</p>
 <div class="arithmatex">\[
-dz=\nabla f\cdot\mathbf h+\frac{1}{2}\mathbf h^TH\mathbf h+o(||\mathbf h^2||)
+\text{d}z=\nabla f\cdot\mathbf h+\frac{1}{2}\mathbf h^TH\mathbf h+o(||\mathbf h^2||)
 \]</div>
-<p>不难证明，<span class="arithmatex">\((x_0,y_0,z_0)\)</span>为极值点的充分条件为<span class="arithmatex">\(\nabla f=\mathbf 0\)</span>，若极小值点存在，<span class="arithmatex">\(dz=\mathbf h^TH\mathbf h&gt;0\)</span>，反之<span class="arithmatex">\(dz=\mathbf h^TH\mathbf h&lt;0\)</span>，即<span class="arithmatex">\(H\)</span>为严格正(负)定矩阵。若此点处极值点不存在，则总存在<span class="arithmatex">\(\mathbf p，\mathbf q\)</span>，使得<span class="arithmatex">\(\mathbf p^TH\mathbf p&lt;0&lt;\mathbf q^TH\mathbf q\)</span>。</p>
+<p>不难证明，<span class="arithmatex">\((x_0,y_0,z_0)\)</span>为极值点的充分条件为<span class="arithmatex">\(\nabla f=\mathbf 0\)</span>，若极小值点存在，<span class="arithmatex">\(\text{d}z=\mathbf h^TH\mathbf h&gt;0\)</span>，反之<span class="arithmatex">\(\text{d}z=\mathbf h^TH\mathbf h&lt;0\)</span>，即<span class="arithmatex">\(H\)</span>为严格正(负)定矩阵。若此点处极值点不存在，则总存在<span class="arithmatex">\(\mathbf p，\mathbf q\)</span>，使得<span class="arithmatex">\(\mathbf p^TH\mathbf p&lt;0&lt;\mathbf q^TH\mathbf q\)</span>。</p>
 <p>设<span class="arithmatex">\(H\)</span>的特征值为<span class="arithmatex">\(\lambda\)</span>，特征向量为<span class="arithmatex">\(\mathbf x\)</span>，由此可得：</p>
 <div class="arithmatex">\[
 H\mathbf x=\lambda\mathbf x
