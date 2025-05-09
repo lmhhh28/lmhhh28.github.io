@@ -1,0 +1,27 @@
+/* 使用Material主题的内置变量 */
+.homepage-hero {
+  background-color: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  padding: 3rem;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+/* 或者使用自定义变量（推荐） */
+:root {
+  --hero-bg: #f8f9fa;       /* 日间背景 */
+  --hero-text: #212121;     /* 日间文字 */
+}
+
+[data-md-color-scheme="slate"] {
+  --hero-bg: #303030;       /* 夜间背景 */
+  --hero-text: #f5f5f5;     /* 夜间文字 */
+}
+
+.homepage-hero {
+  background-color: var(--hero-bg);
+  color: var(--hero-text);
+  padding: 3rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}

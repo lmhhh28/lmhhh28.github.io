@@ -44,7 +44,7 @@
     
       <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
     
-      <link rel="stylesheet" href="assets/stylesheets/custom.css">
+      <link rel="stylesheet" href="assets/stylesheets/hero-theme.css">
     
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -70,11 +70,6 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
-      
-        
-        <a href="#welcome-to-lmhhhs-note" class="md-skip">
-          跳转至
-        </a>
       
     </div>
     <div data-md-component="announce">
@@ -106,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Welcome to lmhhh's Note!
+              Home
             
           </span>
         </div>
@@ -1653,19 +1648,91 @@
   
 
 
-<h1 id="welcome-to-lmhhhs-note"><strong>Welcome to lmhhh's Note!</strong></h1>
-<h2 id="this-is-katex-test"><strong>This is KateX Test:</strong></h2>
-<div class="arithmatex">\[
-\int \frac{1}{1+x^{5}}dx=\dfrac{\ln\left(\left|x+1\right|\right)}{5}+\left(\dfrac{1}{4\,\sqrt{5}}-\dfrac{1}{20}\right)\,\ln\left(2\,{x}^{2}+\left(\sqrt{5}-1\right)\,x+2\right)+\left(-\dfrac{1}{4\,\sqrt{5}}-\dfrac{1}{20}\right)\,\ln\left(2\,{x}^{2}+\left(-\sqrt{5}-1\right)\,x+2\right)+\dfrac{\sqrt{2\,\sqrt{5}+10}\,\arctan\left(\frac{x+\frac{\sqrt{5}-1}{4}}{\sqrt{\frac{\sqrt{5}}{8}+\frac{5}{8}}}\right)}{10}+\dfrac{\sqrt{10-2\,\sqrt{5}}\,\arctan\left(\frac{2\,\sqrt{2}\,\left(x+\frac{-\sqrt{5}-1}{4}\right)}{\sqrt{5-\sqrt{5}}}\right)}{10}+C
-\]</div>
-<h2 id="this-is-css-test"><strong>This is CSS Test</strong></h2>
-<div class="homepage-hero">
-  <h2>Custom Hero Section</h2>
-  <p>This section uses custom CSS styling.</p>
-</div>
+<h1>
+  <div class="typing-container">
+    <span id="typing-text"></span>
+  </div>
+</h1>
+<style>
+  .typing-container {
+    display: inline-block;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 1.2em;
+  }
+  #typing-text::after {
+    content: "|";
+    font-weight: bold;
+    width: 2px;
+    animation: cursor-blink 1s step-end infinite;
+    margin-left: -1px;  /* 微调光标与文字的距离 */
+  }
+  @keyframes cursor-blink {
+    from, to { opacity: 1 }
+    50% { opacity: 0 }
+  }
+</style>
 
-<h2 id="this-is-javascript-test"><strong>This is JavaScript Test</strong></h2>
-<p><button class="custom-button">Click Me</button></p>
+<script>
+const textElement = document.getElementById('typing-text');
+const cursorElement = document.getElementById('typing-cursor');
+const texts = [
+  "Welcome to Lmhhh's Note!",
+  "This is a Test Page.❤",
+  "这是一个测试页面 ❤"
+];
+
+let currentTextIndex = 0;
+let isTyping = true;
+let charIndex = 0;
+let typingSpeed = 100;
+let deletingSpeed = 50;
+let pauseBeforeDelete = 1500;
+let pauseBeforeType = 500;
+let timeout;
+
+function type() {
+  if (charIndex < texts[currentTextIndex].length) {
+    textElement.textContent += texts[currentTextIndex].charAt(charIndex);
+    charIndex++;
+    timeout = setTimeout(type, typingSpeed);
+  } else {
+    // 完成打字，准备删除
+    timeout = setTimeout(deleteText, pauseBeforeDelete);
+  }
+}
+
+function deleteText() {
+  if (charIndex > 0) {
+    textElement.textContent = texts[currentTextIndex].substring(0, charIndex - 1);
+    charIndex--;
+    timeout = setTimeout(deleteText, deletingSpeed);
+  } else {
+    // 完成删除，准备打下一段
+    currentTextIndex = (currentTextIndex + 1) % texts.length;
+    timeout = setTimeout(type, pauseBeforeType);
+  }
+}
+
+// 开始动画
+type();
+
+// 清理：页面不可见时暂停动画
+document.addEventListener('visibilitychange', function() {
+  if (document.hidden) {
+    clearTimeout(timeout);
+  } else {
+    // 恢复动画
+    if (textElement.textContent === texts[currentTextIndex]) {
+      timeout = setTimeout(deleteText, pauseBeforeDelete);
+    } else {
+      timeout = setTimeout(type, typingSpeed);
+    }
+  }
+});
+</script>
+
+<p><button class="custom-button">点我</button></p>
 <canvas id="myChart" width="400" height="200"></canvas>
 
 
