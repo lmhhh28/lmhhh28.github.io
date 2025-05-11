@@ -727,6 +727,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.统一的微积分基本定理
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1717,6 +1726,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.统一的微积分基本定理
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1747,7 +1765,7 @@
 <h2 id="22gauss"><strong>2.2.曲面的通量与Gauss公式</strong></h2>
 <p>对于空间中光滑且连续的向量场<span class="arithmatex">\(\mathbf{F}\)</span>，其通过有向曲面<span class="arithmatex">\(\Omega\)</span>的通量为：</p>
 <div class="arithmatex">\[
-B=\iint_\Omega \mathbf{F}\cdot\mathbf{n}\text{d}s
+B=\iint_\Omega \mathbf{F}\cdot\mathbf{n}\text{d}S
 \]</div>
 <p>又：<span class="arithmatex">\(\text{d}s=\frac{1}{|\cos\gamma|}\text{d}\sigma=\frac{|\mathbf{n}|\cdot|\mathbf{p}|}{|\mathbf{n}\cdot\mathbf{p}|}\text{d}\sigma\)</span>，上式可写为(隐函数 or not?)：</p>
 <div class="arithmatex">\[
@@ -1755,7 +1773,7 @@ B=\iint_\Omega \mathbf{F}\cdot \frac{\nabla f}{|\nabla{f}\cdot\mathbf{p}|}\text{
 \]</div>
 <p>若有向曲面<span class="arithmatex">\(\Omega\)</span>闭合，同样有：</p>
 <div class="arithmatex">\[
-B=\oiint_\Omega \mathbf{F} \cdot \mathbf{n}\text{d}s 
+B=\oiint_\Omega \mathbf{F} \cdot \mathbf{n}\text{d}S
 \]</div>
 <ul>
 <li>Gauss公式与统一的散度定理</li>
@@ -1766,7 +1784,7 @@ B=\oiint_\Omega \mathbf{F} \cdot \mathbf{n}\text{d}s
 \]</div>
 <p>对于任意的闭合有向曲面<span class="arithmatex">\(\Omega\)</span>与其围成的区域<span class="arithmatex">\(D\)</span>，有Gauss定理：</p>
 <div class="arithmatex">\[
-\oiint_\Omega \mathbf{F} \cdot \mathbf{n}\text{d}s=\iiint_D\nabla\cdot \mathbf{F}\text{d}V
+\oiint_\Omega \mathbf{F} \cdot \mathbf{n}\text{d}S=\iiint_D\nabla\cdot \mathbf{F}\text{d}V
 \]</div>
 <hr />
 <h2 id="22stokes"><strong>2.2.空间的旋度与Stokes公式</strong></h2>
@@ -1782,11 +1800,43 @@ B=\oiint_\Omega \mathbf{F} \cdot \mathbf{n}\text{d}s
 <ul>
 <li>旋度场与Stokes定理</li>
 </ul>
-<p>在三维空间中，<span class="arithmatex">\(\nabla\)</span>算子与向量场<span class="arithmatex">\(\mathbf{F}\)</span>作叉积将<span class="arithmatex">\(\mathbb{R}^3\to\mathbb{R}^3\)</span>，将任意向量场<span class="arithmatex">\(\mathbf{F}\)</span>映射为无散的旋度场<span class="arithmatex">\(\nabla\times\mathbf{F}\)</span>，即：</p>
+<p>在三维空间中，<span class="arithmatex">\(\nabla\)</span>算子与向量场<span class="arithmatex">\(\mathbf{F}\)</span>作叉积将<span class="arithmatex">\(\mathbb{R}^3\to\mathbb{R}^3\)</span>，将任意向量场<span class="arithmatex">\(\mathbf{F}\)</span>映射为无源且散度处处为<span class="arithmatex">\(0\)</span>的的旋度场<span class="arithmatex">\(\nabla\times\mathbf{F}\)</span>，即：</p>
 <div class="arithmatex">\[
 \text{div}(\nabla\times\mathbf{F})=\nabla\cdot(\nabla\times\mathbf{F})=0
 \]</div>
-<p>设空间中有向曲面<span class="arithmatex">\(\Omega\)</span>，其边界曲线为<span class="arithmatex">\(C\)</span></p>
+<p>设空间中有向曲面<span class="arithmatex">\(\Omega\)</span>，其边界曲线为<span class="arithmatex">\(C\)</span>。空间中处处光滑且连续的向量场<span class="arithmatex">\(\mathbf{F}\)</span>在边界曲线<span class="arithmatex">\(C\)</span>上的线积分可以表示为<span class="arithmatex">\(\mathbf{F}\)</span>的旋度场通过曲面<span class="arithmatex">\(\Omega\)</span>的通量，即Stokes定理：</p>
+<div class="arithmatex">\[
+\oint_C \mathbf{F}\cdot\mathbf{r}\text{d}s=\iint_\Omega (\nabla\times\mathbf{F})\cdot\mathbf{n}\text{d}S
+\]</div>
+<p>设单位法向量<span class="arithmatex">\(\mathbf{n}=(\cos\alpha,\cos\beta,\cos\gamma)\)</span>，则<span class="arithmatex">\(\mathbf{n}\text{d}S=(\text{d}y\text{d}z,\text{d}x\text{d}z,\text{d}x\text{d}y)\)</span>。所以有：</p>
+<div class="arithmatex">\[
+\oint_C \mathbf{F}\cdot\mathbf{r}\text{d}s=\iint_D (\frac{\partial R}{\partial y}-\frac{\partial Q}{\partial z})\text{d}y\text{d}z+(\frac{\partial R}{\partial x}-\frac{\partial P}{\partial z})\text{d}x\text{d}z+(\frac{\partial Q}{\partial x}-\frac{\partial P}{\partial y})\text{d}x\text{d}y
+\]</div>
+<p>当有向曲面<span class="arithmatex">\(\Omega\)</span>为平面<span class="arithmatex">\(xOy\)</span>上的封闭区域<span class="arithmatex">\(D\)</span>时，Stokes定理退化为格林公式的旋量形式：</p>
+<div class="arithmatex">\[
+\oint_C\mathbf{F}\cdot\mathbf{r}\text{d}s=\iint_D \nabla\times\mathbf{F}\text{d}\sigma
+\]</div>
+<hr />
+<h2 id="23"><strong>2.3.统一的微积分基本定理</strong></h2>
+<p>我们有牛顿-莱布尼茨定理：</p>
+<div class="arithmatex">\[
+f(b)-f(a)=\int_a^b \frac{\text{d}f}{\text{d}x}\text{d}x
+\]</div>
+<p>在一维的情形下，不妨将微商运算符<span class="arithmatex">\(\frac{\text{d}}{\text{d}x}\)</span>写作<span class="arithmatex">\(\nabla\)</span>运算符，其意义依然表示在<span class="arithmatex">\(x_0\)</span>点邻域内的线性变换。在一维向量场内，<span class="arithmatex">\(\mathbf{f}(b)-\mathbf{f}(a)\)</span>表示向量场在区域<span class="arithmatex">\(L[a,b]\)</span>处流入流出情形。于是可将上述写作Green公式在一维情形下的通量形式：</p>
+<div class="arithmatex">\[
+\mathbf{f}(b)-\mathbf{f}(a)=\int_{L[a,b]}\nabla \cdot\mathbf{f}\text{d}x
+\]</div>
+<p>我们有以下在<span class="arithmatex">\(\nabla\)</span>算符下统一形式的微积分基本定理：</p>
+<div class="arithmatex">\[
+\mathbf{f}(b)-\mathbf{f}(a)=\int_{L}\nabla \cdot\mathbf{f}\text{d}x
+\]</div>
+<div class="arithmatex">\[
+\oint_C\mathbf{F}\cdot \mathbf{n}\text{d}s=\iint _C \nabla \cdot \mathbf{F}\text{d}\sigma
+\]</div>
+<div class="arithmatex">\[
+\oiint_\Omega \mathbf{F} \cdot \mathbf{n}\text{d}S=\iiint_D\nabla\cdot \mathbf{F}\text{d}V
+\]</div>
+<hr />
 
 
 
