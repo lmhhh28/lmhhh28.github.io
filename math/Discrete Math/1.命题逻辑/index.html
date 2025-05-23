@@ -1423,6 +1423,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../review/%E6%80%9D%E6%83%B3%E9%81%93%E5%BE%B7%E4%B8%8E%E6%B3%95%E6%B2%BB/0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    思想道德与法治
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1597,6 +1618,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.命题公式的分类
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.命题公式的基本等价关系
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1618,21 +1657,56 @@
 <h1 id="2"><strong>2.数理逻辑</strong></h1>
 <hr />
 <h2 id="21"><strong>2.1.命题连结词描述方法</strong></h2>
-<p>蕴含式关于<span class="arithmatex">\(Q\)</span>是<span class="arithmatex">\(P\)</span>的必要条件(<span class="arithmatex">\(P\)</span>是<span class="arithmatex">\(Q\)</span>的充分条件)的描述如下：</p>
+<p>蕴含式关于<span class="arithmatex">\(Q\)</span>是<span class="arithmatex">\(P\)</span>的必要条件(<span class="arithmatex">\(P\)</span>是<span class="arithmatex">\(Q\)</span>的充分条件)，即<span class="arithmatex">\(P\to Q\)</span>的描述如下：</p>
 <ol>
-<li>
-<p>如果<span class="arithmatex">\(P\)</span>则<span class="arithmatex">\(Q\)</span></p>
-</li>
-<li>
-<p>因为<span class="arithmatex">\(P\)</span>所以<span class="arithmatex">\(Q\)</span></p>
-</li>
-<li>
-<p>只要<span class="arithmatex">\(P\)</span>就<span class="arithmatex">\(Q\)</span></p>
-</li>
-<li>
-<p>只有<span class="arithmatex">\(Q\)</span>则<span class="arithmatex">\(P\)</span></p>
-</li>
+<li>如果<span class="arithmatex">\(P\)</span>，则<span class="arithmatex">\(Q\)</span></li>
+<li>因为<span class="arithmatex">\(P\)</span>，所以<span class="arithmatex">\(Q\)</span></li>
+<li>只要<span class="arithmatex">\(P\)</span>，就<span class="arithmatex">\(Q\)</span></li>
+<li>只有<span class="arithmatex">\(Q\)</span>，则<span class="arithmatex">\(P\)</span></li>
+<li>除非<span class="arithmatex">\(Q\)</span>，才<span class="arithmatex">\(P\)</span></li>
+<li>除非<span class="arithmatex">\(Q\)</span>，否则<span class="arithmatex">\(\neg P\)</span></li>
+<li>没有<span class="arithmatex">\(Q\)</span>，就没有<span class="arithmatex">\(P\)</span></li>
 </ol>
+<p>蕴含式具有对称性，即：</p>
+<div class="arithmatex">\[
+P\to\neg Q\Leftrightarrow Q\to\neg P
+\]</div>
+<hr />
+<h2 id="22"><strong>2.2.命题公式的分类</strong></h2>
+<ol>
+<li>永真公式(重言式)(tautology)：对于命题公式<span class="arithmatex">\(G\)</span>在任意的解释<span class="arithmatex">\(I\)</span>下都为真</li>
+<li>永假公式(永假式)(contradiction)：对于命题公式<span class="arithmatex">\(G\)</span>在任意的解释<span class="arithmatex">\(I\)</span>下都为假</li>
+<li>可满足式(satisfable)：至少存在一个解释<span class="arithmatex">\(I\)</span>使命题公式<span class="arithmatex">\(G\)</span>为真</li>
+</ol>
+<hr />
+<h2 id="23"><strong>2.3.命题公式的基本等价关系</strong></h2>
+<ol>
+<li>幂等律</li>
+</ol>
+<div class="arithmatex">\[
+G\vee G=G
+\]</div>
+<div class="arithmatex">\[
+G\wedge G=G
+\]</div>
+<ol>
+<li>同一律</li>
+</ol>
+<div class="arithmatex">\[
+G\vee 0=G
+\]</div>
+<div class="arithmatex">\[
+G\wedge 1=G
+\]</div>
+<ol>
+<li>零律</li>
+</ol>
+<div class="arithmatex">\[
+G\vee 1 = 1
+\]</div>
+<div class="arithmatex">\[
+G\wedge 0=0
+\]</div>
 
 
 
