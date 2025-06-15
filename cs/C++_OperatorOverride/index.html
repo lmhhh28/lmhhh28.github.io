@@ -20,7 +20,7 @@
     
     
       
-        <title>运算符重载 - My Note</title>
+        <title>OperatorOverride - My Note</title>
       
     
     
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              运算符重载
+              OperatorOverride
             
           </span>
         </div>
@@ -833,7 +833,7 @@
         
   
   <span class="md-ellipsis">
-    类的构造函数与组合
+    类的构造与组合
   </span>
   
 
@@ -875,7 +875,7 @@
         
   
   <span class="md-ellipsis">
-    Class and Object(3)
+    数据的共享与保护
   </span>
   
 
@@ -905,7 +905,7 @@
           
   
   <span class="md-ellipsis">
-    运算符重载
+    OperatorOverride
   </span>
   
 
@@ -916,7 +916,7 @@
         
   
   <span class="md-ellipsis">
-    运算符重载
+    OperatorOverride
   </span>
   
 
@@ -984,7 +984,7 @@
         
   
   <span class="md-ellipsis">
-    模板
+    Template
   </span>
   
 
@@ -1026,7 +1026,7 @@
         
   
   <span class="md-ellipsis">
-    异常
+    Exception
   </span>
   
 
@@ -2085,6 +2085,19 @@
 <li><code>sizeof</code> (大小运算符)</li>
 <li><code>typeid</code> (类型信息运算符)</li>
 </ul>
+<p>The 2 forms of operator override:</p>
+<ol>
+<li>重载为类的非静态成员函数<ul>
+<li>运算符表达式左侧必须是此类的对象</li>
+<li>必须重载为成员函数：<code>=</code>, <code>[]</code>, <code>()</code>, <code>-&gt;</code></li>
+</ul>
+</li>
+<li>重载为非成员函数(友元全局函数)<ul>
+<li>运算符表达式左侧可以是任意类型</li>
+<li>必须重载为非成员全局函数：<code>&lt;&lt;</code>, <code>&gt;&gt;</code></li>
+</ul>
+</li>
+</ol>
 <p>考虑设计一个复数类<code>Complex</code>，使用运算符重载实现复数类对象的加法运算：</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">Complex</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="k">private</span><span class="o">:</span>
