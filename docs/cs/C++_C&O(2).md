@@ -1,4 +1,4 @@
-# **C++.Class and Object(2)**
+# **C++.继承与多态**
 
 ---
 
@@ -7,11 +7,11 @@
 基类(Base Class):
 
 ```c++
-class Shape{
+class Shape {
 	private:	// 派生类不可访问
 		string shapeName;
 	protected:	// 派生类可访问
-		int positionX,positionY;
+		int positionX, positionY;
 	public:
 		void setName(const string& name);
 		float area();
@@ -22,7 +22,7 @@ class Shape{
 派生类(Derived Class):
 
 ```c++
-class Circle: public/protected/private Shape{
+class Circle: public/protected/private Shape {
 	private:
     	float radius;
     public:
@@ -38,52 +38,74 @@ class Circle: public/protected/private Shape{
 
 Constructor and Destructor 的调用：
 
+While the constructor of the subClass is called, under no circumstance dose the constructor of baseClass is called.
+
 - 无参/默认构造函数
 
 ```c++
-class baseClass{
+class innerClass {
 	public:
-		baseClass(){
-			cout<<"calling to baseClass constructor"<<endl;
+		innerClass() {
+			std::cout << "calling to innerClass constructor" << std::endl;
 		}
-		~baseClass(){
-			cout<<"calling to baseClass destructor"<<endl;
+		~innerClass() {
+			std::cout << "calling to innerClass destructor" << std::endl;
 		}
 };
 
-class subClass: public baseClass{
+class baseClass {
+	private:
+		innerClass innerBase;
 	public:
-		subClass{
-			cout<<"\tcalling to subClass constructor"<<endl;
+		baseClass() {
+			std::cout << "calling to baseClass constructor" << std::endl;
 		}
-		~subClass{
-			cout<<"\tcalling to subClass destructor"<<endl;
+		~baseClass() {
+			std::cout << "calling to baseClass destructor" << std::endl;
 		}
-}
+};
+
+class subClass : public baseClass {
+	private:
+		innerClass innerSub;
+	public:
+		subClass() {
+			std::cout << "\tcalling to subClass constructor" << std::endl;
+		}
+		~subClass() {
+			std::cout << "\tcalling to subClass destructor" << std::endl;
+		}
+};
 ```
 
 - 有参数构造函数(base class)
 
 ```c++
-class baseClass{
+class baseClass {
 	public:
 		baseClass(int val);
 };
 
-class subClass: public baseClass{
+class subClass: public baseClass {
 	public:
-		subClass:baseClass(0){}
+		subClass : baseClass(0) {}
 }
 ```
 
 When we creat a object of `subClass`, it's base class's constructor will be call to first.
 
 ```
-calling to baseClass constructor
-	calling to subClass constructor
-	calling to subClass destructor
-calling to baseClass destructor
+calling to innerClass constructor
+        calling to baseClass constructor
+calling to innerClass constructor
+                calling to subClass constructor
+                calling to subClass destructor
+calling to innerClass destructor
+        calling to baseClass destructor
+calling to innerClass destructor
 ```
+
+在继承类`subClass`中，首先会构造基类`baseClass`，其次会构造内嵌类`innerClass`，最后构造自身`subClass`。析构的顺序相反。
 
 ---
 
@@ -92,21 +114,21 @@ calling to baseClass destructor
 - 成员函数的重写(Override)
 
 ```c++
-class baseClass{
+class baseClass {
 	public:
-		void greet(){
-			cout<<"this is baseClass"<<endl;
+		void greet() {
+			cout << "this is baseClass" << endl;
 		}
 };
 
 class subClass:public baseClass{
 	public:
-		void greet(){
-			cout<<"this is subClass"<<endl;
+		void greet() {
+			cout << "this is subClass" << endl;
 		}
 };
 
-auto main(){
+int main() {
 	subClass obj;
 	baseClass* ptr_base = &obj;
 	baseClass& ref_base = obj;
@@ -132,7 +154,7 @@ this is baseClass
 在`baseClass`中的`greet`函数前加上`virtual`关键字，调用`subClass`中的`greet`函数。
 
 ```c++
-class baseClass{
+class baseClass {
 	public:
 		virtual void greet();
 };
@@ -140,7 +162,7 @@ class baseClass{
 
 The result of running:
 
-```
+```plaintext
 this is subClass
 this is subClass
 this is subClass
@@ -149,30 +171,30 @@ this is subClass
 虚函数提供了一种特殊接口，指向继承类对象的基类类型指针可以通过虚函数访问继承类的Override函数。
 
 ```c++
-class Animal{
+class Animal {
   	protected:	// we hope we can't call these interface function directly
-    	virtual void makeSound(){}
+    	virtual void makeSound() {}
     	// ......
 };
 
-class Dog: public Animal{
+class Dog : public Animal {
     protected:
-    	void makeSound() override{
-            cout<<"dog's sound"<<endl;
+    	void makeSound() override {
+            cout << "dog's sound" << endl;
         }
 };
 
-class Cat: public Animal{
+class Cat : public Animal {
     protected:
-    	void makeSound() override{
-            cout<<"cat's sound"<<endl;
+    	void makeSound() override {
+            cout << "cat's sound" << endl;
         }
 };
 
 class Sheep: public Animal{
     protected:
-    	void makeSound() override{
-            cout<<"sheep's sound"<<endl;
+    	void makeSound() override {
+            cout << "sheep's sound" << endl;
         }
 };
 ```
@@ -180,7 +202,7 @@ class Sheep: public Animal{
 通过虚函数提供的统一的指针类型形式，考虑设计一个统一的接口函数访问继承类下的Override函数。
 
 ```c++
-void playSound(Animal* ptr){
+void playSound(Animal* ptr) {
     ptr->makeSound();
 }
 ```
@@ -188,10 +210,10 @@ void playSound(Animal* ptr){
 - 纯虚函数(Pure Virtual Function)
 
 ```c++
-class Animal{
+class Animal {
   	protected:
     	virtual void makeSound() = 0;
-    	virtual ~Shape(){}	// 通过虚函数调用继承类的析构函数完成对继承类对象的虚构。
+    	virtual ~Shape() {}	 // 通过虚函数调用继承类的析构函数完成对继承类对象的虚构。
     	// ......
 };
 ```

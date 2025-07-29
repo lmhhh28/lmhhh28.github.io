@@ -1,4 +1,4 @@
-# **C++.Class and Object(3)**
+# **C++.The Protected & Shared Data**
 
 ---
 
@@ -31,10 +31,10 @@ For example:
 void func() {
     static int count = 0;  // 只初始化一次
     count++;
-    cout<<count<<endl;
+    cout << count << endl;
 }
 
-auto main() {
+int main() {
     func();
     func();
     func();
@@ -95,7 +95,7 @@ public:
 
 int MyClass::count = 0;	// 静态成员变量初始化
 
-auto main(){
+int main(){
     MyClass::showCount();	// 直接通过类名调用，不依赖于实例的构建
 	MyClass obj_1;
     MyClass obj_2;

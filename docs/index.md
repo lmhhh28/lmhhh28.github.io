@@ -1,8 +1,90 @@
-# **Welcome to lmhhh's Note!**
 
-## **This is KateX Test:**
+<h1>
+  <div class="typing-container">
+    <span id="typing-text"></span>
+  </div>
+</h1>
+<style>
+  .typing-container {
+    display: inline-block;
+    font-weight: bold;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.2em;
+  }
+  #typing-text::after {
+    content: "|";
+    font-weight: bold;
+    width: 2px;
+    animation: cursor-blink 1s step-end infinite;
+    margin-left: -1px;
+  }
+  @keyframes cursor-blink {
+    from, to { opacity: 1 }
+    50% { opacity: 0 }
+  }
+</style>
 
-$$
-\int \frac{1}{1+x^{5}}dx=\dfrac{\ln\left(\left|x+1\right|\right)}{5}+\left(\dfrac{1}{4\,\sqrt{5}}-\dfrac{1}{20}\right)\,\ln\left(2\,{x}^{2}+\left(\sqrt{5}-1\right)\,x+2\right)+\left(-\dfrac{1}{4\,\sqrt{5}}-\dfrac{1}{20}\right)\,\ln\left(2\,{x}^{2}+\left(-\sqrt{5}-1\right)\,x+2\right)+\dfrac{\sqrt{2\,\sqrt{5}+10}\,\arctan\left(\frac{x+\frac{\sqrt{5}-1}{4}}{\sqrt{\frac{\sqrt{5}}{8}+\frac{5}{8}}}\right)}{10}+\dfrac{\sqrt{10-2\,\sqrt{5}}\,\arctan\left(\frac{2\,\sqrt{2}\,\left(x+\frac{-\sqrt{5}-1}{4}\right)}{\sqrt{5-\sqrt{5}}}\right)}{10}+C
-$$
+<script>
+const textElement = document.getElementById('typing-text');
+const cursorElement = document.getElementById('typing-cursor');
+const texts = [
+  "Emancipate Your Mind.",
+  "Think Freely.",
+  "Pursuit of Truth."
+];
+
+let currentTextIndex = 0;
+let isTyping = true;
+let charIndex = 0;
+let typingSpeed = 100;
+let deletingSpeed = 50;
+let pauseBeforeDelete = 1500;
+let pauseBeforeType = 500;
+let timeout;
+
+function type() {
+  if (charIndex < texts[currentTextIndex].length) {
+    textElement.textContent += texts[currentTextIndex].charAt(charIndex);
+    charIndex++;
+    timeout = setTimeout(type, typingSpeed);
+  } else {
+    timeout = setTimeout(deleteText, pauseBeforeDelete);
+  }
+}
+
+function deleteText() {
+  if (charIndex > 0) {
+    textElement.textContent = texts[currentTextIndex].substring(0, charIndex - 1);
+    charIndex--;
+    timeout = setTimeout(deleteText, deletingSpeed);
+  } else {
+    currentTextIndex = (currentTextIndex + 1) % texts.length;
+    timeout = setTimeout(type, pauseBeforeType);
+  }
+}
+
+type();
+
+document.addEventListener('visibilitychange', function() {
+  if (document.hidden) {
+    clearTimeout(timeout);
+  } else {
+    if (textElement.textContent === texts[currentTextIndex]) {
+      timeout = setTimeout(deleteText, pauseBeforeDelete);
+    } else {
+      timeout = setTimeout(type, typingSpeed);
+    }
+  }
+});
+</script>
+
+
+<!-- <link rel="stylesheet" href="css/cards/base.css" />
+<link rel="stylesheet" href="css/cards/cards.css" />
+<script type="module" crossorigin src="/assets/cards/index.1.js"></script>
+<link rel="stylesheet" href="/assets/cards/index.1.css">
+<div id="app"></div>
+
+<canvas id="myChart" width="400" height="200"></canvas> -->
+
 

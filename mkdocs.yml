@@ -1,47 +1,72 @@
 site_name: My Note
 nav:
   - Math: 
-    - 数学笔记:
-      - Start: math/index.md
+    - 高等数学A:
       - 0.Start: math/0.Start.md 
-      - 4.不定积分: math/4.不定积分.md
-      - 8.多元函数微分:
-        - 8.1.微分与导数: math/7.Vector.md
-        - 8.2.Jacobi矩阵与隐映射: math/8.Function_2.md
-        - 8.3.Hessian矩阵与Lagrange乘数: math/8.Function_3.md
+      - 4.不定积分: math/4.IndefInt.md
+      - 8/10.多元函数微积分:
+        - 8.1.多元函数微分: math/8.MutiValFunctionDe.md
+        - 8.2.Jacobi矩阵与全微分: math/8.JacobiMartix&TotalDe.md
+        - 8.3.8.Hessian矩阵与极值: math/8.HessianMartix&ExtremeVal.md
+        - 10.1.Describe a Vector Feild: math/10.Describe_a_VectorFeild.md
+        - 10.2.Green公式的空间形式: math/10.Green'sSpaceForm.md
+      - 11.线性微分方程理论: math/11.DiffentialEquation.md
+    - 离散数学:
+      - Some Notes: math/DiscreteMath/SomeNotes.md
   - Computer Science:
     - Start: cs/start.md
     - C++:
       - Range Loop: cs/C++_loop.md
-      - Class and Object(1): cs/C++_C&O(1).md
-      - Class and Object(2): cs/C++_C&O(2).md
-      - Class and Object(3): cs/C++_C&O(3).md
-      - 运算符重载: cs/C++_运算符重载.md
-      - 模板: cs/C++_模板.md
+      - 类的构造与组合: cs/C++_C&O(1).md
+      - 继承与多态: cs/C++_C&O(2).md
+      - 数据的共享与保护: cs/C++_C&O(3).md
+      - OperatorOverride: cs/C++_OperatorOverride.md
+      - Template: cs/C++_Template.md
+      - Template_git: cs/ReadMe.md
       - Namespace: cs/C++_Namespace.md
-      - 异常: cs/C++_Exception.md
-    - 伯努利方法: cs/Bernoulli's_method.md
-    - 傅里叶-莫茨金消元法: cs/fourier-motzkin-elimination.md
+      - Exception: cs/C++_Exception.md
+    - Algorithm: 
+      - 伯努利方法: cs/Bernoulli's_method.md
+      - 傅里叶-莫茨金消元法: cs/fourier-motzkin-elimination.md
+  - Philosophy:
+    - The Republic: 
+      - Index: Philosophy/TheRepublic/0.md
+      - Book Ⅰ: Philosophy/TheRepublic/1.md
   - Review:
+    - C++: 
+      - 练习01-概论: review/c++/1.md
+      - 练习02-基本语法: review/c++/2.md
+      - 练习03-函数: review/c++/3.md
+      - 练习04-类与对象: review/c++/4.md
+      - 练习05-数据的共享与保护: review/c++/5.md
+      - 练习06-数组和指针: review/c++/6.md
+      - 练习07-类的继承: review/c++/7.md
+      - 练习08-多态性: review/c++/8.md
+      - 练习09-模板: review/c++/9.md
+      - 练习10-异常处理: review/c++/10.md
+    - 网络工程导论: review/NetworkPreface.md
     - 创业学:
-      - 题库_1: review/创业学/题库1.md
-      - 题库_2: review/创业学/题库2.md
+      - 题库_1: review/Creativity/1.md
+      - 题库_2: review/Creativity/2.md
     - 中国近代史纲要:
-      - Start: history/index.md
-      - 附录.1.条约: history/附录.1.条约.md
-      - 附录.2.Q&A: history/附录.2.Q&A.md
-      - 附录.3.会议: history/附录.3.会议.md
-      - Chapter.1: history/Chapter.1.md
-      - Chapter.2: history/Chapter.2.md
-      - Chapter.3: history/Chapter.3.md
-      - Chapter.4: history/Chapter.4.md
-      - Chapter.5: history/Chapter.5.md
-      - Chapter.6: history/Chapter.6.md
-      - Chapter.7: history/Chapter.7.md
+      - Start: review/history/index.md
+      - 附录.1.条约: review/history/1.md
+      - 附录.2.Q&A: review/history/2.md
+      - 附录.3.会议: review/history/3.md
+      - Chapter.1: review/history/Chapter.1.md
+      - Chapter.2: review/history/Chapter.2.md
+      - Chapter.3: review/history/Chapter.3.md
+      - Chapter.4: review/history/Chapter.4.md
+      - Chapter.5: review/history/Chapter.5.md
+      - Chapter.6: review/history/Chapter.6.md
+      - Chapter.7: review/history/Chapter.7.md
+    - 思想道德与法治: 
+      - Question and Answer: review/Religion/0.md
   - Others:
     - Start: law/index.md
     - Law: law/Examples.md
-    - Presentation: law/English.md              
+    - Presentation: law/English.md
+    - Linear Algebra: math/13.md              
   - Code-server: http://8.140.235.199:8080/
 theme:
   name: material
@@ -49,7 +74,6 @@ theme:
   font:
     text: Noto Serif SC
   features:
-    - toc.integrate
     - navigation.instant
     - navigation.tabs
     - navigation.sections
@@ -74,7 +98,7 @@ theme:
         icon: material/brightness-4
         name: 自动
 repo_url: https://github.com/lmhhh28/lmhhh28.github.io
-repo_name: 'My Note Resource'
+repo_name: 'lmhhh28'
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
@@ -87,9 +111,13 @@ extra_javascript:
   - javascripts/katex.js
   - https://unpkg.com/katex@0/dist/katex.min.js
   - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+  - https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js
+  - assets/javascripts/custom.js
+  - assets/javascripts/chart.js
 
 extra_css:
   - https://unpkg.com/katex@0/dist/katex.min.css
+  - assets/stylesheets/hero-theme.css
 
 extra:
   generator: false

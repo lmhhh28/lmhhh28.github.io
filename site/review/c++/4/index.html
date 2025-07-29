@@ -1,0 +1,3461 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../3/">
+      
+      
+        <link rel="next" href="../5/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.46">
+    
+    
+      
+        <title>练习04-类与对象 - My Note</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Serif SC";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/hero-theme.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#04-" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../.." title="My Note" class="md-header__button md-logo" aria-label="My Note" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Note
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              练习04-类与对象
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="切换至日间模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至日间模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="indigo"  aria-label="切换至夜间模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至夜间模式" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="自动"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="自动" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/lmhhh28/lmhhh28.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    lmhhh28
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../math/0.Start/" class="md-tabs__link">
+          
+  
+  Math
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../cs/start/" class="md-tabs__link">
+          
+  
+  Computer Science
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../Philosophy/TheRepublic/0/" class="md-tabs__link">
+          
+  
+  Philosophy
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../1/" class="md-tabs__link">
+          
+  
+  Review
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../law/" class="md-tabs__link">
+          
+  
+  Others
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="http://8.140.235.199:8080/" class="md-tabs__link">
+        
+  
+    
+  
+  Code-server
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="My Note" class="md-nav__button md-logo" aria-label="My Note" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My Note
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lmhhh28/lmhhh28.github.io" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    lmhhh28
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Math
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Math
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    高等数学A
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            高等数学A
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/0.Start/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0.Start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/4.IndefInt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4.不定积分
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1_3" id="__nav_1_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    8/10.多元函数微积分
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            8/10.多元函数微积分
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/8.MutiValFunctionDe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.1.多元函数微分
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/8.JacobiMartix%26TotalDe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.2.Jacobi矩阵与全微分
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/8.HessianMartix%26ExtremeVal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8.3.8.Hessian矩阵与极值
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/10.Describe_a_VectorFeild/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10.1.Describe a Vector Feild
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/10.Green%27sSpaceForm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10.2.Green公式的空间形式
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/11.DiffentialEquation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11.线性微分方程理论
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    离散数学
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            离散数学
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/DiscreteMath/SomeNotes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Some Notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Computer Science
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Computer Science
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cs/start/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    C++
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            C++
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cs/C%2B%2B_loop/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Range Loop
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cs/C%2B%2B_C%26O%281%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    类的构造与组合
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cs/C%2B%2B_C%26O%282%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    继承与多态
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cs/C%2B%2B_C%26O%283%29/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据的共享与保护
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cs/C%2B%2B_OperatorOverride/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OperatorOverride
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cs/C%2B%2B_Template/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cs/ReadMe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Template_git
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cs/C%2B%2B_Namespace/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Namespace
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cs/C%2B%2B_Exception/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exception
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Algorithm
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Algorithm
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cs/Bernoulli%27s_method/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    伯努利方法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cs/fourier-motzkin-elimination/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    傅里叶-莫茨金消元法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Philosophy
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Philosophy
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    The Republic
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            The Republic
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Philosophy/TheRepublic/0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Philosophy/TheRepublic/1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Book Ⅰ
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Review
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Review
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    C++
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            C++
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    练习01-概论
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    练习02-基本语法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    练习03-函数
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    练习04-类与对象
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    练习04-类与对象
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#04-" class="md-nav__link">
+    <span class="md-ellipsis">
+      练习04-类与对象
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="练习04-类与对象">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.(单选题) 下列关于C++语言类的描述中错误的是( )。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.(单选题) 下列关于对象的描述中，错误的是（ ）。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.(单选题) 类的实例化是指( )。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.(单选题) 不可以成为类的数据成员的是（ ）。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.(单选题) 下列关于对象的描述中，错误的是（ ）。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-samplenintsetvalue" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.(单选题) 类sample包含成员数据n（int），成员函数setValue的类外实现正确的是( )。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.(单选题) 对类成员访问权限的控制，是通过设置成员的访问控制属性实现的，下列不是访问控制属性的是( )。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.(单选题) 以下关键字不能用来声明类的访问权限的是( )。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.(单选题) 下列关于类定义的说法中，正确的是( )。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-fooclass-foo-int-bar-bar" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.(单选题) 已知Foo类的声明为：class Foo ｛ int bar; ｝; 则成员bar的访问权限是( )。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.(单选题) 下列说法中正确的是( )。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.(单选题) 下列关于类的定义格式的描述中，错误的是（ ）。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-aaaaaa" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.(单选题) 若a为AA类的非静态数据成员，在AA类的一个成员函数定义中访问a时，其书写格式为（ ）。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-aaagetaaxxa" class="md-nav__link">
+    <span class="md-ellipsis">
+      14.(单选题) 若AA为一个类，a为该类的私有整型数据成员，getA()为该类的一个非静态公有成员函数，功能是返回a的值。如果x为该类的一个对象，要在类外访问x对象中a的值，正确的访问格式为( )。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.(单选题) 在类的定义中，为对象分配内存，对类的数据成员初始化并执行其他内部管理操作的函数是( )。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      16.(单选题) 下列关于构造函数的描述中，错误的是( )。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-mya" class="md-nav__link">
+    <span class="md-ellipsis">
+      17.(单选题) 类MyA的复制构造函数是( )。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      18.(单选题) C＋＋语言中关于构造函数的说法正确的是（ ）。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19-fundfunademo" class="md-nav__link">
+    <span class="md-ellipsis">
+      19.(单选题) 自由函数fun的定义如下。执行语句d=fun(a)后Demo类的复制构造函数被调用次数是（ ）次。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#20" class="md-nav__link">
+    <span class="md-ellipsis">
+      20.(单选题) 对于一个类定义，下列叙述中错误的是( )。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      21.(单选题) 下列情况中，不会调用复制构造函数的是（ ）。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      22.(单选题) 下列关于对象初始化的叙述中，正确的是（ ）。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      23.(单选题) 类的析构函数的作用是( )。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      24.(单选题) ( )是析构函数的特征。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      25.(单选题) 下列关于析构函数的描述中，错误的是（ ）。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26" class="md-nav__link">
+    <span class="md-ellipsis">
+      26.(单选题) 下列不是类的成员函数的是( )。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27" class="md-nav__link">
+    <span class="md-ellipsis">
+      27.(单选题) 下列关于类成员对象构造函数调用顺序的叙述中，正确的是( )。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28" class="md-nav__link">
+    <span class="md-ellipsis">
+      28.(单选题) 下面类的定义，有（ ）处错误。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29" class="md-nav__link">
+    <span class="md-ellipsis">
+      29.(单选题) 有如下类定义：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#30" class="md-nav__link">
+    <span class="md-ellipsis">
+      30.(单选题) 下列程序的运行结果是( )。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      31.(单选题) 有如下类定义
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      32.(单选题) 下面程序的输出结果是( )。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      33.(单选题) 有如下两个类定义
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      34.(单选题) 下面程序的运行结果为( )。
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#04-_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      练习04-类与对象答案
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="练习04-类与对象答案">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      正确答案列表：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    练习05-数据的共享与保护
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    练习06-数组和指针
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    练习07-类的继承
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    练习08-多态性
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../9/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    练习09-模板
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    练习10-异常处理
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../NetworkPreface/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    网络工程导论
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    创业学
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            创业学
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Creativity/1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    题库_1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Creativity/2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    题库_2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    中国近代史纲要
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            中国近代史纲要
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../history/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../history/1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录.1.条约
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../history/2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录.2.Q&A
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../history/3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    附录.3.会议
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../history/Chapter.1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter.1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../history/Chapter.2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter.2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../history/Chapter.3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter.3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../history/Chapter.4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter.4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../history/Chapter.5/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter.5
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../history/Chapter.6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter.6
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../history/Chapter.7/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter.7
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    思想道德与法治
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            思想道德与法治
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Religion/0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Question and Answer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Others
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Others
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../law/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Start
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../law/Examples/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Law
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../law/English/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Presentation
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../math/13/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Linear Algebra
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="http://8.140.235.199:8080/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Code-server
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#04-" class="md-nav__link">
+    <span class="md-ellipsis">
+      练习04-类与对象
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="练习04-类与对象">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.(单选题) 下列关于C++语言类的描述中错误的是( )。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.(单选题) 下列关于对象的描述中，错误的是（ ）。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.(单选题) 类的实例化是指( )。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.(单选题) 不可以成为类的数据成员的是（ ）。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.(单选题) 下列关于对象的描述中，错误的是（ ）。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-samplenintsetvalue" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.(单选题) 类sample包含成员数据n（int），成员函数setValue的类外实现正确的是( )。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.(单选题) 对类成员访问权限的控制，是通过设置成员的访问控制属性实现的，下列不是访问控制属性的是( )。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.(单选题) 以下关键字不能用来声明类的访问权限的是( )。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.(单选题) 下列关于类定义的说法中，正确的是( )。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-fooclass-foo-int-bar-bar" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.(单选题) 已知Foo类的声明为：class Foo ｛ int bar; ｝; 则成员bar的访问权限是( )。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.(单选题) 下列说法中正确的是( )。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.(单选题) 下列关于类的定义格式的描述中，错误的是（ ）。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13-aaaaaa" class="md-nav__link">
+    <span class="md-ellipsis">
+      13.(单选题) 若a为AA类的非静态数据成员，在AA类的一个成员函数定义中访问a时，其书写格式为（ ）。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14-aaagetaaxxa" class="md-nav__link">
+    <span class="md-ellipsis">
+      14.(单选题) 若AA为一个类，a为该类的私有整型数据成员，getA()为该类的一个非静态公有成员函数，功能是返回a的值。如果x为该类的一个对象，要在类外访问x对象中a的值，正确的访问格式为( )。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.(单选题) 在类的定义中，为对象分配内存，对类的数据成员初始化并执行其他内部管理操作的函数是( )。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      16.(单选题) 下列关于构造函数的描述中，错误的是( )。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#17-mya" class="md-nav__link">
+    <span class="md-ellipsis">
+      17.(单选题) 类MyA的复制构造函数是( )。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#18-c" class="md-nav__link">
+    <span class="md-ellipsis">
+      18.(单选题) C＋＋语言中关于构造函数的说法正确的是（ ）。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#19-fundfunademo" class="md-nav__link">
+    <span class="md-ellipsis">
+      19.(单选题) 自由函数fun的定义如下。执行语句d=fun(a)后Demo类的复制构造函数被调用次数是（ ）次。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#20" class="md-nav__link">
+    <span class="md-ellipsis">
+      20.(单选题) 对于一个类定义，下列叙述中错误的是( )。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      21.(单选题) 下列情况中，不会调用复制构造函数的是（ ）。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      22.(单选题) 下列关于对象初始化的叙述中，正确的是（ ）。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      23.(单选题) 类的析构函数的作用是( )。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      24.(单选题) ( )是析构函数的特征。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#25" class="md-nav__link">
+    <span class="md-ellipsis">
+      25.(单选题) 下列关于析构函数的描述中，错误的是（ ）。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#26" class="md-nav__link">
+    <span class="md-ellipsis">
+      26.(单选题) 下列不是类的成员函数的是( )。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#27" class="md-nav__link">
+    <span class="md-ellipsis">
+      27.(单选题) 下列关于类成员对象构造函数调用顺序的叙述中，正确的是( )。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#28" class="md-nav__link">
+    <span class="md-ellipsis">
+      28.(单选题) 下面类的定义，有（ ）处错误。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#29" class="md-nav__link">
+    <span class="md-ellipsis">
+      29.(单选题) 有如下类定义：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#30" class="md-nav__link">
+    <span class="md-ellipsis">
+      30.(单选题) 下列程序的运行结果是( )。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      31.(单选题) 有如下类定义
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      32.(单选题) 下面程序的输出结果是( )。
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      33.(单选题) 有如下两个类定义
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      34.(单选题) 下面程序的运行结果为( )。
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#04-_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      练习04-类与对象答案
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="练习04-类与对象答案">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      正确答案列表：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>练习04-类与对象</h1>
+
+<h3 id="04-">练习04-类与对象</h3>
+<p>题量: 34 满分: 100<br />
+作答时间:<em>04-29 19:36</em> 至_05-30 19:36_  </p>
+<h4 id="1-c">1.(单选题) 下列关于C++语言类的描述中错误的是(     )。</h4>
+<ul>
+<li>A. 类用于描述事物的属性和对事物的操作  </li>
+<li>B. 类与类之间必须是平等的关系，而不能组成层次结构  </li>
+<li>C. 类与类之间通过封装而具有明确的独立性  </li>
+<li>D. 类与类之间可以通过一些方法进行通信和联络  </li>
+</ul>
+<h4 id="2">2.(单选题) 下列关于对象的描述中，错误的是（     ）。</h4>
+<ul>
+<li>A. 对象就是C语言中的结构变量  </li>
+<li>B. 对象是属性和行为的封装体  </li>
+<li>C. 对象是类的一个实例  </li>
+<li>D. 对象是现实世界中客观存在的某种实体  </li>
+</ul>
+<h4 id="3">3.(单选题) 类的实例化是指(     )。</h4>
+<ul>
+<li>A. 定义类  </li>
+<li>B. 创建类的对象  </li>
+<li>C. 指明具体类  </li>
+<li>D. 调用类的成员  </li>
+</ul>
+<h4 id="4">4.(单选题) 不可以成为类的数据成员的是（     ）。</h4>
+<ul>
+<li>A. 本类对象  </li>
+<li>B. 另一个类的对象  </li>
+<li>C. 类的指针或引用  </li>
+<li>D. 其它简单的数据类型  </li>
+</ul>
+<h4 id="5">5.(单选题) 下列关于对象的描述中，错误的是（     ）。</h4>
+<ul>
+<li>A. 定义对象时系统会自动进行初始化  </li>
+<li>B. 对象成员的表示与C语言结构变量的成员表示相同  </li>
+<li>C. 同类的所有对象占有内存字节数相同  </li>
+<li>D. 一个类所能创建对象的个数是有限制的  </li>
+</ul>
+<h4 id="6-samplenintsetvalue">6.(单选题) 类sample包含成员数据n（int），成员函数setValue的类外实现正确的是(     )。</h4>
+<ul>
+<li>A. sample::setValue(int n0)｛ n=n0; ｝  </li>
+<li>B. setValue(int n0)｛ n=n0; ｝  </li>
+<li>C. void sample::setValue(int n0)｛ n=n0; ｝  </li>
+<li>D. void setValue(int n0)｛ n=n0; ｝  </li>
+</ul>
+<h4 id="7">7.(单选题) 对类成员访问权限的控制，是通过设置成员的访问控制属性实现的，下列不是访问控制属性的是(   )。</h4>
+<ul>
+<li>A. 公有类型  </li>
+<li>B. 私有类型  </li>
+<li>C. 保护类型  </li>
+<li>D. 友元类型  </li>
+</ul>
+<h4 id="8">8.(单选题) 以下关键字不能用来声明类的访问权限的是(     )。</h4>
+<ul>
+<li>A. public  </li>
+<li>B. static  </li>
+<li>C. protected  </li>
+<li>D. private  </li>
+</ul>
+<h4 id="9">9.(单选题) 下列关于类定义的说法中，正确的是(      )。</h4>
+<ul>
+<li>A. 类定义中包括数据成员和函数成员的声明  </li>
+<li>B. 类成员的缺省访问权限是保护的  </li>
+<li>C. 数据成员必须被声明为私有的  </li>
+<li>D. 成员函数只能在类体外进行定义  </li>
+</ul>
+<h4 id="10-fooclass-foo-int-bar-bar">10.(单选题) 已知Foo类的声明为：class Foo ｛  int bar;  ｝; 则成员bar的访问权限是(     )。</h4>
+<ul>
+<li>A. 私有数据成员  </li>
+<li>B. 公有成员函数  </li>
+<li>C. 公有数据成员  </li>
+<li>D. 私有成员函数  </li>
+</ul>
+<h4 id="11">11.(单选题) 下列说法中正确的是(     )。</h4>
+<ul>
+<li>A. 类定义中只能说明函数成员的函数头，不能定义函数体  </li>
+<li>B. 类中的函数成员可以在类体中定义，也可以在类体之外定义  </li>
+<li>C. 类中的函数成员在类体之外定义时必须要与类声明在同一文件中  </li>
+<li>D. 在类体之外定义的函数成员不能操作该类的私有数据成员  </li>
+</ul>
+<h4 id="12">12.(单选题) 下列关于类的定义格式的描述中，错误的是（     ）。</h4>
+<ul>
+<li>A. 类中成员有3种访问权限  </li>
+<li>B. 定义类的关键字通常用class，也可用struct  </li>
+<li>C. 类的定义可分说明部分和实现部分  </li>
+<li>D. 类中成员函数都是公有的，数据成员都是私有的  </li>
+</ul>
+<h4 id="13-aaaaaa">13.(单选题) 若a为AA类的非静态数据成员，在AA类的一个成员函数定义中访问a时，其书写格式为（     ）。</h4>
+<ul>
+<li>A. a()  </li>
+<li>B. AA.a  </li>
+<li>C. a  </li>
+<li>D. AA::a()  </li>
+</ul>
+<h4 id="14-aaagetaaxxa">14.(单选题) 若AA为一个类，a为该类的私有整型数据成员，getA()为该类的一个非静态公有成员函数，功能是返回a的值。如果x为该类的一个对象，要在类外访问x对象中a的值，正确的访问格式为(     )。</h4>
+<ul>
+<li>A. AA.getA()  </li>
+<li>B. x.getA()  </li>
+<li>C. x.a  </li>
+<li>D. AA::a  </li>
+</ul>
+<h4 id="15">15.(单选题) 在类的定义中，为对象分配内存，对类的数据成员初始化并执行其他内部管理操作的函数是(     )。</h4>
+<ul>
+<li>A. 友元函数  </li>
+<li>B. 虚函数  </li>
+<li>C. 构造函数  </li>
+<li>D. 析构函数  </li>
+</ul>
+<h4 id="16">16.(单选题) 下列关于构造函数的描述中，错误的是(     )。</h4>
+<ul>
+<li>A. 构造函数可以设置默认参数  </li>
+<li>B. 构造函数在定义对象时自动执行  </li>
+<li>C. 构造函数不可以重载  </li>
+<li>D. 构造函数可以是内联函数  </li>
+</ul>
+<h4 id="17-mya">17.(单选题) 类MyA的复制构造函数是(     )。</h4>
+<ul>
+<li>A. MyA()  </li>
+<li>B. MyA(MyA*)  </li>
+<li>C. MyA(MyA&amp;)  </li>
+<li>D. MyA(MyA)  </li>
+</ul>
+<h4 id="18-c">18.(单选题) C＋＋语言中关于构造函数的说法正确的是（  ）。</h4>
+<ul>
+<li>A. 构造函数的函数名不必和类名相同  </li>
+<li>B. 构造函数只能有一个  </li>
+<li>C. 每个类必定有构造函数  </li>
+<li>D. 构造函数必有返回值  </li>
+</ul>
+<h4 id="19-fundfunademo">19.(单选题) 自由函数fun的定义如下。执行语句d=fun(a)后Demo类的复制构造函数被调用次数是（       ）次。</h4>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">Demo</span><span class="w"> </span><span class="n">Fun</span><span class="err">（</span><span class="n">Demo</span><span class="w"> </span><span class="o">&amp;</span><span class="n">b</span><span class="err">）</span><span class="w"> </span><span class="err">｛</span><span class="w"> </span><span class="n">Demo</span><span class="w"> </span><span class="n">c</span><span class="p">(</span><span class="n">b</span><span class="p">);</span><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w">  </span><span class="err">｝</span><span class="w">  </span>
+</code></pre></div>
+- A. 1<br />
+- B. 2<br />
+- C. 3<br />
+- D. 4  </p>
+<h4 id="20">20.(单选题) 对于一个类定义，下列叙述中错误的是(       )。</h4>
+<ul>
+<li>A. 如果没有定义复制构造函数，编译器将生成一个复制构造函数  </li>
+<li>B. 如果没有定义默认的构造函数，编译器一定将生成一个默认的构造函数  </li>
+<li>C. 如果没有定义构造函数，编译器将生成一个默认的构造函数和一个复制构造函数  </li>
+<li>D. 如果已经定义了构造函数和复制构造函数，编译器不会生成任何构造函数  </li>
+</ul>
+<h4 id="21">21.(单选题) 下列情况中，不会调用复制构造函数的是（        ）。</h4>
+<ul>
+<li>A. 用一个对象去初始化同一类的另一个新对象时  </li>
+<li>B. 将类的一个对象赋值给该类的另一个对象时  </li>
+<li>C. 函数的形参是类的对象，调用函数进行形参和实参结合时  </li>
+<li>D. 函数的返回值是类的对象，函数执行返回调用时  </li>
+</ul>
+<h4 id="22">22.(单选题) 下列关于对象初始化的叙述中，正确的是（          ）。</h4>
+<ul>
+<li>A. 定义对象的时候不能对对象进行初始化  </li>
+<li>B. 定义对象之后可以显式地调用构造函数进行初始化  </li>
+<li>C. 定义对象时将自动调用构造函数进行初始化  </li>
+<li>D. 在一个类中必须显式地定义构造函数实现初始化  </li>
+</ul>
+<h4 id="23">23.(单选题) 类的析构函数的作用是(      )。</h4>
+<ul>
+<li>A. 一般成员函数的初始化  </li>
+<li>B. 类的初始化  </li>
+<li>C. 对象的初始化  </li>
+<li>D. 删除类创建的对象  </li>
+</ul>
+<h4 id="24">24.(单选题) (     )是析构函数的特征。</h4>
+<ul>
+<li>A. 一个类中只能定义一个析构函数  </li>
+<li>B. 析构函数名与类名不同  </li>
+<li>C. 析构函数的定义只能在类体内  </li>
+<li>D. 析构函数可以有一个或多个参数  </li>
+</ul>
+<h4 id="25">25.(单选题) 下列关于析构函数的描述中，错误的是（     ）。</h4>
+<ul>
+<li>A. 析构函数的函数体都为空  </li>
+<li>B. 析构函数是用来释放对象的  </li>
+<li>C. 析构函数是系统自动调用的  </li>
+<li>D. 析构函数是不能重载的  </li>
+</ul>
+<h4 id="26">26.(单选题) 下列不是类的成员函数的是(     )。</h4>
+<ul>
+<li>A. 构造函数  </li>
+<li>B. 析构函数  </li>
+<li>C. 友元函数  </li>
+<li>D. 复制构造函数  </li>
+</ul>
+<h4 id="27">27.(单选题) 下列关于类成员对象构造函数调用顺序的叙述中，正确的是(     )。</h4>
+<ul>
+<li>A. 与它们在初始化列表中顺序相同  </li>
+<li>B. 与它们在类中声明的顺序相同  </li>
+<li>C. 与析构函数的调用顺序相同  </li>
+<li>D. 顺序不确定  </li>
+</ul>
+<h4 id="28">28.(单选题) 下面类的定义，有（  ）处错误。</h4>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">MyClass</span><span class="err">｛</span><span class="w">  </span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="k">public</span><span class="o">:</span><span class="w">  </span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">MyClass</span><span class="p">()</span><span class="err">；</span><span class="w">  </span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="o">~</span><span class="n">MyClass</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">vahle</span><span class="p">)</span><span class="err">；</span><span class="w">  </span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="k">private</span><span class="o">:</span><span class="w">  </span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="err">；</span><span class="w">  </span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="err">｝</span><span class="p">;</span><span class="w">  </span>
+</code></pre></div>
+- A. 1<br />
+- B. 2<br />
+- C. 3<br />
+- D. 4  </p>
+<h4 id="29">29.(单选题) 有如下类定义：</h4>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">MyClass</span><span class="err">｛</span><span class="w">  </span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">;</span><span class="w">  </span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="k">public</span><span class="o">:</span><span class="w">  </span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="n">MyClass</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="err">｛</span><span class="w"> </span><span class="err">｝</span><span class="w">  </span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">gerValue</span><span class="p">()</span><span class="err">｛</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">value</span><span class="p">;</span><span class="w"> </span><span class="err">｝</span><span class="w">  </span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="err">｝</span><span class="p">;</span><span class="w">  </span>
+</code></pre></div>
+则类 MyClass 的构造函数的个数是(     )<br />
+- A. 1 个<br />
+- B. 2 个<br />
+- C. 3 个<br />
+- D. 4 个  </p>
+<h4 id="30">30.(单选题) 下列程序的运行结果是(         )。</h4>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="c1">  </span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span><span class="w">  </span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">class</span><span class="w"> </span><span class="nc">Location</span><span class="err">｛</span><span class="w">  </span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">        </span><span class="k">private</span><span class="o">:</span><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">;</span><span class="w">  </span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="k">public</span><span class="o">:</span><span class="w">  </span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">init</span><span class="p">(</span><span class="kt">int</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="kt">int</span><span class="o">=</span><span class="mi">0</span><span class="p">);</span><span class="w">  </span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="nf">valueX</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">val</span><span class="p">)</span><span class="w">  </span><span class="err">｛</span><span class="w">   </span><span class="n">X</span><span class="o">=</span><span class="n">val</span><span class="p">;</span><span class="w">   </span><span class="err">｝</span><span class="w">  </span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">valueX</span><span class="p">()</span><span class="w">   </span><span class="err">｛</span><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">X</span><span class="p">;</span><span class="w">    </span><span class="err">｝</span><span class="w">  </span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">valueY</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">val</span><span class="p">)</span><span class="w">  </span><span class="err">｛</span><span class="w">   </span><span class="n">Y</span><span class="o">=</span><span class="n">val</span><span class="p">;</span><span class="w">   </span><span class="err">｝</span><span class="w">  </span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">valueY</span><span class="p">()</span><span class="w">   </span><span class="err">｛</span><span class="w">     </span><span class="k">return</span><span class="w">  </span><span class="n">Y</span><span class="p">;</span><span class="err">｝</span><span class="w">  </span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="err">｝</span><span class="p">;</span><span class="w">  </span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="kt">void</span><span class="w"> </span><span class="nf">Location::init</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">initX</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">initY</span><span class="p">)</span><span class="w">  </span><span class="err">｛</span><span class="w">    </span><span class="n">X</span><span class="o">=</span><span class="n">initX</span><span class="p">;</span><span class="w"> </span><span class="n">Y</span><span class="o">=</span><span class="n">initY</span><span class="p">;</span><span class="w">   </span><span class="err">｝</span><span class="w">  </span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="err">｛</span><span class="w">    </span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">  </span><span class="n">Location</span><span class="w"> </span><span class="n">A</span><span class="p">,</span><span class="n">B</span><span class="p">;</span><span class="w">  </span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">  </span><span class="n">A</span><span class="p">.</span><span class="n">init</span><span class="p">();</span><span class="w">      </span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">  </span><span class="n">B</span><span class="p">.</span><span class="n">valueX</span><span class="p">(</span><span class="mi">5</span><span class="p">);</span><span class="w">  </span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">  </span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">A</span><span class="p">.</span><span class="n">valueX</span><span class="p">()</span><span class="o">&lt;&lt;</span><span class="n">A</span><span class="p">.</span><span class="n">valueY</span><span class="p">();</span><span class="w">  </span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">  </span><span class="n">B</span><span class="p">.</span><span class="n">init</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">2</span><span class="p">);</span><span class="w">   </span><span class="n">B</span><span class="p">.</span><span class="n">valueY</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span><span class="w">  </span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">  </span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">B</span><span class="p">.</span><span class="n">valueX</span><span class="p">()</span><span class="o">&lt;&lt;</span><span class="n">B</span><span class="p">.</span><span class="n">valueY</span><span class="p">()</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span><span class="w">  </span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="err">｝</span><span class="w">  </span>
+</code></pre></div>
+- A. 5064<br />
+- B. 0064<br />
+- C. 5062<br />
+- D. 0062  </p>
+<h4 id="31">31.(单选题) 有如下类定义</h4>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">MyClass</span><span class="err">｛</span><span class="w">  </span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w">  </span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="k">public</span><span class="o">:</span><span class="w">  </span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="n">MyClass</span><span class="p">()</span><span class="o">:</span><span class="n">x</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span><span class="n">y</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="err">｛</span><span class="w">  </span><span class="err">｝</span><span class="w">  </span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">GetX</span><span class="p">()</span><span class="err">｛</span><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w">   </span><span class="err">｝</span><span class="w">  </span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">SetX</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">xx</span><span class="p">)</span><span class="err">｛</span><span class="w">   </span><span class="n">x</span><span class="o">=</span><span class="n">xx</span><span class="p">;</span><span class="w">   </span><span class="err">｝</span><span class="w">  </span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w">  </span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="err">｝</span><span class="p">;</span><span class="w">  </span>
+</code></pre></div>
+已知obj是类MyClass的对象，下列语句中违反类成员访问控制权限的是(     )<br />
+- A. obj.x;<br />
+- B. obj.y;<br />
+- C. obj.GetX();<br />
+- D. obj.SetX(0);  </p>
+<h4 id="32">32.(单选题) 下面程序的输出结果是(     )。</h4>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="c1">  </span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span><span class="w">  </span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">class</span><span class="w"> </span><span class="nc">Test</span><span class="err">｛</span><span class="w">  </span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="k">public</span><span class="o">:</span><span class="w">  </span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">  </span><span class="n">Test</span><span class="p">()</span><span class="err">｛</span><span class="w"> </span><span class="err">｝</span><span class="w">  </span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="n">Test</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">Test</span><span class="w"> </span><span class="o">&amp;</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="err">｛</span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="mi">1</span><span class="p">;</span><span class="err">｝</span><span class="w">  </span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="err">｝</span><span class="p">;</span><span class="w">  </span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="n">Test</span><span class="w"> </span><span class="nf">fun</span><span class="p">(</span><span class="n">Test</span><span class="w"> </span><span class="o">&amp;</span><span class="n">u</span><span class="p">)</span><span class="w"> </span><span class="err">｛</span><span class="w">    </span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">  </span><span class="n">Test</span><span class="w"> </span><span class="n">t</span><span class="o">=</span><span class="n">u</span><span class="p">;</span><span class="w">   </span><span class="k">return</span><span class="w"> </span><span class="n">t</span><span class="p">;</span><span class="w">   </span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="err">｝</span><span class="w">  </span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w">  </span><span class="err">｛</span><span class="w">    </span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">  </span><span class="n">Test</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">;</span><span class="w">      </span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">  </span><span class="n">x</span><span class="o">=</span><span class="n">fun</span><span class="p">(</span><span class="n">y</span><span class="p">);</span><span class="w">    </span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="err">｝</span><span class="w">  </span>
+</code></pre></div>
+- A. 无输出<br />
+- B. 1<br />
+- C. 11<br />
+- D. 111  </p>
+<h4 id="33">33.(单选题) 有如下两个类定义</h4>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">class</span><span class="w"> </span><span class="nc">AA</span><span class="err">｛</span><span class="w">  </span><span class="err">｝</span><span class="p">;</span><span class="w">  </span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">class</span><span class="w"> </span><span class="nc">BB</span><span class="err">｛</span><span class="w">    </span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span><span class="n">AA</span><span class="w"> </span><span class="n">v1</span><span class="p">,</span><span class="o">*</span><span class="n">v2</span><span class="p">;</span><span class="w">    </span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">  </span><span class="n">BB</span><span class="w"> </span><span class="n">v3</span><span class="p">;</span><span class="w">    </span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">v4</span><span class="p">;</span><span class="w">    </span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="err">｝</span><span class="p">;</span><span class="w">  </span>
+</code></pre></div>
+其中有一个成员变量的定义是错误的，这个变量是（  ）。<br />
+- A. v1<br />
+- B. v2<br />
+- C. v3<br />
+- D. v4  </p>
+<h4 id="34">34.(单选题) 下面程序的运行结果为(     )。</h4>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="cp">#include</span><span class="cpf">&lt;iostream&gt;</span><span class="c1">  </span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span><span class="w">  </span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">class</span><span class="w"> </span><span class="nc">A</span><span class="err">｛</span><span class="w">  </span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">           </span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="p">;</span><span class="w">  </span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="k">public</span><span class="o">:</span><span class="w"> </span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">  </span><span class="n">A</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">)</span><span class="err">｛</span><span class="w">  </span><span class="n">num</span><span class="o">=</span><span class="n">i</span><span class="p">;</span><span class="w">    </span><span class="err">｝</span><span class="w">  </span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="n">A</span><span class="p">(</span><span class="n">A</span><span class="w"> </span><span class="o">&amp;</span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="err">｛</span><span class="w"> </span><span class="n">num</span><span class="o">=</span><span class="n">a</span><span class="p">.</span><span class="n">num</span><span class="o">++</span><span class="p">;</span><span class="w">  </span><span class="err">｝</span><span class="w">  </span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="n">print</span><span class="p">()</span><span class="err">｛</span><span class="w">  </span><span class="n">cout</span><span class="o">&lt;&lt;</span><span class="n">num</span><span class="p">;</span><span class="w">   </span><span class="err">｝</span><span class="w">  </span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="err">｝</span><span class="p">;</span><span class="w">  </span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="err">｛</span><span class="w">    </span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">  </span><span class="n">A</span><span class="w"> </span><span class="n">a</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="n">b</span><span class="p">(</span><span class="n">a</span><span class="p">);</span><span class="w">  </span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">  </span><span class="n">a</span><span class="p">.</span><span class="n">print</span><span class="p">();</span><span class="w">  </span><span class="n">b</span><span class="p">.</span><span class="n">print</span><span class="p">();</span><span class="w">     </span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="err">｝</span><span class="w">  </span>
+</code></pre></div>
+- A. 11<br />
+- B. 12<br />
+- C. 21<br />
+- D. 22</p>
+<hr />
+<h3 id="04-_1">练习04-类与对象答案</h3>
+<h4 id="_1">正确答案列表：</h4>
+<ol>
+<li>B  </li>
+<li>A  </li>
+<li>B  </li>
+<li>A  </li>
+<li>D  </li>
+<li>C  </li>
+<li>D  </li>
+<li>B  </li>
+<li>A  </li>
+<li>A  </li>
+<li>B  </li>
+<li>D  </li>
+<li>C  </li>
+<li>B  </li>
+<li>C  </li>
+<li>C  </li>
+<li>C  </li>
+<li>C  </li>
+<li>B  </li>
+<li>B  </li>
+<li>B  </li>
+<li>C  </li>
+<li>D  </li>
+<li>A  </li>
+<li>A  </li>
+<li>C  </li>
+<li>B  </li>
+<li>B  </li>
+<li>A  </li>
+<li>B  </li>
+<li>A  </li>
+<li>C  </li>
+<li>C  </li>
+<li>C</li>
+</ol>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "navigation.expand"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="../../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
+      
+        <script src="../../../assets/javascripts/custom.js"></script>
+      
+        <script src="../../../assets/javascripts/chart.js"></script>
+      
+    
+  </body>
+</html>
