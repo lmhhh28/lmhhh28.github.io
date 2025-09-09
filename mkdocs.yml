@@ -66,7 +66,8 @@ nav:
     - Start: law/index.md
     - Law: law/Examples.md
     - Presentation: law/English.md
-    - Linear Algebra: math/13.md              
+    - Linear Algebra: math/13.md
+    - Assessments: review/mvp/assessment.md              
   - Code-server: http://8.140.235.199:8080/
 theme:
   name: material
