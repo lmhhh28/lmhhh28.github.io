@@ -105,8 +105,8 @@ markdown_extensions:
       generic: true
   - pymdownx.highlight:
       anchor_linenums: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
+  - admonition
+  - pymdownx.details
   - pymdownx.superfences
 extra_javascript:
   - javascripts/katex.js
