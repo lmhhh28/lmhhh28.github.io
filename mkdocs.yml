@@ -62,6 +62,10 @@ nav:
       - Chapter.7: review/history/Chapter.7.md
     - 思想道德与法治: 
       - Question and Answer: review/Religion/0.md
+    - 毛泽东思想和中国特色社会主义理论体系概论:
+      - Problem: 
+        - 0.导论: review/Mao/problem/0.md
+      - Summary: review/Mao/0.md
   - Others:
     - Start: law/index.md
     - Law: law/Examples.md
