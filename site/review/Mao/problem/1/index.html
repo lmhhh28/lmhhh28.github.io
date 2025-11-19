@@ -9,25 +9,21 @@
       
       
       
-        <link rel="prev" href="../8.MutiValFunctionDe/">
       
       
-        <link rel="next" href="../8.HessianMartix%26ExtremeVal/">
-      
-      
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
     
     
       
-        <title>8.2.Jacobi矩阵与全微分 - My Note</title>
+        <title>1. - My Note</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.e53b48f4.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +44,9 @@
     
       <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
     
-      <link rel="stylesheet" href="../../assets/stylesheets/hero-theme.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/hero-theme.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#82jacobi" class="md-skip">
+        <a href="#1" class="md-skip">
           跳转至
         </a>
       
@@ -90,7 +86,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../.." title="My Note" class="md-header__button md-logo" aria-label="My Note" data-md-component="logo">
+    <a href="../../../.." title="My Note" class="md-header__button md-logo" aria-label="My Note" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -110,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              8.2.Jacobi矩阵与全微分
+              1.
             
           </span>
         </div>
@@ -229,8 +225,6 @@
   
   
   
-    
-  
   
     
     
@@ -238,13 +232,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../0.Start/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../../../math/0.Start/" class="md-tabs__link">
           
   
   
@@ -267,7 +259,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../cs/start/" class="md-tabs__link">
+        <a href="../../../../cs/start/" class="md-tabs__link">
           
   
   
@@ -294,7 +286,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Philosophy/TheRepublic/0/" class="md-tabs__link">
+        <a href="../../../../Philosophy/TheRepublic/0/" class="md-tabs__link">
           
   
   
@@ -324,7 +316,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../review/c%2B%2B/1/" class="md-tabs__link">
+        <a href="../../../c%2B%2B/1/" class="md-tabs__link">
           
   
   
@@ -347,7 +339,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../law/" class="md-tabs__link">
+        <a href="../../../../law/" class="md-tabs__link">
           
   
   
@@ -400,7 +392,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="My Note" class="md-nav__button md-logo" aria-label="My Note" data-md-component="logo">
+    <a href="../../../.." title="My Note" class="md-nav__button md-logo" aria-label="My Note" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -427,31 +419,28 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           
-          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
             
   
   
@@ -464,7 +453,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             Math
@@ -475,31 +464,28 @@
                 
   
   
-    
   
   
-  
     
     
     
     
       
       
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
         
           
-          
         
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_1" >
         
           
-          <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="">
+          <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
             
   
   
@@ -512,7 +498,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1_1">
             <span class="md-nav__icon md-icon"></span>
             高等数学A
@@ -526,7 +512,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../0.Start/" class="md-nav__link">
+      <a href="../../../../math/0.Start/" class="md-nav__link">
         
   
   
@@ -549,7 +535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../4.IndefInt/" class="md-nav__link">
+      <a href="../../../../math/4.IndefInt/" class="md-nav__link">
         
   
   
@@ -569,8 +555,6 @@
                 
   
   
-    
-  
   
   
     
@@ -583,11 +567,13 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1_3" checked>
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_1_3" >
         
           
           <label class="md-nav__link" for="__nav_1_1_3" id="__nav_1_1_3_label" tabindex="0">
@@ -603,7 +589,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_1_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_1_1_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_1_1_3">
             <span class="md-nav__icon md-icon"></span>
             8/10.多元函数微积分
@@ -617,7 +603,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../8.MutiValFunctionDe/" class="md-nav__link">
+      <a href="../../../../math/8.MutiValFunctionDe/" class="md-nav__link">
         
   
   
@@ -637,32 +623,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    8.2.Jacobi矩阵与全微分
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../../math/8.JacobiMartix%26TotalDe/" class="md-nav__link">
         
   
   
@@ -673,62 +637,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#21jacobi" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.1.向量集映射与Jacobi矩阵
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#22jacobi" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.2.链式法则的Jacobi矩阵形式
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#23" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.3.隐函数与隐映射
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#24jacobi" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.4.曲面参数化与Jacobi行列式
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -741,7 +649,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../8.HessianMartix%26ExtremeVal/" class="md-nav__link">
+      <a href="../../../../math/8.HessianMartix%26ExtremeVal/" class="md-nav__link">
         
   
   
@@ -764,7 +672,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../10.Describe_a_VectorFeild/" class="md-nav__link">
+      <a href="../../../../math/10.Describe_a_VectorFeild/" class="md-nav__link">
         
   
   
@@ -787,7 +695,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../10.Green%27sSpaceForm/" class="md-nav__link">
+      <a href="../../../../math/10.Green%27sSpaceForm/" class="md-nav__link">
         
   
   
@@ -818,7 +726,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../11.DiffentialEquation/" class="md-nav__link">
+      <a href="../../../../math/11.DiffentialEquation/" class="md-nav__link">
         
   
   
@@ -855,13 +763,10 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
@@ -870,7 +775,7 @@
         <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1_2" >
         
           
-          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
             
   
   
@@ -897,7 +802,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../DiscreteMath/SomeNotes/" class="md-nav__link">
+      <a href="../../../../math/DiscreteMath/SomeNotes/" class="md-nav__link">
         
   
   
@@ -980,7 +885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/start/" class="md-nav__link">
+      <a href="../../../../cs/start/" class="md-nav__link">
         
   
   
@@ -1048,7 +953,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/C%2B%2B_loop/" class="md-nav__link">
+      <a href="../../../../cs/C%2B%2B_loop/" class="md-nav__link">
         
   
   
@@ -1071,7 +976,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/C%2B%2B_C%26O%281%29/" class="md-nav__link">
+      <a href="../../../../cs/C%2B%2B_C%26O%281%29/" class="md-nav__link">
         
   
   
@@ -1094,7 +999,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/C%2B%2B_C%26O%282%29/" class="md-nav__link">
+      <a href="../../../../cs/C%2B%2B_C%26O%282%29/" class="md-nav__link">
         
   
   
@@ -1117,7 +1022,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/C%2B%2B_C%26O%283%29/" class="md-nav__link">
+      <a href="../../../../cs/C%2B%2B_C%26O%283%29/" class="md-nav__link">
         
   
   
@@ -1140,7 +1045,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/C%2B%2B_OperatorOverride/" class="md-nav__link">
+      <a href="../../../../cs/C%2B%2B_OperatorOverride/" class="md-nav__link">
         
   
   
@@ -1163,7 +1068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/C%2B%2B_Template/" class="md-nav__link">
+      <a href="../../../../cs/C%2B%2B_Template/" class="md-nav__link">
         
   
   
@@ -1186,7 +1091,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/ReadMe/" class="md-nav__link">
+      <a href="../../../../cs/ReadMe/" class="md-nav__link">
         
   
   
@@ -1209,7 +1114,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/C%2B%2B_Namespace/" class="md-nav__link">
+      <a href="../../../../cs/C%2B%2B_Namespace/" class="md-nav__link">
         
   
   
@@ -1232,7 +1137,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/C%2B%2B_Exception/" class="md-nav__link">
+      <a href="../../../../cs/C%2B%2B_Exception/" class="md-nav__link">
         
   
   
@@ -1308,7 +1213,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/Bernoulli%27s_method/" class="md-nav__link">
+      <a href="../../../../cs/Bernoulli%27s_method/" class="md-nav__link">
         
   
   
@@ -1331,7 +1236,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cs/fourier-motzkin-elimination/" class="md-nav__link">
+      <a href="../../../../cs/fourier-motzkin-elimination/" class="md-nav__link">
         
   
   
@@ -1459,7 +1364,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Philosophy/TheRepublic/0/" class="md-nav__link">
+      <a href="../../../../Philosophy/TheRepublic/0/" class="md-nav__link">
         
   
   
@@ -1482,7 +1387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Philosophy/TheRepublic/1/" class="md-nav__link">
+      <a href="../../../../Philosophy/TheRepublic/1/" class="md-nav__link">
         
   
   
@@ -1610,7 +1515,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../review/c%2B%2B/1/" class="md-nav__link">
+      <a href="../../../c%2B%2B/1/" class="md-nav__link">
         
   
   
@@ -1633,7 +1538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../review/c%2B%2B/2/" class="md-nav__link">
+      <a href="../../../c%2B%2B/2/" class="md-nav__link">
         
   
   
@@ -1656,7 +1561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../review/c%2B%2B/3/" class="md-nav__link">
+      <a href="../../../c%2B%2B/3/" class="md-nav__link">
         
   
   
@@ -1679,7 +1584,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../review/c%2B%2B/4/" class="md-nav__link">
+      <a href="../../../c%2B%2B/4/" class="md-nav__link">
         
   
   
@@ -1702,7 +1607,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../review/c%2B%2B/5/" class="md-nav__link">
+      <a href="../../../c%2B%2B/5/" class="md-nav__link">
         
   
   
@@ -1725,7 +1630,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../review/c%2B%2B/6/" class="md-nav__link">
+      <a href="../../../c%2B%2B/6/" class="md-nav__link">
         
   
   
@@ -1748,7 +1653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../review/c%2B%2B/7/" class="md-nav__link">
+      <a href="../../../c%2B%2B/7/" class="md-nav__link">
         
   
   
@@ -1771,7 +1676,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../review/c%2B%2B/8/" class="md-nav__link">
+      <a href="../../../c%2B%2B/8/" class="md-nav__link">
         
   
   
@@ -1794,7 +1699,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../review/c%2B%2B/9/" class="md-nav__link">
+      <a href="../../../c%2B%2B/9/" class="md-nav__link">
         
   
   
@@ -1817,7 +1722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../review/c%2B%2B/10/" class="md-nav__link">
+      <a href="../../../c%2B%2B/10/" class="md-nav__link">
         
   
   
@@ -1848,7 +1753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../review/NetworkPreface/" class="md-nav__link">
+      <a href="../../../NetworkPreface/" class="md-nav__link">
         
   
   
@@ -1916,7 +1821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../review/Creativity/1/" class="md-nav__link">
+      <a href="../../../Creativity/1/" class="md-nav__link">
         
   
   
@@ -1939,7 +1844,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../review/Creativity/2/" class="md-nav__link">
+      <a href="../../../Creativity/2/" class="md-nav__link">
         
   
   
@@ -2015,7 +1920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../review/history/" class="md-nav__link">
+      <a href="../../../history/" class="md-nav__link">
         
   
   
@@ -2038,7 +1943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../review/history/1/" class="md-nav__link">
+      <a href="../../../history/1/" class="md-nav__link">
         
   
   
@@ -2061,7 +1966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../review/history/2/" class="md-nav__link">
+      <a href="../../../history/2/" class="md-nav__link">
         
   
   
@@ -2084,7 +1989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../review/history/3/" class="md-nav__link">
+      <a href="../../../history/3/" class="md-nav__link">
         
   
   
@@ -2107,7 +2012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../review/history/Chapter.1/" class="md-nav__link">
+      <a href="../../../history/Chapter.1/" class="md-nav__link">
         
   
   
@@ -2130,7 +2035,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../review/history/Chapter.2/" class="md-nav__link">
+      <a href="../../../history/Chapter.2/" class="md-nav__link">
         
   
   
@@ -2153,7 +2058,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../review/history/Chapter.3/" class="md-nav__link">
+      <a href="../../../history/Chapter.3/" class="md-nav__link">
         
   
   
@@ -2176,7 +2081,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../review/history/Chapter.4/" class="md-nav__link">
+      <a href="../../../history/Chapter.4/" class="md-nav__link">
         
   
   
@@ -2199,7 +2104,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../review/history/Chapter.5/" class="md-nav__link">
+      <a href="../../../history/Chapter.5/" class="md-nav__link">
         
   
   
@@ -2222,7 +2127,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../review/history/Chapter.6/" class="md-nav__link">
+      <a href="../../../history/Chapter.6/" class="md-nav__link">
         
   
   
@@ -2245,7 +2150,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../review/history/Chapter.7/" class="md-nav__link">
+      <a href="../../../history/Chapter.7/" class="md-nav__link">
         
   
   
@@ -2321,7 +2226,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../review/Religion/0/" class="md-nav__link">
+      <a href="../../../Religion/0/" class="md-nav__link">
         
   
   
@@ -2442,7 +2347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../review/Mao/problem/0/" class="md-nav__link">
+      <a href="../0/" class="md-nav__link">
         
   
   
@@ -2473,7 +2378,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../review/Mao/0/" class="md-nav__link">
+      <a href="../../0/" class="md-nav__link">
         
   
   
@@ -2556,7 +2461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../law/" class="md-nav__link">
+      <a href="../../../../law/" class="md-nav__link">
         
   
   
@@ -2579,7 +2484,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../law/Examples/" class="md-nav__link">
+      <a href="../../../../law/Examples/" class="md-nav__link">
         
   
   
@@ -2602,7 +2507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../law/English/" class="md-nav__link">
+      <a href="../../../../law/English/" class="md-nav__link">
         
   
   
@@ -2625,7 +2530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../13/" class="md-nav__link">
+      <a href="../../../../math/13/" class="md-nav__link">
         
   
   
@@ -2648,7 +2553,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../review/mvp/assessment/" class="md-nav__link">
+      <a href="../../../mvp/assessment/" class="md-nav__link">
         
   
   
@@ -2720,36 +2625,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#21jacobi" class="md-nav__link">
+  <a href="#1030" class="md-nav__link">
     <span class="md-ellipsis">
-      2.1.向量集映射与Jacobi矩阵
+      一、单选题（共10题，30分）
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#22jacobi" class="md-nav__link">
+  <a href="#1050" class="md-nav__link">
     <span class="md-ellipsis">
-      2.2.链式法则的Jacobi矩阵形式
+      二、多选题（共10题，50分）
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#23" class="md-nav__link">
+  <a href="#1020" class="md-nav__link">
     <span class="md-ellipsis">
-      2.3.隐函数与隐映射
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#24jacobi" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.4.曲面参数化与Jacobi行列式
+      三、判断题（共10题，20分）
     </span>
   </a>
   
@@ -2774,292 +2670,324 @@
   
 
 
-<h1 id="82jacobi"><strong>8.2.Jacobi矩阵与全微分</strong></h1>
-<hr />
-<h2 id="21jacobi"><strong>2.1.向量集映射与Jacobi矩阵</strong></h2>
-<p>考虑向量集函数<span class="arithmatex">\(\mathbf{z}=f(\mathbf{v})，\mathbf{v}=(x,y)^{\mathbf{T}}\)</span>在<span class="arithmatex">\((x_0,y_0)\)</span>处微分：</p>
-<div class="arithmatex">\[
-f(\mathbf v+\mathbf h)-f(\mathbf v)=J\cdot\mathbf h+o(||\mathbf h||)，\mathbf h \to \mathbf 0
-\]</div>
-<p>其中<span class="arithmatex">\(o(||\mathbf h||)\)</span>为<span class="arithmatex">\(||\mathbf h||\)</span>的高阶无穷小，因此<span class="arithmatex">\(f(\mathbf v)\)</span>在<span class="arithmatex">\((x_0,y_0)\)</span>处任意方向<span class="arithmatex">\(\mathbf h\)</span>的增量可近似于增量<span class="arithmatex">\(\mathbf h\)</span>的线性函数：</p>
-<div class="arithmatex">\[
-\text{d}f(\mathbf v)=J\cdot\mathbf h
-\]</div>
-<p>对于更为具体的向量集函数<span class="arithmatex">\(F(x,y)=(P(x,y),Q(x,y))^{\mathbf T}\)</span>，其微分可表示为：</p>
-<div class="arithmatex">\[
-\text{d}F(x,y)=
-\begin{pmatrix}
- \text{d}P\\
- \text{d}Q
-\end{pmatrix}
-=\begin{pmatrix}
- \nabla P\\
- \nabla Q
-\end{pmatrix}\cdot\mathbf h=
-\begin{pmatrix}
- P_x &amp; P_y\\
- Q_x &amp; Q_y
-\end{pmatrix}\cdot\mathbf{h}
-\]</div>
-<p>因此我们确定二维向量集函数<span class="arithmatex">\(\mathbf{z}=f(\mathbf{v})\)</span>的Jacobi矩阵：</p>
-<div class="arithmatex">\[
-J=\begin{pmatrix}
- P_x &amp; P_y\\
- Q_x &amp; Q_y
-\end{pmatrix}
-\]</div>
-<p>对于二维值函数<span class="arithmatex">\(z=f(x,y)\)</span>，有<span class="arithmatex">\(\text{d}z=\nabla f\cdot\mathbf{h}\)</span>，<span class="arithmatex">\(\nabla f\)</span>为值函数<span class="arithmatex">\(z=f(x,y)\)</span>的Jacobi矩阵，被视为一个二维向量向量到值的映射。</p>
-<hr />
-<h2 id="22jacobi"><strong>2.2.链式法则的Jacobi矩阵形式</strong></h2>
-<p>对于二维的复合值函数<span class="arithmatex">\(z=F(u(x,y),v(x,y))\)</span>，其微分为：</p>
-<div class="arithmatex">\[
-\text{d}z=\nabla F\cdot 
-\begin{pmatrix}
-\text{d}u \\
-\text{d}v
-\end{pmatrix}=
-\nabla F \cdot
-\begin{pmatrix}
-\nabla u \\
-\nabla v
-\end{pmatrix}\cdot
-\begin{pmatrix}
-\text{d}x \\
-\text{d}y
-\end{pmatrix}=
-\nabla F\cdot
-\begin{pmatrix}
-u_x  &amp; u_y\\
-v_x  &amp; v_y
-\end{pmatrix}\cdot
-\begin{pmatrix}
-\text{d}x \\
-\text{d}y
-\end{pmatrix}
-\]</div>
-<p>对于更为普遍的复合函数，链式法则展示了一种<span class="arithmatex">\(n\)</span>维向量通过对应Jacobi矩阵的一种链式映射关系。</p>
-<p>如上述的复合函数<span class="arithmatex">\(z=F(\lambda(x,y),\mu(x,y))\)</span>，可视为下述的链式映射：</p>
-<div class="arithmatex">\[
-\begin{pmatrix}
-\text{d}x\\
-\text{d}y
-\end{pmatrix}
-\stackrel{J_{(u,v)}}{\longrightarrow}
-\begin{pmatrix}
-\text{d}u\\
-\text{d}v
-\end{pmatrix}
-\stackrel{J_F}{\longrightarrow}
-\text{d}z
-\]</div>
-<hr />
-<h2 id="23"><strong>2.3.隐函数与隐映射</strong></h2>
+<h1 id="1"><strong>1.</strong></h1>
+<h2 id="1030">一、单选题（共10题，30分）</h2>
+<ol>
+<li>
+<p>(单选题, 3分) 在( )上，毛泽东思想被写入党章，确立为党必须长期坚持的指导思想。</p>
+</li>
+<li>
+<p>A. 中共六大</p>
+</li>
+<li>B. 中共七大</li>
+<li>C. 中共八大</li>
+<li>
+<p>D. 中共十一届三中全会</p>
+</li>
+<li>
+<p>(单选题, 3分) 毛泽东思想在( )时期初步形成。</p>
+</li>
+<li>
+<p>A. 辛亥革命</p>
+</li>
+<li>B. 土地革命战争</li>
+<li>C. 抗日战争</li>
+<li>
+<p>D. 解放战争</p>
+</li>
+<li>
+<p>(单选题, 3分) 在毛泽东思想萌芽时期，中国共产党人提出了( )</p>
+</li>
+<li>
+<p>A. 新民主主义革命的基本思想</p>
+</li>
+<li>B. 农村包围城市的道路理论</li>
+<li>C. 战胜敌人的三大法宝</li>
+<li>
+<p>D. 党的三大优良作风</p>
+</li>
+<li>
+<p>(单选题, 3分) 毛泽东思想在( )时期走向成熟。</p>
+</li>
+<li>
+<p>A. 辛亥革命</p>
+</li>
+<li>B. 土地革命战争</li>
+<li>C. 抗日战争</li>
+<li>
+<p>D. 解放战争</p>
+</li>
+<li>
+<p>(单选题, 3分) 毛泽东思想在( )继续发展。</p>
+</li>
+<li>
+<p>A. 抗日战争</p>
+</li>
+<li>B. 土地革命战争</li>
+<li>C. 抗美援朝战争</li>
+<li>
+<p>D. 解放战争和新中国成立后</p>
+</li>
+<li>
+<p>(单选题, 3分) 毛泽东思想是在( )成为时代主题的条件下形成和发展起来的。</p>
+</li>
+<li>
+<p>A. 改革与开放</p>
+</li>
+<li>B. 和平与发展</li>
+<li>C. 战争与革命</li>
+<li>
+<p>D. 革命与建设</p>
+</li>
+<li>
+<p>(单选题, 3分) 毛泽东思想达到成熟的主要标志是( )理论的系统阐述。</p>
+</li>
+<li>
+<p>A. 新民主主义革命</p>
+</li>
+<li>B. 社会主义革命和建设</li>
+<li>C. 革命军队建设</li>
+<li>
+<p>D. 政策和策略</p>
+</li>
+<li>
+<p>(单选题, 3分) 毛泽东思想的基本点、精髓是( )。</p>
+</li>
+<li>
+<p>A. 实事求是</p>
+</li>
+<li>B. 群众路线</li>
+<li>C. 独立自主</li>
+<li>
+<p>D. 理论联系实际</p>
+</li>
+<li>
+<p>(单选题, 3分) 对毛泽东和毛泽东思想的历史地位作了新的马克思主义的实事求是评价的是党的十一届六中全会通过的( )。</p>
+</li>
+<li>
+<p>A. 《党的若干历史问题的决议》</p>
+</li>
+<li>B. 《论联合政府》</li>
+<li>C. 《关于建国以来党的若干历史问题的决议》</li>
+<li>
+<p>D. 《新民主主义论》</p>
+</li>
+<li>
+<p>(单选题, 3分) 毛泽东思想是中国( )的科学指南。</p>
 <ul>
-<li>隐函数：</li>
+<li>A. 改革与社会主义探索</li>
+<li>B. 革命和改革开放</li>
+<li>C. 革命和建设</li>
+<li>D. 改革开放与社会主义建设</li>
 </ul>
-<p>对于隐函数<span class="arithmatex">\(f(x_1,x_2,x_3)=0\)</span>，可以确定唯一的映射：<span class="arithmatex">\(x_i=x_i(x_j,x_k)\)</span>。对函数<span class="arithmatex">\(f\)</span>微分：</p>
-<div class="arithmatex">\[
-\text{d}f=\nabla f\cdot
-\begin{pmatrix}
-\nabla x_1 \\
-\nabla x_2 \\
-\nabla x_3
-\end{pmatrix}\cdot
-\begin{pmatrix}
-\text{d}x_1 \\
-\text{d}x_2 
-\end{pmatrix}=
-\nabla f\cdot
-\begin{pmatrix}
- I\\
- \nabla x_3
-\end{pmatrix}\cdot
-\begin{pmatrix}
-\text{d}x_1 \\
-\text{d}x_2 
-\end{pmatrix}
-\]</div>
-<p>解出<span class="arithmatex">\(\nabla x_3\)</span>：</p>
-<div class="arithmatex">\[
-\nabla f_{(x_1,x_2)}+\frac{\partial f}{\partial x_3}\nabla x_3=0
-\]</div>
-<p>即：<span class="arithmatex">\(\nabla x_3=-{(\frac{\partial f}{\partial x_3})}^{-1}\nabla f_{(x_1,x_2)}\)</span>。</p>
+</li>
+</ol>
+<h2 id="1050">二、多选题（共10题，50分）</h2>
+<ol>
+<li>
+<p>(多选题, 5分) 毛泽东在( )等著作中，指明了中国革命的发展规律，标志着毛泽东思想的初步形成。</p>
 <ul>
-<li>隐映射：</li>
+<li>A. 《中国的红色政权为什么能够存在》</li>
+<li>B. 《井冈山的斗争》</li>
+<li>C. 《星星之火，可以燎原》</li>
+<li>D. 《反对本本主义》</li>
 </ul>
-<p>对于隐函数方程组：</p>
-<div class="arithmatex">\[
-\left\{
-\begin{matrix} 
-  F_1(x,y,u,v)=0 \\  
-  F_2(x,y,u,v)=0 
-\end{matrix}
-\right. 
-\]</div>
-<p>可以确定唯一隐映射：</p>
-<div class="arithmatex">\[
-\left\{
-\begin{matrix} 
-  u = u(x,y) \\  
-  v = v(x,y) 
-\end{matrix}
-\right. 
-\]</div>
-<p>对<span class="arithmatex">\(F_1，F_2\)</span>微分：</p>
-<div class="arithmatex">\[
-\left\{
-\begin{matrix} 
-  \text{d}F_1=\nabla F_1\cdot J_{(u,v)}\cdot\mathbf{h} \\  
-  \text{d}F_2=\nabla F_2\cdot J_{(u,v)}\cdot\mathbf{h} 
-\end{matrix}
-\right. 
-\]</div>
-<p>不妨写作以下形式：</p>
-<div class="arithmatex">\[
-\text{d}\mathbf{F}=
-\begin{pmatrix}
-\text{d}F_1 \\
-\text{d}F_2
-\end{pmatrix}=
-\begin{pmatrix}
-\nabla F_1 \\
-\nabla F_2
-\end{pmatrix}\cdot
-J_{(u,v)}\cdot\mathbf{h}=
-J_F\cdot J_{(u,v)} \cdot \mathbf{h}
-\]</div>
-<p>由于微分的形式不变性，对<span class="arithmatex">\(\mathbf F\)</span>的微分依然可以视作对应Jacobi矩阵的链式映射法则：</p>
-<div class="arithmatex">\[
-\begin{pmatrix}
-\text{d}x\\
-\text{d}y
-\end{pmatrix}
-\stackrel{J_{(u,v)}}{\longrightarrow}
-\begin{pmatrix}
-\text{d}\lambda\\
-\text{d}\mu
-\end{pmatrix}
-\stackrel{J_F}{\longrightarrow}
-\text{d}\mathbf F
-\]</div>
-<p>不妨将<span class="arithmatex">\(J_F\)</span>分块为：<span class="arithmatex">\((J_{F_{(x,y)}}\ \ \ J_{F_{(u,v)}})，|J_F|\ne 0\)</span>，有：</p>
-<div class="arithmatex">\[
-\text{d}\mathbf{F}=
-\begin{pmatrix}
- J_{F_{(x,y)}} &amp; J_{F_{(u,v)}}
-\end{pmatrix}\cdot
-\begin{pmatrix}
-I \\
-J_{(u,v)}
-\end{pmatrix}\cdot
-\mathbf{h}=
-(J_{F_{(x,y)}}+J_{F_{(u,v)}}J_{(u,v)})\cdot\mathbf{h}
-\]</div>
-<p>解出<span class="arithmatex">\(J_{(\lambda,\mu)}\)</span>：</p>
-<div class="arithmatex">\[
-J_{(u,v)}=-{(J_{F_{(u,v)}})}^{-1}J_{F_{(x,y)}}
-\]</div>
-<hr />
-<h2 id="24jacobi"><strong>2.4.曲面参数化与Jacobi行列式</strong></h2>
-<p>对于光滑且连续的曲面<span class="arithmatex">\(\Omega\)</span>，其自变量<span class="arithmatex">\(x,y\)</span>可作参数化表示：<span class="arithmatex">\(x=P(u,v),y=Q(u,v)\)</span>，可视作<span class="arithmatex">\(x,y\)</span>关于<span class="arithmatex">\(u,v\)</span>的向量场<span class="arithmatex">\(\mathbf{z}=\mathbf{F}(u,v)\)</span>。对于<span class="arithmatex">\(\text{x}o\text{y}\)</span>平面上任意一点，<span class="arithmatex">\(J\)</span>可视作对该点处邻域的线性变换。即：<span class="arithmatex">\(\text{d}\mathbf{z}=J\text{d}\mathbf{h}\)</span>，此处面积微元：</p>
-<div class="arithmatex">\[
-\text{d}\sigma=\text{d}x\text{d}y=\text{det}J\cdot\text{d}u\text{d}v
-\]</div>
-<ol>
-<li>极坐标</li>
+</li>
+<li>
+<p>(多选题, 5分) 毛泽东思想活的灵魂是( )。</p>
+<ul>
+<li>A. 实事求是</li>
+<li>B. 群众路线</li>
+<li>C. 独立自主</li>
+<li>D. 与时俱进</li>
+</ul>
+</li>
+<li>
+<p>(多选题, 5分) 毛泽东思想是( )。</p>
+<ul>
+<li>A. 马克思列宁主义在中国的运用和发展</li>
+<li>B. 关于社会主义初级阶段的理论</li>
+<li>C. 是中国共产党集体智慧的结晶</li>
+<li>D. 是被实践证明了的关于中国革命和建设的正确的理论原则和经验总结</li>
+</ul>
+</li>
+<li>
+<p>(多选题, 5分) 实事求是，就是( )。</p>
+<ul>
+<li>A. 一切从实际出发</li>
+<li>B. 理论联系实际</li>
+<li>C. 坚持在实践中检验和发展真理</li>
+<li>D. 解放思想</li>
+</ul>
+</li>
+<li>
+<p>(多选题, 5分) 群众路线，就是( )。</p>
+<ul>
+<li>A. 一切为了群众</li>
+<li>B. 一切依靠群众</li>
+<li>C. 从群众中来</li>
+<li>D. 到群众中去</li>
+</ul>
+</li>
+<li>
+<p>(多选题, 5分) 毛泽东思想有多方面的丰富内容，除了关于新民主主义革命理论和党的建设理论外，还包括( )等主要内容。</p>
+<ul>
+<li>A. 关于社会主义革命和社会主义建设的理论</li>
+<li>B. 关于革命军队建设和军事战略的理论</li>
+<li>C. 关于政策和策略的理论</li>
+<li>D. 关于思想政治工作和文化工作的理论</li>
+</ul>
+</li>
+<li>
+<p>(多选题, 5分) 以下属于毛泽东思想范畴的是( )。</p>
+<ul>
+<li>A. “工农武装割据思想”</li>
+<li>B. 关于新民主主义革命的理论</li>
+<li>C. 关于正确处理人民内部矛盾的思想</li>
+<li>D. “文化大革命”的理论</li>
+</ul>
+</li>
+<li>
+<p>(多选题, 5分) 毛泽东思想是在我国( )的实践过程中，逐步形成和发展起来的。</p>
+<ul>
+<li>A. 新民主主义革命</li>
+<li>B. 社会主义革命</li>
+<li>C. 改革开放</li>
+<li>D. 社会主义建设</li>
+</ul>
+</li>
+<li>
+<p>(多选题, 5分) 在毛泽东思想的形成过程中，中共党内的主要错误倾向是( )。</p>
+<ul>
+<li>A. 把马克思主义教条化</li>
+<li>B. 把共产国际决议神圣化</li>
+<li>C. 把苏联经验神圣化</li>
+<li>D. 把中国革命经验神圣化</li>
+</ul>
+</li>
+<li>
+<p>(多选题, 5分) 毛泽东思想的历史地位包括 ( )。</p>
+<ul>
+<li>A. 马克思主义中国化时代化第一个重大理论成果</li>
+<li>B. 中国革命和建设的科学指南</li>
+<li>C. 党和人民的宝贵精神财富</li>
+<li>D. 放之四海皆准，颠扑不破的真理</li>
+</ul>
+</li>
 </ol>
-<div class="arithmatex">\[
-\left\{
-\begin{matrix} 
-  x = r\cos\theta \\  
-  y = r\sin\theta 
-\end{matrix}
-\right. 
-\]</div>
-<p>可表示为：<span class="arithmatex">\(\text{d}\mathbf{z}=J\text{d}\mathbf{h}(r,\theta)\)</span>。其中：</p>
-<div class="arithmatex">\[
-J=\begin{pmatrix}
- \cos\theta &amp; -r\sin\theta\\
- \sin\theta &amp; r\cos\theta
-\end{pmatrix}, \text{det}J=r
-\]</div>
-<p>故有：</p>
-<div class="arithmatex">\[
-\text{d}\sigma=\text{d}x\text{d}y=r\text{d}r\text{d}\theta
-\]</div>
+<h2 id="1020">三、判断题（共10题，20分）</h2>
 <ol>
-<li>球坐标</li>
+<li>
+<p>(判断题, 2分) 毛泽东同志的著作是毛泽东思想的集中体现。 ( )</p>
+<ul>
+<li>A. 对</li>
+<li>B. 错</li>
+</ul>
+</li>
+<li>
+<p>(判断题, 2分) 毛泽东思想就是毛泽东个人的思想。 ( )</p>
+<ul>
+<li>A. 对</li>
+<li>B. 错</li>
+</ul>
+</li>
+<li>
+<p>(判断题, 2分) 毛泽东思想的精髓和根本出发点是独立自主。 ( )</p>
+<ul>
+<li>A. 对</li>
+<li>B. 错</li>
+</ul>
+</li>
+<li>
+<p>(判断题, 2分) 毛泽东思想是中国共产党集体智慧的结晶。 ( )</p>
+<ul>
+<li>A. 对</li>
+<li>B. 错</li>
+</ul>
+</li>
+<li>
+<p>(判断题, 2分) 毛泽东是毛泽东思想的唯一创立者。 ( )</p>
+<ul>
+<li>A. 对</li>
+<li>B. 错</li>
+</ul>
+</li>
+<li>
+<p>(判断题, 2分) 毛泽东同志的话是“放之四海皆准、颠扑不破的真理”。 ( )</p>
+<ul>
+<li>A. 对</li>
+<li>B. 错</li>
+</ul>
+</li>
+<li>
+<p>(判断题, 2分) 毛泽东思想关于社会主义建设的基本思想观点，仍具有重要的现实指导作用。 ( )</p>
+<ul>
+<li>A. 对</li>
+<li>B. 错</li>
+</ul>
+</li>
+<li>
+<p>(判断题, 2分) 毛泽东同志晚年犯了错误，所以不能用毛泽东思想来指导中国的建设。 ( )</p>
+<ul>
+<li>A. 对</li>
+<li>B. 错</li>
+</ul>
+</li>
+<li>
+<p>(判断题, 2分) 毛泽东思想是马列主义基本原理在中国的运用和发展。 ( )</p>
+<ul>
+<li>A. 对</li>
+<li>B. 错</li>
+</ul>
+</li>
+<li>
+<p>(判断题, 2分) 毛泽东思想是马克思主义中国化时代化的第一个重大理论成果。 ( )</p>
+<ul>
+<li>A. 对</li>
+<li>B. 错</li>
+</ul>
+</li>
 </ol>
-<div class="arithmatex">\[
-\left\{
-\begin{matrix} 
-  x = r\sin\theta\cos\phi \\  
-  y = r\sin\theta\sin\phi \\
-  z = r\cos\theta 
-\end{matrix}
-\right. 
-\]</div>
-<p>可表示为：<span class="arithmatex">\(\text{d}\mathbf{\omega}=J\text{d}\mathbf{h}(r,\theta,\phi)\)</span>。其中：</p>
-<div class="arithmatex">\[
-J=\begin{pmatrix}
-\sin\theta\cos\phi &amp; r\cos\theta\cos\phi &amp; -r\sin\theta\sin\phi\\
-\sin\theta\sin\phi &amp; r\cos\theta\sin\phi &amp; r\sin\theta\cos\phi\\
-\cos\theta &amp; -r\sin\theta &amp; 0
-\end{pmatrix}, \text{det}J=r^2\sin\theta
-\]</div>
-<p>故有：</p>
-<div class="arithmatex">\[
-\text{d}V=\text{d}x\text{d}y\text{d}z=r^2\sin\theta\text{d}r\text{d}\theta\text{d}\phi
-\]</div>
+<h1 id="_1">答案汇总</h1>
+<h2 id="_2">一、单选题答案</h2>
 <ol>
-<li>柱坐标</li>
+<li>正确答案：B（中共七大）</li>
+<li>正确答案：B（土地革命战争）</li>
+<li>正确答案：A（新民主主义革命的基本思想）</li>
+<li>正确答案：C（抗日战争）</li>
+<li>正确答案：D（解放战争和新中国成立后）</li>
+<li>正确答案：C（战争与革命）</li>
+<li>正确答案：A（新民主主义革命）</li>
+<li>正确答案：A（实事求是）</li>
+<li>正确答案：C（《关于建国以来党的若干历史问题的决议》）</li>
+<li>正确答案：C（革命和建设）</li>
 </ol>
-<div class="arithmatex">\[
-\left\{
-\begin{matrix} 
-  x = r\cos\theta \\  
-  y = r\sin\theta \\
-  z = z 
-\end{matrix}
-\right. 
-\]</div>
-<p>可表示为：<span class="arithmatex">\(\text{d}\mathbf{\omega}=J\text{d}\mathbf{h}(r,\theta, z)\)</span>。其中：</p>
-<div class="arithmatex">\[
-J=\begin{pmatrix}
-\cos\theta &amp; -r\sin\theta &amp; 0\\
-\sin\theta &amp; r\cos\theta &amp; 0\\
-0 &amp; 0 &amp; 1
-\end{pmatrix}, \text{det}J=r
-\]</div>
-<p>故有：</p>
-<div class="arithmatex">\[
-\text{d}V=\text{d}x\text{d}y\text{d}z=r\text{d}r\text{d}\theta\text{d}z
-\]</div>
+<h2 id="_3">二、多选题答案</h2>
 <ol>
-<li>锥面坐标</li>
+<li>正确答案：ABCD（《中国的红色政权为什么能够存在》；《井冈山的斗争》；《星星之火，可以燎原》；《反对本本主义》）</li>
+<li>正确答案：ABC（实事求是；群众路线；独立自主）</li>
+<li>正确答案：ACD（马克思列宁主义在中国的运用和发展；是中国共产党集体智慧的结晶；是被实践证明了的关于中国革命和建设的正确的理论原则和经验总结）</li>
+<li>正确答案：ABC（一切从实际出发；理论联系实际；坚持在实践中检验和发展真理）</li>
+<li>正确答案：ABCD（一切为了群众；一切依靠群众；从群众中来；到群众中去）</li>
+<li>正确答案：ABCD（关于社会主义革命和社会主义建设的理论；关于革命军队建设和军事战略的理论；关于政策和策略的理论；关于思想政治工作和文化工作的理论）</li>
+<li>正确答案：ABC（“工农武装割据思想”；关于新民主主义革命的理论；关于正确处理人民内部矛盾的思想）</li>
+<li>正确答案：ABD（新民主主义革命；社会主义革命；社会主义建设）</li>
+<li>正确答案：ABC（把马克思主义教条化；把共产国际决议神圣化；把苏联经验神圣化）</li>
+<li>正确答案：ABC（马克思主义中国化时代化第一个重大理论成果；中国革命和建设的科学指南；党和人民的宝贵精神财富）</li>
 </ol>
-<div class="arithmatex">\[
-\left\{
-\begin{matrix} 
-  x = r\cos\theta \\  
-  y = r\sin\theta \\
-  z = kr 
-\end{matrix}
-\right. 
-\]</div>
-<p>可表示为：<span class="arithmatex">\(\text{d}\mathbf{\omega}=J\text{d}\mathbf{h}(r,\theta, k)\)</span>。其中：</p>
-<div class="arithmatex">\[
-J=\begin{pmatrix}
-\cos\theta &amp; -r\sin\theta &amp; 0\\
-\sin\theta &amp; r\cos\theta &amp; 0\\
-k &amp; 0 &amp; r
-\end{pmatrix}, \text{det}J=r^2
-\]</div>
-<p>故有：</p>
-<div class="arithmatex">\[
-\text{d}V=\text{d}x\text{d}y\text{d}z=r^2\text{d}r\text{d}\theta\text{d}k
-\]</div>
-<hr />
+<h2 id="_4">三、判断题答案</h2>
+<ol>
+<li>正确答案：B（错）</li>
+<li>正确答案：B（错）</li>
+<li>正确答案：B（错）</li>
+<li>正确答案：A（对）</li>
+<li>正确答案：B（错）</li>
+<li>正确答案：B（错）</li>
+<li>正确答案：A（对）</li>
+<li>正确答案：B（错）</li>
+<li>正确答案：A（对）</li>
+<li>正确答案：A（对）</li>
+</ol>
 
 
 
@@ -3103,12 +3031,12 @@ k &amp; 0 &amp; r
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "navigation.expand"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "navigation.expand"], "search": "../../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
-        <script src="../../javascripts/katex.js"></script>
+        <script src="../../../../javascripts/katex.js"></script>
       
         <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       
@@ -3116,9 +3044,9 @@ k &amp; 0 &amp; r
       
         <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
       
-        <script src="../../assets/javascripts/custom.js"></script>
+        <script src="../../../../assets/javascripts/custom.js"></script>
       
-        <script src="../../assets/javascripts/chart.js"></script>
+        <script src="../../../../assets/javascripts/chart.js"></script>
       
     
   </body>
