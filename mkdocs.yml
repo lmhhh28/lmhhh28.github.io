@@ -66,6 +66,8 @@ nav:
       - Problem: 
         - Q&A: review/Mao/problem/0.md
       - Summary: review/Mao/0.md
+    - 习概: 
+      - Q&A: review/xi.md
   - Others:
     - Start: law/index.md
     - Law: law/Examples.md
